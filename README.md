@@ -13,6 +13,7 @@ Our main programming language will be JavaScript using React Native. Our main fr
 
 ## Data
 
+https://cloud.smartdraw.com/editor.aspx?credID=-41346779&depoId=38345123&flags=128#depoId=38345123&credID=-41346779
 
 ## UI (user interface) mockups
 https://app.moqups.com/CHuAaOGEAqM6ozZhQIbcGMwdOa2JMTOh/view/page/ae8fe8eb0
