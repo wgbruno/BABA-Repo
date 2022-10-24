@@ -1,4 +1,4 @@
-import {Stats} from './Stats.js';
+import { Stats } from './Stats.js';
 export class Player {
     constructor(firstName, lastName, number, age, height, stats){
         this.firstName = firstName;
