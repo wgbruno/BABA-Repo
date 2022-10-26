@@ -1,6 +1,7 @@
 import React, {useState, useEffect} from "react";
 import { Button, Text, TextInput, TouchableOpacity, View, StyleSheet, SafeAreaView } from 'react-native';
 import AddPlayer from "./View/AddPlayer.js";
+import AddTeam from "./View/AddTeam.js";
 import Home from "./View/Home.js";
 import ViewAllPlayers from "./View/ViewAllPlayers.js";
 import FormStyle from "./Style/Form.style";
@@ -12,7 +13,8 @@ const AppNavigator = createStackNavigator(
   {  
       HomeScreen: Home,  
       PlayerReg: AddPlayer,
-      ViewPlayers: ViewAllPlayers 
+      ViewPlayers: ViewAllPlayers,
+      TeamReg: AddTeam
   },  
   {  
       initialRouteName: "HomeScreen"  

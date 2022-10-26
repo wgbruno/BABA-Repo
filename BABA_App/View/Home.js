@@ -18,6 +18,11 @@ export default class Home extends React.Component{
                     onPress={() => this.props.navigation.navigate('ViewPlayers')}
                     title="View Players">
                 </Button>
+                <Button 
+                    style={FormStyle.formButton} 
+                    onPress={() => this.props.navigation.navigate('TeamReg')}
+                    title="Register Team">
+                </Button>
             </View>    
         </>);
     }
