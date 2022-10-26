@@ -11,11 +11,11 @@ import { openDatabase } from 'react-native-sqlite-storage';
 
 export var db = openDatabase({name: 'TeamDatabase.db'});
 
-export default function RegisterTeam(){
-    const [teamName, setName] = React.useState("");
-    const [record, setRecord] = React.useState("");
-    const [seed, setSeed] = React.useState("");
-    const [players, setPlayers] = React.useState("");
+export default function AddTeam({ navigation }){
+    const [teamName, setName] = useState("");
+    const [record, setRecord] = useState("");
+    const [seed, setSeed] = useState("");
+    const [players, setPlayers] = useState("");
 
     useEffect(() => {
         db.transaction(function (txn) {
