@@ -1,8 +1,5 @@
 import React, {useState, useEffect} from 'react';
 import { Alert, Button, Text, TextInput, TouchableOpacity, View } from 'react-native';
-import { Player } from "../Objects/Player.js";
-import { Team } from "../Objects/Team.js";
-import { Stats } from "../Objects/Stats.js";
 import MainStyle from "../Style/MainStyle.style";
 import FormStyle from "../Style/Form.style";
 import { createAppContainer, createStackNavigator } from 'react-navigation'; 
@@ -11,11 +8,11 @@ import { openDatabase } from 'react-native-sqlite-storage';
 
 export var db = openDatabase({name: 'TeamDatabase.db'});
 
-export default function RegisterTeam(){
-    const [teamName, setName] = React.useState("");
-    const [record, setRecord] = React.useState("");
-    const [seed, setSeed] = React.useState("");
-    const [players, setPlayers] = React.useState("");
+export default function RegisterTeam({ navigation }){
+    const [teamName, setName] = useState("");
+    const [record, setRecord] = useState("");
+    const [seed, setSeed] = useState("");
+    const [players, setPlayers] = useState("");
 
     useEffect(() => {
         db.transaction(function (txn) {
@@ -27,7 +24,7 @@ export default function RegisterTeam(){
               if (res.rows.length == 0) {
                 txn.executeSql('DROP TABLE IF EXISTS Team_Table', []);
                 txn.executeSql("CREATE TABLE IF NOT EXISTS Team_Table(teamID INTEGER PRIMARY KEY AUTOINCREMENT, "
-                  + "teamName VARCHAR(25), record VARCHAR(25), seed INT(15), players INT(15) ",
+                  + "teamName VARCHAR(25), record VARCHAR(25), seed INT(15), players INT(15))",
                   []
                 );
               }
