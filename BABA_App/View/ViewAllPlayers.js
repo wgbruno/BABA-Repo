@@ -70,12 +70,26 @@ export default function ViewAllPlayers({ navigation }){
                         paramLast: item.lastName,
                         paramAge: item.age,
                         paramNumber: item.number,
-                        paramHeight: item.height});}}>
+                        paramHeight: item.height,
+                        paramPoints: item.points,
+                        paramRebounds: item.rebounds,
+                        paramAssists: item.assists,
+                        paramBlocks: item.blocks,
+                        paramSteals: item.steals,
+                        paramFouls: item.fouls,
+                        paramTurnovers: item.turnovers});}}>
                         <Text style={styles.itemsStyle}>First Name: {item.firstName}</Text>
                         <Text style={styles.itemsStyle}>Last Name: {item.lastName}</Text>
                         <Text style={styles.itemsStyle}>Age: {item.age}</Text>
                         <Text style={styles.itemsStyle}>Number: {item.number}</Text>
                         <Text style={styles.itemsStyle}>Height: {item.height}</Text>
+                        <Text style={styles.itemsStyle}>PTS: {item.points}</Text>
+                        <Text style={styles.itemsStyle}>REB: {item.rebounds}</Text>
+                        <Text style={styles.itemsStyle}>AST: {item.assists}</Text>
+                        <Text style={styles.itemsStyle}>BLK: {item.blocks}</Text>
+                        <Text style={styles.itemsStyle}>STL: {item.steals}</Text>
+                        <Text style={styles.itemsStyle}>PF: {item.fouls}</Text>
+                        <Text style={styles.itemsStyle}>TO: {item.turnovers}</Text>
                     </TouchableOpacity>
                 </View>
                 }
