@@ -14,7 +14,8 @@ const AppNavigator = createStackNavigator(
       HomeScreen: Home,  
       PlayerReg: AddPlayer,
       ViewPlayers: ViewAllPlayers, 
-      UpdatePlayers: EditPlayer
+      UpdatePlayers: EditPlayer,
+      TeamReg: AddTeam
   },  
   {  
       initialRouteName: "HomeScreen"  
