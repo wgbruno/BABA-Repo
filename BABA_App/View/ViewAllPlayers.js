@@ -1,9 +1,11 @@
 import React, {useEffect, useState} from 'react';
 import { Button, Text, TextInput, TouchableOpacity, View, StyleSheet } from 'react-native';
 import { FlatList } from 'react-native-gesture-handler';
+import { NavigationContainer } from 'react-native';
+import {createStackNavigator} from 'react-navigation-stack';
 import { db } from './AddPlayer';
 
-export default function ViewAllPlayers(){
+export default function ViewAllPlayers({ navigation }){
     const [items, setItems] = useState([]);
     const [empty, setEmpty] = useState([]);
 
@@ -61,11 +63,20 @@ export default function ViewAllPlayers(){
                 keyExtractor={(item, index) => index.toString()}
                 renderItem={({ item }) =>
                 <View key={item.number} style={{ padding: 20}}>
-                    <Text style={styles.itemsStyle}>First Name: {item.firstName}</Text>
-                    <Text style={styles.itemsStyle}>Last Name: {item.lastName}</Text>
-                    <Text style={styles.itemsStyle}>Age: {item.age}</Text>
-                    <Text style={styles.itemsStyle}>Number: {item.number}</Text>
-                    <Text style={styles.itemsStyle}>Height: {item.height}</Text>
+                    <TouchableOpacity 
+                        onPress={() => {navigation.navigate('UpdatePlayers', {
+                        paramID: item.playerID,
+                        paramFirst: item.firstName,
+                        paramLast: item.lastName,
+                        paramAge: item.age,
+                        paramNumber: item.number,
+                        paramHeight: item.height});}}>
+                        <Text style={styles.itemsStyle}>First Name: {item.firstName}</Text>
+                        <Text style={styles.itemsStyle}>Last Name: {item.lastName}</Text>
+                        <Text style={styles.itemsStyle}>Age: {item.age}</Text>
+                        <Text style={styles.itemsStyle}>Number: {item.number}</Text>
+                        <Text style={styles.itemsStyle}>Height: {item.height}</Text>
+                    </TouchableOpacity>
                 </View>
                 }
             />
