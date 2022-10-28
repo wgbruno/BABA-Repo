@@ -1,6 +1,24 @@
 import {expect, jest, test} from '@jest/globals';
 import AddPlayer from "../View/AddPlayer";
 import EditPlayer from "../View/EditPlayer";
+import renderer from "react-test-renderer";
+
+/* example code for reference
+import renderer from 'react-test-renderer';
+import Link from '../Link';
+
+if('renders correctly', () => {
+    const tree = renderer
+        .create(<Link page="http://www.facebook.com">Facebook</Link>)
+        .toJSON();
+    expect(tree).toMatchSnapshot();
+})*/
+
+test('Add New Player', () => {
+    const temp = renderer.create(<AddPlayer firstName="Random"></AddPlayer>).toJSON();
+    expect(temp).toMatchSnapshot();
+    /*dont know what to put in between AddPlayer brakcets, if anything even goes there*/
+})
 
 
 test('Add New Player', function(){
