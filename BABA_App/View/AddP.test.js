@@ -8,8 +8,9 @@ import { openDatabase } from "react-native-sqlite-storage";
 import effectCall from '../DAOs/AddPlayerDao';
 import insertPlay from '../DAOs/AddPlayerDao';
 import viewPlay from '../DAOs/AddPlayerDao';
+import Player from '../Objects/Player';
 
-export var db = openDatabase({name: 'PlayerDatabase.db'});
+export var db = openDatabase({name: 'TestDatabase.db'});
 
 export default function AddPlayer({ navigation }){
     const [firstName, setFirst] = useState("");
@@ -18,20 +19,7 @@ export default function AddPlayer({ navigation }){
     const [number, setNumber] = useState("");
     const [height, setHeight] = useState("");
 
-    useEffect(() => {
-        effectCall();
-        
-        // take this code out and put it into a new class/function
-        // we only have one layer right now, need to seperate it
-    }, []);
-
-    const insertPlayer = () => {
-        insertPlay();
-    }
-    
-    const viewPlayer = () => {
-        viewPlay();
-    }
+    const p = new Player(firstName,lastName,age,number,height);
 
     return (<>
         <View style={FormStyle.groupView}>

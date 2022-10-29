@@ -1,4 +1,5 @@
 import { Stats } from './Stats.js';
+import AddPlayer from '../DAOs/AddPlayerDao.js';
 
 // rename this to PlayerController?? or PlayerDao?
 export class Player {
@@ -10,6 +11,8 @@ export class Player {
         this.age = age;
         this.height = height;
         this.stats = stats;
+
+        AddPlayer(this.getProfile());
     }
 
     //call this method to use in sqllite execute call from AddPlayer
