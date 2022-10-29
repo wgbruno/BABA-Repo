@@ -4,7 +4,7 @@ import AddPlayer from '../DAOs/AddPlayerDao.js';
 // rename this to PlayerController?? or PlayerDao?
 export class Player {
     //create player
-    constructor(firstName, lastName, number, age, height, stats){
+    constructor(firstName, lastName, number, age, height, stats, navigation){
         this.firstName = firstName;
         this.lastName = lastName;
         this.number = number;
@@ -12,7 +12,7 @@ export class Player {
         this.height = height;
         this.stats = stats;
 
-        AddPlayer(this.getProfile());
+        AddPlayer(navigation, this.getProfile());
     }
 
     //call this method to use in sqllite execute call from AddPlayer
@@ -65,6 +65,10 @@ export class Player {
         this.stats = newStats;
     }
 
+    /*
+    deletePlayer(){
+        //nullify all the attributes and do something to remove from db?
+    }*/
     //delete player: anything needed here, or just remove entry from db?
 }
 

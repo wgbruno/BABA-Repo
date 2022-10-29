@@ -19,7 +19,7 @@ export default function AddPlayer({ navigation }){
     const [number, setNumber] = useState("");
     const [height, setHeight] = useState("");
 
-    const p = new Player(firstName,lastName,age,number,height);
+    const p = new Player(firstName,lastName,age,number,height,navigation);
 
     return (<>
         <View style={FormStyle.groupView}>
