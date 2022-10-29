@@ -7,7 +7,7 @@ import { NavigationContainer } from 'react-native';
 import { openDatabase } from 'react-native-sqlite-storage';
 import Team from '../Objects/Team';
 
-export var db = openDatabase({name: 'TeamDatabase.db'});
+export var db = openDatabase({name: 'TestDatabase.db'});
 
 export default function RegisterTeam({ navigation }){
     const [teamName, setName] = useState("");
