@@ -1,6 +1,4 @@
-import { Player } from '/Player.js';
-import RegisterTeam from '../View/AddTeamDao.js';
-
+import RegisterTeam from '../DAOs/AddTeamDao.js';
 
 export class Team {
     //create team

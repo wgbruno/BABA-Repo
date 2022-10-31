@@ -1,5 +1,5 @@
 import {expect, jest, test} from '@jest/globals';
-import Player from '../Objects/Player';
+import Player from "../Objects/Player.js"
 import { openDatabase } from 'react-native-sqlite-storage';
 
 export var db = openDatabase({name: 'TestDatabase.db'});

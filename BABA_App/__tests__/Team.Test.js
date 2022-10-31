@@ -1,5 +1,5 @@
 import {expect, jest, test} from '@jest/globals';
-import Team from '../Objects/Team';
+import Team from '../Objects/Team.js';
 import { openDatabase } from 'react-native-sqlite-storage';
 
 /*
