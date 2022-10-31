@@ -35,7 +35,7 @@ export default function RegisterTeam({ navigation }){
 
     const insertTeam = () => {
         db.transaction(function (tx) {
-            tx.executeSql("INSERT INTO Team_Table(teamName, record, seed, players "
+            tx.executeSql("INSERT INTO Team_Table(teamName, record, seed, players) "
                 + "VALUES (?,?,?,?)",
                 [teamName, record, seed, players],
                 (tx, results) => {

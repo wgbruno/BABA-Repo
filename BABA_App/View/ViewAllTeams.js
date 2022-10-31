@@ -65,10 +65,11 @@ export default function ViewAllTeams({ navigation }){
                 <View key={item.number} style={{ padding: 20}}>
                     <TouchableOpacity 
                         onPress={() => {navigation.navigate('UpdateTeams', {
-                        paramID: item.teamName,
-                        paramFirst: item.record,
-                        paramLast: item.seed,
-                        paramAge: item.players,});}}>
+                        paramID: item.teamID,
+                        paramName: item.teamName,
+                        paramRecord: item.record,
+                        paramSeed: item.seed,
+                        paramPlayers: item.players});}}>
                         <Text style={styles.itemsStyle}>Name: {item.teamName}</Text>
                         <Text style={styles.itemsStyle}>Record: {item.record}</Text>
                         <Text style={styles.itemsStyle}>Seed: {item.seed}</Text>

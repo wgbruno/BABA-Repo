@@ -5,9 +5,12 @@ import AddTeam from "./View/AddTeam.js";
 import Home from "./View/Home.js";
 import ViewAllPlayers from "./View/ViewAllPlayers.js";
 import EditPlayer from "./View/EditPlayer.js";
+import ViewAllTeams from "./View/ViewAllTeams.js";
+import EditTeam from "./View/EditTeam.js";
 import FormStyle from "./Style/Form.style";
 import {createAppContainer} from 'react-navigation'; 
 import {createStackNavigator} from 'react-navigation-stack';
+
 
 const AppNavigator = createStackNavigator(  
   {  
@@ -15,7 +18,9 @@ const AppNavigator = createStackNavigator(
       PlayerReg: AddPlayer,
       ViewPlayers: ViewAllPlayers, 
       UpdatePlayers: EditPlayer,
-      TeamReg: AddTeam
+      TeamReg: AddTeam,
+      ViewTeams: ViewAllTeams,
+      UpdateTeams: EditTeam
   },  
   {  
       initialRouteName: "HomeScreen"  
