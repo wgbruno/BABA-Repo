@@ -23,7 +23,7 @@ export default function EditTeam({route, navigation}){
 
     const updateTeam = () => {
         db.transaction((tx) => {
-            tx.executeSql('UPDATE Team_Table set name=?, record=?, '
+            tx.executeSql('UPDATE Team_Table set teamName=?, record=?, '
             + 'seed=?, players=? where teamID=?', 
             [name, seed, record, players, teamID],
             (tx, results) => {
