@@ -1,6 +1,5 @@
 import React, {useEffect, useState} from 'react';
 import { Button, Text, TextInput, TouchableOpacity, View, ScrollView, Alert } from 'react-native';
-import { createAppContainer, createStackNavigator } from 'react-navigation'; 
 import { NavigationContainer } from 'react-native';
 import MainStyle from "../Style/MainStyle.style";
 import FormStyle from "../Style/Form.style";
