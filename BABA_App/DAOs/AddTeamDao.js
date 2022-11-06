@@ -1,8 +1,3 @@
-import React, {useState, useEffect} from 'react';
-import { Alert, Button, Text, TextInput, TouchableOpacity, View } from 'react-native';
-import MainStyle from "../Style/MainStyle.style";
-import FormStyle from "../Style/Form.style";
-import { NavigationContainer } from 'react-native';
 import Realm from "realm";
 
 // Returns the shared instance of the Realm app.
