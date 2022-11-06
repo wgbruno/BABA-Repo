@@ -1,29 +1,19 @@
 import React, {useState} from 'react';
-import {
-  View,
-  Text,
-  Image,
-  StyleSheet,
-  useWindowDimensions,
-  ScrollView,
-} from 'react-native';
+import { View, Text, Image, StyleSheet, useWindowDimensions, ScrollView } from 'react-native';
 import Logo from '../../../assets/images/Logo_1.png';
-import CustomInput from '../../components/CustomInput';
-import CustomButton from '../../components/CustomButton';
+import CustomInput from '../../../src/components/CustomInput'
+import CustomButton from '../../../src/components/CustomButton';
+import { NavigationContainer } from 'react-native';
 
-import {useNavigation} from '@react-navigation/native';
-
-
-const SignInScreen = () => {
+export default function SignInScreen({navigation}){
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
 
   const {height} = useWindowDimensions();
-  const navigation = useNavigation();
 
   const onSignInPressed = () => {
-    // validate user
-    navigation.navigate('Home');
+    //VALIDATE USER
+    navigation.navigate('HomeScreen');
   };
 
   const onForgotPasswordPressed = () => {
@@ -91,5 +81,3 @@ const styles = StyleSheet.create({
     maxHeight: 300,
   },
 });
-
-export default SignInScreen;

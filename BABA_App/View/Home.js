@@ -27,6 +27,31 @@ export default class Home extends React.Component{
                     onPress={() => this.props.navigation.navigate('ViewTeams')}
                     title="View Teams">
                 </Button>
+                <Button 
+                    style={FormStyle.formButton} 
+                    onPress={() => this.props.navigation.navigate('SignIn')}
+                    title="Sign In">
+                </Button>
+                <Button 
+                    style={FormStyle.formButton} 
+                    onPress={() => this.props.navigation.navigate('SignUp')}
+                    title="Sign Up">
+                </Button>
+                <Button 
+                    style={FormStyle.formButton} 
+                    onPress={() => this.props.navigation.navigate('ConfirmEmail')}
+                    title="Confirm Email">
+                </Button>
+                <Button 
+                    style={FormStyle.formButton} 
+                    onPress={() => this.props.navigation.navigate('ForgotPassword')}
+                    title="Forgot Password">
+                </Button>
+                <Button 
+                    style={FormStyle.formButton} 
+                    onPress={() => this.props.navigation.navigate('NewPassword')}
+                    title="New Password">
+                </Button>
             </View>    
         </>);
     }

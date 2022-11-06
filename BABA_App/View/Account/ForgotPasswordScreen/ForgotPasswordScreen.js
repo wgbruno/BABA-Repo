@@ -1,18 +1,14 @@
 import React, {useState} from 'react';
 import {View, Text, StyleSheet, ScrollView} from 'react-native';
-import CustomInput from '../../components/CustomInput';
-import CustomButton from '../../components/CustomButton';
+import CustomInput from '../../../src/components/CustomInput';
+import CustomButton from '../../../src/components/CustomButton';
+import { NavigationContainer } from 'react-native';
 
-import {useNavigation} from '@react-navigation/native';
+export default function ForgotPasswordScreen({navigation}){
+  const [username, setUsername] = useState('');
 
-const NewPasswordScreen = () => {
-  const [code, setCode] = useState('');
-  const [newPassword, setNewPassword] = useState('');
-
-  const navigation = useNavigation();
-
-  const onSubmitPressed = () => {
-    navigation.navigate('Home');
+  const onSendPressed = () => {
+    navigation.navigate('NewPassword');
   };
 
   const onSignInPress = () => {
@@ -24,15 +20,13 @@ const NewPasswordScreen = () => {
       <View style={styles.root}>
         <Text style={styles.title}>Reset your password</Text>
 
-        <CustomInput placeholder="Code" value={code} setValue={setCode} />
-
         <CustomInput
-          placeholder="Enter your new password"
-          value={newPassword}
-          setValue={setNewPassword}
+          placeholder="Username"
+          value={username}
+          setValue={setUsername}
         />
 
-        <CustomButton text="Submit" onPress={onSubmitPressed} />
+        <CustomButton text="Send" onPress={onSendPressed} />
 
         <CustomButton
           text="Back to Sign in"
@@ -63,5 +57,3 @@ const styles = StyleSheet.create({
     color: '#FDB075',
   },
 });
-
-export default NewPasswordScreen;

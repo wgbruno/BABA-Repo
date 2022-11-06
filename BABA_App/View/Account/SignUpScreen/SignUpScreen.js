@@ -1,19 +1,16 @@
 import React, {useState} from 'react';
 import {View, Text, StyleSheet, ScrollView} from 'react-native';
 import CheckBox from '@react-native-community/checkbox';
-import CustomInput from '../../components/CustomInput';
-import CustomButton from '../../components/CustomButton';
+import CustomInput from '../../../src/components/CustomInput';
+import CustomButton from '../../../src/components/CustomButton';
+import { NavigationContainer } from 'react-native';
 
-import {useNavigation} from '@react-navigation/core';
-
-const SignUpScreen = () => {
+export default function SignUpScreen({navigation}){
   const [username, setUsername] = useState('');
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [passwordRepeat, setPasswordRepeat] = useState('');
   const [isSelected, setSelection] = useState(false);
-
-  const navigation = useNavigation();
 
   const onRegisterManager = () => {
     navigation.navigate('AddTeam');
@@ -127,5 +124,3 @@ const styles = StyleSheet.create({
     margin: 8,
   },
 });
-
-export default SignUpScreen;

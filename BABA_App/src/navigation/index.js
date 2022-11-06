@@ -3,14 +3,11 @@ import {View, Text} from 'react-native';
 import {NavigationContainer} from '@react-navigation/native';
 import {createNativeStackNavigator} from '@react-navigation/native-stack';
 
-import SignInScreen from '../screens/SignInScreen';
-import SignUpScreen from '../screens/SignUpScreen';
-import ConfirmEmailScreen from '../screens/ConfirmEmailScreen';
-import ForgotPasswordScreen from '../screens/ForgotPasswordScreen';
-import NewPasswordScreen from '../screens/NewPasswordScreen';
-import HomeScreen from '../screens/HomeScreen';
-import AddTeam from '../screens/AddPlayer';
-import AddPlayer from '../screens/AddTeam';
+import SignInScreen from '../../View/Account/SignInScreen';
+import SignUpScreen from '../../View/Account/SignUpScreen';
+import ConfirmEmailScreen from '../../View/Account/ConfirmEmailScreen';
+import ForgotPasswordScreen from '../../View/Account/ForgotPasswordScreen';
+import NewPasswordScreen from '../../View/Account/NewPasswordScreen';
 
 const Stack = createNativeStackNavigator();
 
@@ -23,9 +20,6 @@ const Navigation = () => {
         <Stack.Screen name="ConfirmEmail" component={ConfirmEmailScreen} />
         <Stack.Screen name="ForgotPassword" component={ForgotPasswordScreen} />
         <Stack.Screen name="NewPassword" component={NewPasswordScreen} />
-        <Stack.Screen name="AddPlayer" component={AddPlayer}/>
-        <Stack.Screen name="AddTeam" component={AddTeam}/>
-        <Stack.Screen name="Home" component={HomeScreen} />
       </Stack.Navigator>
     </NavigationContainer>
   );
