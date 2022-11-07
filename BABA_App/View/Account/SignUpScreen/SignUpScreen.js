@@ -4,25 +4,26 @@ import CheckBox from '@react-native-community/checkbox';
 import CustomInput from '../../../src/components/CustomInput';
 import CustomButton from '../../../src/components/CustomButton';
 import { NavigationContainer } from 'react-native';
+import { Account } from '../../../Objects/AccountCont';
 
 export default function SignUpScreen({navigation}){
   const [username, setUsername] = useState('');
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [passwordRepeat, setPasswordRepeat] = useState('');
-  const [isSelected, setSelection] = useState(false);
 
-  const onRegisterManager = () => {
+  /*const onRegisterManager = () => {
     navigation.navigate('AddTeam');
-  };
+  };*/
 
   const onRegisterPlayer = () => {
-    navigation.navigate('AddPlayer');
+    var account = new Account(username, email, password, "N/A", "N/A");
+    console.log(account.getAccount());
+    navigation.navigate('HomeScreen');
   };
 
   const onSignInPress = () => {
     navigation.navigate('SignIn');
-
   };
 
   const onTermsOfUsePressed = () => {
@@ -57,18 +58,8 @@ export default function SignUpScreen({navigation}){
           setValue={setPasswordRepeat}
           secureTextEntry
         />
-        <View style = {styles.container}>
-          <View style = {styles.checkboxContainer}>
-            <CheckBox
-              value = {isSelected}
-              onValueChange={setSelection}
-              style={styles.checkbox}
-            />
-            <Text style={styles.label}>I'm a manager.</Text>
-          </View>
-        </View>
         
-        <CustomButton text="Register" onPress={isSelected ? onRegisterPlayer : onRegisterManager} />
+        <CustomButton text="Register" onPress={onRegisterPlayer} />
 
         <Text style={styles.text}>
           By registering, you confirm that you accept our{' '}
