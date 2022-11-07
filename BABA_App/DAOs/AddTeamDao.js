@@ -3,63 +3,49 @@ import { Alert, Button, Text, TextInput, TouchableOpacity, View } from 'react-na
 import MainStyle from "../Style/MainStyle.style";
 import FormStyle from "../Style/Form.style";
 import { NavigationContainer } from 'react-native';
-import { openDatabase } from 'react-native-sqlite-storage';
+import Realm from "realm";
 
-export var db = openDatabase({name: 'TeamDatabase.db'});
+// Returns the shared instance of the Realm app.
+/*export function getRealmApp() {
+    const appId = '<enter your App ID here>'; // Set App ID here.
+    const appConfig = {
+      id: appId,
+      timeout: 10000,
+    };
+   return new Realm.App(appConfig);
+ }*/
 
-export default function RegisterTeam({ navigation, teamProfile }){
-    useEffect(() => {
-        db.transaction(function (txn) {
-          txn.executeSql(
-            "SELECT name FROM sqlite_master WHERE type='table' AND name='Team_Table'",
-            [],
-            function(tx, res) {
-              console.log('item:', res.rows.length);
-              if (res.rows.length == 0) {
-                txn.executeSql('DROP TABLE IF EXISTS Team_Table', []);
-                txn.executeSql("CREATE TABLE IF NOT EXISTS Team_Table(teamID INTEGER PRIMARY KEY AUTOINCREMENT, "
-                  + "teamName VARCHAR(25), record VARCHAR(25), seed INT(15), players INT(15))",
-                  []
-                );
-              }
-            }
-          );
-        })
-    }, []);
+class teamSchema extends Realm.Object {}
 
-    const insertTeam = () => {
-        db.transaction(function (tx) {
-            tx.executeSql("INSERT INTO Team_Table(teamName, record, seed, players "
-                + "VALUES (?,?,?,?)",
-                teamProfile,
-                (tx, results) => {
-                    console.log('Results', results.rowsAffected);
-                    if (results.rowsAffected > 0) {
-                        Alert.alert('Inserted','Team Inserted Successfully', [{
-                            text: 'Ok',
-                            onPress: () => navigation.navigate('HomeScreen'),
-                        },],
-                        {cancelable: false});
-                    } else
-                        Alert.alert('Failed');
-                }
-            );
-        });
-        viewTeam();
-    }
-
-    const viewTeam = () => {
-        db.transaction(function (tx) {
-            tx.executeSql(
-                'SELECT * FROM Team_Table',
-                [],
-                (tx, results) => {
-                    var temp = [];
-                    for (let i = 0; i < results.rows.length; i++)
-                        temp.push(results.rows.item(i));
-                    console.log(temp);
-                }
-            );
-        });
+//export default function RegisterTeam({ navigation }){
+teamSchema.schema = {
+    name : "Team",
+    properties : {
+        teamName : 'string',
+        wins : 'int',
+        losses : 'int',
+        seed : 'int',
+        players : {type : "list", objectType : "string"}
     }
 };
+
+export function insertTeam(_teamName, _wins, _losses, _seed, _players){
+    realm.write(() => {
+        const team = realm.create('Team', {
+            teamName : _teamName,
+            wins: _wins,
+            losses : _losses,
+            seed : _seed,
+            players : _players
+        });
+    });
+}
+
+export function getAllTeams(){
+    return realm.objects("Team");
+}
+
+let realm = new Realm({schema: [teamSchema], schemaVersion: 1});
+
+// Export the realm
+export default realm;
