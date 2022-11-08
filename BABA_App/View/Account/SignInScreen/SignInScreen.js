@@ -4,6 +4,7 @@ import Logo from '../../../assets/images/Logo_1.png';
 import CustomInput from '../../../src/components/CustomInput'
 import CustomButton from '../../../src/components/CustomButton';
 import { NavigationContainer } from 'react-native';
+import { Account } from '../../../Objects/AccountCont';
 
 export default function SignInScreen({navigation}){
   const [username, setUsername] = useState('');
@@ -13,6 +14,8 @@ export default function SignInScreen({navigation}){
 
   const onSignInPressed = () => {
     //VALIDATE USER
+    var account = new Account(username, password);
+    console.log(account.getAccount());
     navigation.navigate('HomeScreen');
   };
 
@@ -25,7 +28,7 @@ export default function SignInScreen({navigation}){
   };
 
   const onGuest = () => {
-    navigation.navigate('GuestMode');
+    navigation.navigate('HomeScreen');
   };
 
   

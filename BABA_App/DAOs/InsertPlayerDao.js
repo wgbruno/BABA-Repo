@@ -7,7 +7,6 @@ export var db = openDatabase({name: 'BABA.db'});
 
 
 export default function InsertPlayerDao(playerProfile){
-    const navigation = useNavigation();
     useEffect(() => {
         db.transaction(function (tx) {
             tx.executeSql("INSERT INTO Player_Table(firstName, lastName, age, number, height, "
@@ -19,7 +18,6 @@ export default function InsertPlayerDao(playerProfile){
                     if (results.rowsAffected > 0) {
                         Alert.alert('Inserted','Player Inserted Successfully', [{
                             text: 'Ok',
-                            onPress: () => navigation.navigate('HomeScreen'),
                         },],
                         {cancelable: false});
                     } else
