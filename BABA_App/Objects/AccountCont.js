@@ -23,6 +23,9 @@ export class Account{
     passCheck(){
         return checkPassword(this.userName, this.password);
     }
+    confirmEmail(){
+        Email
+    }
     //Get methods
     getAccount(){
         return [this.userName, this.email, this.password, this.accountID, this.accountType];

@@ -23,6 +23,7 @@ export default function ConfirmEmailScreen({navigation}){
     <ScrollView showsVerticalScrollIndicator={false}>
       <View style={styles.root}>
         <Text style={styles.title}>Confirm your email</Text>
+        <Text style={styles.text}>We sent a 4 digit confrimation code to your email. Please enter that 4 digit code to continue.</Text>
 
         <CustomInput
           placeholder="Enter your confirmation code"
