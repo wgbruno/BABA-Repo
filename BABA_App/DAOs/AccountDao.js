@@ -53,13 +53,16 @@ export function findAccount(_userName, verify){
         }
     }
 }
-
+//realm.objects("Account").filtered('password == $0', _password)
 export function checkPassword(_userName, _password){
-    if(realm.objects("Account").filtered('password == $0', _password)){
-        return 0;
-    } else{
+    var correctLogin = realm.objectForPrimaryKey('Account', _userName);
+    if(correctLogin['password'] == _password){
+        return 0
+    }
+    else{
         return 1;
     }
+ 
 }
 
 export function changePassword(_username, _password){

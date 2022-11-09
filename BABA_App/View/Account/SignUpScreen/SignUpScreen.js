@@ -1,10 +1,12 @@
 import React, {useState} from 'react';
-import {View, Text, StyleSheet, ScrollView, Alert} from 'react-native';
+import {View, Text, StyleSheet, ScrollView, Alert, Linking} from 'react-native';
+import Communications from 'react-native-communications'
 import CheckBox from '@react-native-community/checkbox';
 import CustomInput from '../../../src/components/CustomInput';
 import CustomButton from '../../../src/components/CustomButton';
 import { NavigationContainer } from 'react-native';
 import { Account } from '../../../Objects/AccountCont';
+import { sub } from 'react-native-reanimated';
 
 
 export default function SignUpScreen({navigation}){
@@ -23,10 +25,18 @@ export default function SignUpScreen({navigation}){
       Alert.alert("This username already exists.", "Please try a different username.");
       console.log("Duplicate username");
     } else{
+      sendEmail(email);
       Alert.alert("Success","Account Created!");
-      navigation.navigate('HomeScreen');
+      navigation.navigate('ConfirmEmail');
     }
   };
+
+  const sendEmail = (to) => {
+    var val = Math.floor(1000 + Math.random() * 9000);
+    var subject = "Email Verification Code for BABA";
+    var body = "This is your 4 digit verification code: ${val} Please enter this code in the app."
+    Communications.email(to, null, null, subject, body);
+  }
 
   const onSignInPress = () => {
     navigation.navigate('SignIn');
