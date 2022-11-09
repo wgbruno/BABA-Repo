@@ -1,15 +1,33 @@
 import React, {useState} from 'react';
-import {View, Text, StyleSheet, ScrollView} from 'react-native';
+import {View, Text, StyleSheet, ScrollView, Alert} from 'react-native';
 import CustomInput from '../../../src/components/CustomInput'
 import CustomButton from '../../../src/components/CustomButton';
 import { NavigationContainer } from 'react-native';
+import { Account } from '../../../Objects/AccountCont';
 
 export default function NewPasswordScreen({navigation}){
-  const [code, setCode] = useState('');
+  const [userName, setUserName] = useState('');
+  const [password, setPassword] = useState('');
   const [newPassword, setNewPassword] = useState('');
+  const [rePassword, setRePassword] = useState('');
   
+  const account = new Account(userName, null, password);
+
   const onSubmitPressed = () => {
-    navigation.navigate('Home');
+    if(newPassword != rePassword){
+      Alert.alert("New passwords Do Not Match!", "Please submit passwords again.");
+    } 
+    if(account.newPassword(newPassword) == 1){
+      Alert.alert("Username does not exist","The username you entered does not exist. Try again.");
+    }
+    if(account.newPassword(newPassword) == 2){
+      Alert.alert("Incorrect Password","Please reenter your current password.");
+    }
+    else{
+      Alert.alert('Password Changed', 'You have succesfully changed your password.');
+      navigation.navigate('HomeScreen');
+    }
+    
   };
 
   const onSignInPress = () => {
@@ -21,12 +39,20 @@ export default function NewPasswordScreen({navigation}){
       <View style={styles.root}>
         <Text style={styles.title}>Reset your password</Text>
 
-        <CustomInput placeholder="Code" value={code} setValue={setCode} />
+        <CustomInput placeholder="Username" value={userName} setValue={setUserName} />
+        
+        <CustomInput placeholder="Old password" value={password} setValue={setPassword} />
 
         <CustomInput
           placeholder="Enter your new password"
           value={newPassword}
           setValue={setNewPassword}
+        />
+
+        <CustomInput
+          placeholder="Reenter your new password"
+          value={rePassword}
+          setValue={setRePassword}
         />
 
         <CustomButton text="Submit" onPress={onSubmitPressed} />
