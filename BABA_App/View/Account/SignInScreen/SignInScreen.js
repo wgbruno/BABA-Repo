@@ -1,9 +1,10 @@
 import React, {useState} from 'react';
-import { View, Text, Image, StyleSheet, useWindowDimensions, ScrollView } from 'react-native';
+import { View, Text, Image, StyleSheet, useWindowDimensions, ScrollView, Alert } from 'react-native';
 import Logo from '../../../assets/images/Logo_1.png';
 import CustomInput from '../../../src/components/CustomInput'
 import CustomButton from '../../../src/components/CustomButton';
 import { NavigationContainer } from 'react-native';
+import { Account } from '../../../Objects/AccountCont';
 
 export default function SignInScreen({navigation}){
   const [username, setUsername] = useState('');
@@ -12,8 +13,16 @@ export default function SignInScreen({navigation}){
   const {height} = useWindowDimensions();
 
   const onSignInPressed = () => {
-    //VALIDATE USER
-    navigation.navigate('HomeScreen');
+    var account = new Account(username, password);
+    console.log(account.getAccount());
+    if(account.search()){
+      Alert.alert("Unable to login","No account matching this Username.");
+    } else if(account.passCheck()){
+      Alert.alert("Unable to login","Incorrect Password.");
+    } else{
+      Alert.alert("Success", "You have logged in!");
+      navigation.navigate('HomeScreen');
+    }
   };
 
   const onForgotPasswordPressed = () => {
@@ -25,7 +34,7 @@ export default function SignInScreen({navigation}){
   };
 
   const onGuest = () => {
-    navigation.navigate('GuestMode');
+    navigation.navigate('HomeScreen');
   };
 
   

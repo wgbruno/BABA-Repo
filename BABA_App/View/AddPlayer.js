@@ -4,10 +4,12 @@ import MainStyle from "../Style/MainStyle.style";
 import FormStyle from "../Style/Form.style";
 import { NavigationContainer } from 'react-native';
 import { openDatabase } from "react-native-sqlite-storage";
-import { Player } from '../Objects/PlayerConst';
+import { Player } from '../Objects/PlayerCont';
+import AddPlayerDao from '../DAOs/AddPlayerDao';
+import InsertPlayerDao from '../DAOs/InsertPlayerDao';
 
 export default function AddPlayer(){
-    var p = new Player()
+    var player = new Player();
     
     return (<>
         <View style={FormStyle.groupView}>
@@ -15,21 +17,21 @@ export default function AddPlayer(){
         </View>
         <View style={FormStyle.groupView}>
             <Text style={FormStyle.label}>First Name:</Text>
-            <TextInput onChangeText={p.setFirst} style={FormStyle.input} autoCapitalize={false} />
+            <TextInput onChangeText={player.setFirst} style={FormStyle.input} autoCapitalize={false} />
             
             <Text style={FormStyle.label}>Last Name:</Text>
-            <TextInput onChangeText={p.setLast} style={FormStyle.input} autoCapitalize={false} />
+            <TextInput onChangeText={player.setLast} style={FormStyle.input} autoCapitalize={false} />
             
             <Text style={FormStyle.label}>Age:</Text>
-            <TextInput onChangeText={p.setAge} style={FormStyle.input} autoCapitalize={false} />
+            <TextInput onChangeText={player.setAge} style={FormStyle.input} autoCapitalize={false} />
             
             <Text style={FormStyle.label}>Number:</Text>
-            <TextInput onChangeText={p.setNumber} style={FormStyle.input} autoCapitalize={false} />
+            <TextInput onChangeText={player.setNumber} style={FormStyle.input} autoCapitalize={false} />
 
             <Text style={FormStyle.label}>Height:</Text>
-            <TextInput onChangeText={p.setHeight} style={FormStyle.input} autoCapitalize={false} />
+            <TextInput onChangeText={player.setHeight} style={FormStyle.input} autoCapitalize={false} />
 
-            <TouchableOpacity style={FormStyle.formButton} onPress={p.updateProfile(p)}>
+            <TouchableOpacity style={FormStyle.formButton} onPress={InsertPlayerDao(player)}>
                 <Text style={FormStyle.formButtonText}>Submit</Text>
             </TouchableOpacity>
         </View>
