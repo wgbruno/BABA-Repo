@@ -76,6 +76,7 @@ let updateDBSeed = (teamName, newSeed) => {
     let team = getDBTeam(teamName);
     team.seed = newSeed;
 }
+
 // Needs work
 /*
 export function addDBPlayer(teamName, newPlayer){
@@ -84,6 +85,7 @@ export function addDBPlayer(teamName, newPlayer){
 
 // Export the realm
 export default realm;
+
 export {
     insertDBTeam,
     getAllDBTeams,

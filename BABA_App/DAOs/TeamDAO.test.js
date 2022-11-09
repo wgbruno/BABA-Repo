@@ -1,5 +1,5 @@
 import realm, { insertDBTeam, getAllDBTeams, getDBTeam, updateDBName, updateDBWins, updateDBLosses, updateDBSeed } from "../DAOs/AddTeamDao"
-import dao from './AddTeamDao';
+//import dao from './AddTeamDao';
 
 let players = [];
 insertDBTeam('testTeam', 5, 0, 1, players);
