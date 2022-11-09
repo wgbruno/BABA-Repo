@@ -3,12 +3,20 @@ import {View, Text, StyleSheet, ScrollView} from 'react-native';
 import CustomInput from '../../../src/components/CustomInput';
 import CustomButton from '../../../src/components/CustomButton';
 import { NavigationContainer } from 'react-native';
+import { Account } from '../../../Objects/AccountCont';
 
 export default function ConfirmEmailScreen({navigation}){
+  const [userName, setUserName] = useState('');
   const [code, setCode] = useState('');
-
+  var account = new Account(userName, null, null, null, code);
+  
   const onConfirmPressed = () => {
-    navigation.navigate('Home');
+    if(account.checkAccount()){
+      console.log("Verify didnt work");
+    }
+    else{
+      navigation.navigate('SignIn')
+    }
   };
 
   const onSignInPress = () => {
@@ -16,14 +24,19 @@ export default function ConfirmEmailScreen({navigation}){
   };
 
   const onResendPress = () => {
-    console.warn('onResendPress');
+    account.sendEmail();
   };
 
   return (
     <ScrollView showsVerticalScrollIndicator={false}>
       <View style={styles.root}>
         <Text style={styles.title}>Confirm your email</Text>
-        <Text style={styles.text}>We sent a 4 digit confrimation code to your email. Please enter that 4 digit code to continue.</Text>
+
+        <CustomInput
+          placeholder="Enter your username"
+          value={userName}
+          setValue={setUserName}
+        />
 
         <CustomInput
           placeholder="Enter your confirmation code"

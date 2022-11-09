@@ -16,7 +16,7 @@ export default function SignInScreen({navigation}){
     var account = new Account(username, "N/A", password);
     if(account.search()){
       Alert.alert("Unable to login","No account matching this Username.");
-    } if(account.passCheck()){
+    } else if(account.passCheck()){
       Alert.alert("Unable to login","Incorrect Password.");
     } else{
       Alert.alert("Success", "You have logged in!");
@@ -60,7 +60,7 @@ export default function SignInScreen({navigation}){
 
         <CustomButton text="Sign In" onPress={onSignInPressed} />
 
-        <CustomButton text="Guest mode" onPress={onSignInPressed} />
+        <CustomButton text="Guest mode" onPress={onGuest} />
 
         <CustomButton
           text="Forgot password?"

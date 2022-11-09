@@ -1,4 +1,3 @@
-import {expect, jest, test} from '@jest/globals';
 import { Team, getProfile, getName, getPlayers, getTeam, getWins, getLosses, getSeed } from '../Objects/Team.js';
 
 test('Register New Team', function(){

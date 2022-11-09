@@ -10,7 +10,8 @@ AccountSchema.schema = {
         userName: 'string',
         email: 'string',
         password: 'string',
-        accountType: 'string?'
+        accountType: 'string?',
+        verifyCode: 'int'
     }
 };
 
@@ -22,7 +23,8 @@ export function createAccount(_userName, _email, _password){
                 primaryKey: _userName,
                 userName: _userName,
                 email: _email,
-                password: _password
+                password: _password,
+                verifyCode: 0
             });
         });
         return 0;
@@ -53,7 +55,7 @@ export function findAccount(_userName, verify){
         }
     }
 }
-//realm.objects("Account").filtered('password == $0', _password)
+
 export function checkPassword(_userName, _password){
     var correctLogin = realm.objectForPrimaryKey('Account', _userName);
     if(correctLogin['password'] == _password){
@@ -62,14 +64,38 @@ export function checkPassword(_userName, _password){
     else{
         return 1;
     }
- 
 }
 
-export function changePassword(_username, _password){
+export function addCode(_userName, _code){
+    realm.write(() => {
+        var acc = realm.objectForPrimaryKey('Account',_userName);
+        acc['verifyCode'] = _code;
+    })
+}
 
+export function checkCode(_userName, _code){
+    var acc = realm.objectForPrimaryKey('Account', _userName);
+    if(acc['verifyCode'] == _code){
+        return 0;
+    }
+    return 1;
+}
+
+export function changePassword(_userName, _password, _newPassword){
+    if(!(findAccount(_userName, false))){
+        return 1;
+    }
+    if(checkPassword(_userName, _password)){
+        return 2;
+    }
+    realm.write(() => {
+        var account = realm.objectForPrimaryKey('Account',_userName);
+        account['password'] = _newPassword;
+        return 0;
+    })
 }
 
 
-let realm = new Realm({schema: [AccountSchema], schemaVersion: 1});
+let realm = new Realm({schema: [AccountSchema], schemaVersion: 2});
 
 export default realm;

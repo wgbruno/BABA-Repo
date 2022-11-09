@@ -1,17 +1,19 @@
-import { insertDBTeam, deleteDBTeam, updateDBName, updateDBWins, updateDBLosses, updateDBSeed, addDBPlayer} from '../DAOs/AddTeamDao.js';
+import RegisterTeam from '../DAOs/AddTeamDao.js';
 
 export class Team {
-    // Create team
-    constructor(teamName, wins, losses, seed, players){
+    //create team
+    constructor(teamName, record, seed, players, navigation){
         this.teamName = teamName;
-        this.wins = wins;
-        this.losses = losses;
+        this.record = record;
         this.seed = seed;
         this.players = players;
+
+        RegisterTeam(navigation, this.getProfile);
     }
 
-    getTeam(){
-        return [this.teamName, this.wins, this.losses, this.seed, this.players]
+    //needed for sqlite execute call from RegisterTeam
+    getProfile(){
+        return [this.teamName, this.record, this.seed, this.players]
     }
 
     //view team
@@ -19,12 +21,8 @@ export class Team {
         return this.teamName;
     }
 
-    getWins(){
-        return this.wins;
-    }
-
-    getLosses(){
-        return this.losses;
+    getRecord(){
+        return this.record;
     }
 
     getSeed(){
@@ -38,37 +36,23 @@ export class Team {
     //update team
     updateTeamName(newName){
         this.teamName = newName;
-        updateDBName(newName);
     }
 
-    updateWins(newWins){
-        this.wins = newSeed;
-        updateDBWins(newWins);
-    }
-
-    updateLosses(newLosses){
-        this.losses = newSeed;
-        updateDBLosses(newLosses);
+    updateRecord(newRecord){
+        this.record = newRecord;
     }
 
     updateSeed(newSeed){
         this.seed = newSeed;
-        updateDBSeed(newSeed);
     }
 
-    // Needs work
-    addPlayer(newPlayer){
-        this.player = newPlayer;
-        addDBPlayer(newPlayer);
+    updatePlayers(newPlayers){
+        this.players = newPlayers;
     }
 
-    
-    deleteTeam(_teamName){
-        this.teamName = null;
-        this.wins = null;
-        this.losses = null;
-        this.seed = null;
-        this.players = null;
-        deleteDBTeam(_teamName);
-    }
+    /*
+    deleteTeam(){
+        //nullify team attributes and do something to remove from db
+        //keep player objects? would make sense so users don't have to make a new profile
+    }*/
 }
