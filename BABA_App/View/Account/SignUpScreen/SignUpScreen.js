@@ -1,10 +1,11 @@
 import React, {useState} from 'react';
-import {View, Text, StyleSheet, ScrollView} from 'react-native';
+import {View, Text, StyleSheet, ScrollView, Alert} from 'react-native';
 import CheckBox from '@react-native-community/checkbox';
 import CustomInput from '../../../src/components/CustomInput';
 import CustomButton from '../../../src/components/CustomButton';
 import { NavigationContainer } from 'react-native';
 import { Account } from '../../../Objects/AccountCont';
+
 
 export default function SignUpScreen({navigation}){
   const [username, setUsername] = useState('');
@@ -12,14 +13,19 @@ export default function SignUpScreen({navigation}){
   const [password, setPassword] = useState('');
   const [passwordRepeat, setPasswordRepeat] = useState('');
 
-  /*const onRegisterManager = () => {
-    navigation.navigate('AddTeam');
-  };*/
-
   const onRegisterPlayer = () => {
     var account = new Account(username, email, password, "N/A", "N/A");
     console.log(account.getAccount());
-    navigation.navigate('HomeScreen');
+    if(password != passwordRepeat){
+      Alert.alert("Passwords Do Not Match!", "Please submit passwords again.")
+    } 
+    if(account.create()){
+      Alert.alert("This username already exists.", "Please try a different username.");
+      console.log("Duplicate username");
+    } else{
+      Alert.alert("Success","Account Created!");
+      navigation.navigate('HomeScreen');
+    }
   };
 
   const onSignInPress = () => {
