@@ -57,11 +57,9 @@ export function findAccount(_userName, verify){
 }
 
 export function checkPassword(_userName, _password){
-    var correctLogin = realm.objectForPrimaryKey('Account', _userName);
-    if(correctLogin['password'] == _password){
-        return 0
-    }
-    else{
+    if(realm.objects("Account").filtered('password == $0', _password)){
+        return 0;
+    } else{
         return 1;
     }
 }

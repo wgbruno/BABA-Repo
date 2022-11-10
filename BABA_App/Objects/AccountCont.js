@@ -24,6 +24,7 @@ export class Account{
     passCheck(){
         return checkPassword(this.userName, this.password);
     }
+<<<<<<< Updated upstream
     sendEmail(){
         var code = Math.floor(1000 + Math.random() * 9000);
         this.verifyCode = code;
@@ -45,6 +46,8 @@ export class Account{
     newPassword(newPassword){
         return changePassword(this.userName, this.password, newPassword)
     }
+=======
+>>>>>>> Stashed changes
     //Get methods
     getAccount(){
         return [this.userName, this.email, this.password, this.accountID, this.accountType];

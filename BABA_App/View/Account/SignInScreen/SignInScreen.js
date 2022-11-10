@@ -13,7 +13,8 @@ export default function SignInScreen({navigation}){
   const {height} = useWindowDimensions();
 
   const onSignInPressed = () => {
-    var account = new Account(username, "N/A", password);
+    var account = new Account(username, password);
+    console.log(account.getAccount());
     if(account.search()){
       Alert.alert("Unable to login","No account matching this Username.");
     } else if(account.passCheck()){

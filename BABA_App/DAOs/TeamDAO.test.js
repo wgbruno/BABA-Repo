@@ -1,12 +1,15 @@
-import { insertTeam, getAllTeams, realm, teamSchema } from "../DAOs/AddTeamDao"
+import realm, { insertDBTeam, getAllDBTeams, getDBTeam, updateDBName, updateDBWins, updateDBLosses, updateDBSeed } from "../DAOs/AddTeamDao"
+import {expect, jest, test} from '@jest/globals';
+import dao from './AddTeamDao';
+//import dao from './AddTeamDao';
 
-const players = [];
-
-test('Insert team into database', function(){
-    insertTeam("testTeam", 5, 0, 1, players);
-    expect(teamSchema).toContain("testTeam");
+let players = [];
+insertDBTeam('testTeam', 5, 0, 1, players);
+test('Getting team', function(){
+    let team = getDBTeam("testTeam");
+    expect(team.teamName).toBe("testTeam");
+    expect(team.wins).toBe(5);
+    expect(team.losses).toBe(0);
+    expect(team.seed).toBe(1);  
+    expect(team.players).toBe(null);
 })
-
-//insertTeam("team 1", 10, 0, 1, players);
-
-//getAllTeams();

@@ -1,8 +1,3 @@
-import React, {useState, useEffect} from 'react';
-import { Alert, Button, Text, TextInput, TouchableOpacity, View } from 'react-native';
-import MainStyle from "../Style/MainStyle.style";
-import FormStyle from "../Style/Form.style";
-import { NavigationContainer } from 'react-native';
 import Realm from "realm";
 
 // Returns the shared instance of the Realm app.
@@ -29,7 +24,16 @@ teamSchema.schema = {
     }
 };
 
-export function insertTeam(_teamName, _wins, _losses, _seed, _players){
+export function getAllTeams(){
+    return realm.objects("Team");
+}
+
+// Create Realm
+let realm = new Realm({schema: [teamSchema], schemaVersion: 1});
+
+//Functions
+//Insert Team
+let insertDBTeam = (_teamName, _wins, _losses, _seed, _players) => {
     realm.write(() => {
         const team = realm.create('Team', {
             teamName : _teamName,
@@ -41,11 +45,53 @@ export function insertTeam(_teamName, _wins, _losses, _seed, _players){
     });
 }
 
-export function getAllTeams(){
-    return realm.objects("Team");
+//Get all teams in JSON form
+let getAllDBTeams = () => {
+    return realm.objects('Team');
+}
+//Get individual team by name
+let getDBTeam = (_teamName) => {
+    return realm.objects('Team').filtered(`teamName="${_teamName}"`);
+}
+//Delete individual team by name
+let deleteDBTeam = (_teamName) => {
+    realm.write(() => {
+        realm.delete(realm.objects("Team").filtered(_teamName));
+    })
+}
+let updateDBName = (teamName, newName) => {
+    let team = getDBTeam(teamName);
+    team.teamName = newName;
+}
+let updateDBWins = (teamName, newWins) => {
+    let team = getDBTeam(teamName);
+    team.wins = newWins;
+}
+let updateDBLosses = (teamName, newLosses) => {
+    let team = getDBTeam(teamName);
+    team.losses = newLosses;
+}
+let updateDBSeed = (teamName, newSeed) => {
+    let team = getDBTeam(teamName);
+    team.seed = newSeed;
 }
 
-let realm = new Realm({schema: [teamSchema], schemaVersion: 1});
+// Needs work
+/*
+export function addDBPlayer(teamName, newPlayer){
+    
+}*/
 
 // Export the realm
 export default realm;
+
+export {
+    insertDBTeam,
+    getAllDBTeams,
+    getDBTeam,
+    deleteDBTeam,
+    updateDBName,
+    updateDBWins,
+    updateDBLosses,
+    updateDBSeed
+}
