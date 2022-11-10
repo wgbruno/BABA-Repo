@@ -17,6 +17,11 @@ AccountSchema.schema = {
     }
 };
 
+export function getAccountDB(_userName){
+    var account = realm.objectForPrimaryKey("Account", _userName);
+    return new Account(_userName, account['email'], account['password'], account['accountType'], account['verifyCode'], account['logStatus']);
+}
+
 //Creates account in DB, returns 0 on success, 1 on failure or duplicate username
 export function createAccount(_userName, _email, _password){
     if(!(findAccount(_userName, false))){
@@ -44,7 +49,6 @@ export function findAccount(_userName, verify){
             return 1;
         }
         else{
-            console.log("Found matching account");
             return 0;
         }
     }
@@ -53,18 +57,17 @@ export function findAccount(_userName, verify){
             return 1;
         }
         else{
-            console.log("Unique Username");
             return 0;
         }
     }
 }
 
 export function checkPassword(_userName, _password){
-    if(realm.objects("Account").filtered('password == $0', _password)){
+    var account = realm.objectForPrimaryKey("Account", _userName);
+    if(account["password"] == _password){
         return 0;
-    } else{
-        return 1;
     }
+    return 1;
 }
 
 export function addCode(_userName, _code){
@@ -72,6 +75,9 @@ export function addCode(_userName, _code){
         var acc = realm.objectForPrimaryKey('Account',_userName);
         acc['verifyCode'] = _code;
     })
+    if(realm.objectForPrimaryKey("Account", _userName)["verifyCode"] == _code){
+        return 0;
+    }
 }
 
 export function checkCode(_userName, _code){
@@ -86,57 +92,59 @@ export function changePassword(_userName, _newPassword){
     realm.write(() => {
         var account = realm.objectForPrimaryKey('Account', _userName);
         account['password'] = _newPassword;
-        console.log(account);
-        return 0;
     })
+    if(realm.objectForPrimaryKey("Account", _userName)["password"] == _newPassword){
+        return 0;
+    }
 }
 
 export function removeAccount(_userName){
     realm.write(() => {
         var account = realm.objectForPrimaryKey('Account', _userName);
         realm.delete(account);
-        return 0;
     })
+    if(findAccount(_userName, true)){
+        return 0;
+    }
 }
 
 export function removeAll(){
     realm.write(() => {
         realm.deleteAll();
-        return 0;
     })
+    if(realm.objects("Account").length == 0){
+        return 0;
+    }
 }
 
 export function loggedIn(_userName){
     realm.write(() => {
         var account = realm.objectForPrimaryKey('Account', _userName);
-        console.log(account);
         account['logStatus'] = true;
-        return 0;
     })
+    if(realm.objectForPrimaryKey("Account", _userName)["logStatus"] == true){
+        return 0;
+    }
 }
 
 export function loggedOff(_userName){
     realm.write(() => {
         var account = realm.objectForPrimaryKey('Account', _userName);
         account['logStatus'] = false;
-        return 0;
     })
-}
-
-export function findLoggedIn(){
-    var account = realm.objects("Account").filtered('logStatus == true');
-    if(account == undefined || account.length > 1){
-        console.log("Error finding logged in account");
-        return 1;
-    } else{
-        console.log("Account correctly logged in");
+    if(realm.objectForPrimaryKey("Account", _userName)["logStatus"] == false){
         return 0;
     }
 }
 
-export function findPassword(_userName){
-    var account = realm.objectForPrimaryKey("Account", _userName);
-    return new Account(_userName, account['email'], account['password']);
+export function findLoggedIn(){
+    var account = realm.objects("Account").filtered('logStatus =='+true);
+    console.log(account);
+    if(account != undefined){
+        return 0;
+    } else{
+        return 1;
+    }
 }
 
 let realm = new Realm({schema: [AccountSchema], schemaVersion: 5});

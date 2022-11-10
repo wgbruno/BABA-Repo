@@ -36,7 +36,7 @@ const AppNavigator = createStackNavigator(
       CalendarScreen: Calendar
   },  
   {  
-      initialRouteName: "CalendarScreen"  
+      initialRouteName: "SignIn"  
   }  
 ); 
 const AppContainer = createAppContainer(AppNavigator); 

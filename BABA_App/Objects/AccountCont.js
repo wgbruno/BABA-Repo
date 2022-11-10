@@ -1,21 +1,19 @@
 import {Alert, Linking} from 'react-native';
 import AddAccountDao, { findPassword } from '../DAOs/AccountDao.js';
-import realm, {createAccount, findAccount, changePassword, checkPassword, checkCode, addCode, removeAccount, removeAll, loggedIn, sendPassword} from '../DAOs/AccountDao.js';
+import realm, {createAccount, findAccount, changePassword, checkPassword, checkCode, addCode, removeAccount, removeAll, loggedIn, getAccountDB} from '../DAOs/AccountDao.js';
 
 export class Account{
-    constructor(userName, email, password, accountType, verifyCode){
+    constructor(userName, email, password, accountType, verifyCode, logStatus){
         this.userName = userName;
         this.email = email;
         this.password = password;
         this.accountType = accountType;
         this.verifyCode = verifyCode;
+        this.logStatus = logStatus
     }
     //Creates account in DB, returns 0 on success, 1 on failure or duplicate username
     create(){
         return createAccount(this.userName, this.email, this.password);
-    }
-    update(){
-
     }
     //Finds an account in DB based on username, returns 0 on success, 1 on failure
     search(){
@@ -32,15 +30,11 @@ export class Account{
         let message = '&body=This is your 4 digit verification code: '+code+' Please enter this code in app to verify your account.';
         url += sub;
         url += message;
-        console.log(this.getAccount());
-        if(addCode(this.userName, this.verifyCode)){
-            console.log("Unable to add code to account.")
-            return 1;
-        }
+        addCode(this.userName, code)
         return Linking.openURL(url);
     }
-    checkAccount(){
-        return checkCode(this.userName, this.verifyCode);
+    checkAccount(code){
+        return checkCode(this.userName, code);
     }
     newPassword(newPassword){
         return changePassword(this.userName, newPassword)
@@ -55,48 +49,29 @@ export class Account{
         return loggedIn(this.userName);
     }
     sendPassword(){
-        var account = findPassword(this.userName);
+        var account = getAccountDB(this.userName);
         let url = 'mailto:'+account.email;
         let sub = '?subject=BABA Account Password';
         let message = '&body=This is your account password for BABA: '+account.password;
         url += sub;
         url += message;
-        console.log(account.getAccount());
         return Linking.openURL(url);
     }
-    //Get methods
+
+    //Get method
     getAccount(){
-        return [this.userName, this.email, this.password, this.accountID, this.accountType];
+        return getAccountDB(this.userName);
     }
-    getUserName(){
-        return this.userName;
-    }
-    getEmail(){
-        return this.email;
-    }
-    getPassword(){
-        return this.password;
-    }
-    getAccountID(){
-        return this.accountID;
-    }
-    getAccountType(){
-        return this.accountType;
-    }
-    //Set methods
-    setUserName(newUserName){
-        this.userName = newUserName;
-    }
-    setEmail(newEmail){
-        this.email = newEmail;
-    }
-    setPassword(newPassword){
-        this.password = newPassword;
-    }
-    setAccountID(newAccountID){
-        this.accountID = newAccountID;
-    }
-    setAccountType(newAccountType){
-        this.accountType = newAccountType;
+
+    //Set method
+    setAccount(_userName, _email, _password, _accountType, _verifyCode, _logStatus){
+        removeAccount(this.userName);
+        this.userName = _userName;
+        this.email = _email;
+        this.password = _password;
+        this.accountType =_accountType;
+        this.verifyCode = _verifyCode;
+        this.logStatus = _logStatus;
+        return createAccount(this.userName, this.email, this.password);
     }
 } 

@@ -11,7 +11,7 @@ export default function ConfirmEmailScreen({navigation}){
   var account = new Account(userName, null, null, null, code);
   
   const onConfirmPressed = () => {
-    if(account.checkAccount()){
+    if(account.checkAccount(code)){
       console.log("Verify didnt work");
     }
     else{
