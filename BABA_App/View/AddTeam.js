@@ -2,10 +2,10 @@ import React, { useState } from 'react';
 import { Text, TextInput, TouchableOpacity, View, SafeAreaView, StatusBar } from 'react-native';
 import MainStyle from "../Style/MainStyle.style";
 import FormStyle from "../Style/Form.style";
-import realm, { insertDBTeam, getAllDBTeams } from "../DAOs/AddAccountDao";
 import realm, { insertDBTeam, getAllDBTeams } from "../DAOs/AddTeamDao";
 
 export default function RegisterTeam(){
+    insertDBTeam('testTeam', 5, 0, 1, []);
     //const [teamName, setName] = useState(insertDBTeam());
     /*
     return (

@@ -24,30 +24,6 @@ export class Account{
     passCheck(){
         return checkPassword(this.userName, this.password);
     }
-<<<<<<< Updated upstream
-    sendEmail(){
-        var code = Math.floor(1000 + Math.random() * 9000);
-        this.verifyCode = code;
-        let url = 'mailto:$'+this.email;
-        let sub = '?subject=Email Verification for BABA';
-        let message = '&body=This is your 4 digit verification code: '+code+' Please enter this code in app to verify your account.';
-        url += sub;
-        url += message;
-        console.log(this.getAccount());
-        if(addCode(this.userName, this.verifyCode)){
-            console.log("Unable to add code to account.")
-            return 1;
-        }
-        return Linking.openURL(url);
-    }
-    checkAccount(){
-        return checkCode(this.userName, this.verifyCode);
-    }
-    newPassword(newPassword){
-        return changePassword(this.userName, this.password, newPassword)
-    }
-=======
->>>>>>> Stashed changes
     //Get methods
     getAccount(){
         return [this.userName, this.email, this.password, this.accountID, this.accountType];

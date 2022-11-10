@@ -24,10 +24,6 @@ teamSchema.schema = {
     }
 };
 
-export function getAllTeams(){
-    return realm.objects("Team");
-}
-
 // Create Realm
 let realm = new Realm({schema: [teamSchema], schemaVersion: 1});
 
@@ -49,28 +45,51 @@ let insertDBTeam = (_teamName, _wins, _losses, _seed, _players) => {
 let getAllDBTeams = () => {
     return realm.objects('Team');
 }
+
+//Return whether the database is empty
+let DBisEmpty = () => {
+    return realm.length == 0;
+}
+
 //Get individual team by name
 let getDBTeam = (_teamName) => {
-    return realm.objects('Team').filtered(`teamName="${_teamName}"`);
+    let team = getAllDBTeams().filter(userTeam => userTeam.teamName == _teamName);
+    return team;
 }
+
 //Delete individual team by name
 let deleteDBTeam = (_teamName) => {
     realm.write(() => {
-        realm.delete(realm.objects("Team").filtered(_teamName));
+        realm.delete(getAllDBTeams().filter(userTeam => userTeam.teamName == _teamName));
     })
 }
+
+//Delete all teams in database
+let deleteAllDBTeams = () =>{
+    realm.write(() => {
+        realm.delete(getAllDBTeams());
+    })
+}
+
+//Update team name
 let updateDBName = (teamName, newName) => {
     let team = getDBTeam(teamName);
     team.teamName = newName;
 }
+
+//Update team wins
 let updateDBWins = (teamName, newWins) => {
     let team = getDBTeam(teamName);
     team.wins = newWins;
 }
+
+//Update team losses
 let updateDBLosses = (teamName, newLosses) => {
     let team = getDBTeam(teamName);
     team.losses = newLosses;
 }
+
+//Update team seed
 let updateDBSeed = (teamName, newSeed) => {
     let team = getDBTeam(teamName);
     team.seed = newSeed;
@@ -90,8 +109,10 @@ export {
     getAllDBTeams,
     getDBTeam,
     deleteDBTeam,
+    deleteAllDBTeams,
     updateDBName,
     updateDBWins,
     updateDBLosses,
-    updateDBSeed
+    updateDBSeed,
+    DBisEmpty
 }
