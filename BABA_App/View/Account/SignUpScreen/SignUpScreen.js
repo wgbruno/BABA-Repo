@@ -25,8 +25,6 @@ export default function SignUpScreen({navigation}){
     } else{
       account.sendEmail();
       navigation.navigate('ConfirmEmail');
-      Alert.alert("Success","Account Created!");
-      
     }
   };
 

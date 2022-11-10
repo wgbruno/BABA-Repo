@@ -1,5 +1,5 @@
 import React, {useState} from 'react';
-import {View, Text, StyleSheet, ScrollView} from 'react-native';
+import {View, Text, StyleSheet, ScrollView, Alert} from 'react-native';
 import CustomInput from '../../../src/components/CustomInput';
 import CustomButton from '../../../src/components/CustomButton';
 import { NavigationContainer } from 'react-native';
@@ -15,6 +15,7 @@ export default function ConfirmEmailScreen({navigation}){
       console.log("Verify didnt work");
     }
     else{
+      Alert.alert("Success","Account Created!");
       navigation.navigate('SignIn')
     }
   };

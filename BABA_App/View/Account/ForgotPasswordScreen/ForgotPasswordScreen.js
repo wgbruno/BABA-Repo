@@ -3,12 +3,14 @@ import {View, Text, StyleSheet, ScrollView} from 'react-native';
 import CustomInput from '../../../src/components/CustomInput';
 import CustomButton from '../../../src/components/CustomButton';
 import { NavigationContainer } from 'react-native';
+import { Account } from '../../../Objects/AccountCont';
 
 export default function ForgotPasswordScreen({navigation}){
-  const [username, setUsername] = useState('');
+  const [userName, setUserName] = useState('');
 
-  const onSendPressed = () => {
-    navigation.navigate('NewPassword');
+  const emailPassword = () => {
+    var account = new Account(userName);
+    account.sendPassword();
   };
 
   const onSignInPress = () => {
@@ -18,15 +20,15 @@ export default function ForgotPasswordScreen({navigation}){
   return (
     <ScrollView showsVerticalScrollIndicator={false}>
       <View style={styles.root}>
-        <Text style={styles.title}>Reset your password</Text>
+        <Text style={styles.title}>Email your password</Text>
 
         <CustomInput
           placeholder="Username"
-          value={username}
-          setValue={setUsername}
+          value={userName}
+          setValue={setUserName}
         />
 
-        <CustomButton text="Send" onPress={onSendPressed} />
+        <CustomButton text="Send" onPress={emailPassword} />
 
         <CustomButton
           text="Back to Sign in"

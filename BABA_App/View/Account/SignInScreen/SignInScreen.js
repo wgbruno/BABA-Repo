@@ -19,8 +19,12 @@ export default function SignInScreen({navigation}){
     } else if(account.passCheck()){
       Alert.alert("Unable to login","Incorrect Password.");
     } else{
-      Alert.alert("Success", "You have logged in!");
-      navigation.navigate('HomeScreen');
+      if(account.logInAccount()){
+        Alert.alert("Error","Problem Logging in. Try again.");
+      }else{
+        Alert.alert("Success", "You have logged in!");
+        navigation.navigate('HomeScreen');
+      }
     }
   };
 

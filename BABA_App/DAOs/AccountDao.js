@@ -1,6 +1,7 @@
 import React from "react";
 import { Alert } from "react-native";
 import Realm from "realm";
+import { Account } from '../Objects/AccountCont';
 
 class AccountSchema extends Realm.Object {}
 AccountSchema.schema = {
@@ -11,7 +12,8 @@ AccountSchema.schema = {
         email: 'string',
         password: 'string',
         accountType: 'string?',
-        verifyCode: 'int'
+        verifyCode: 'int',
+        logStatus: 'bool'
     }
 };
 
@@ -24,7 +26,8 @@ export function createAccount(_userName, _email, _password){
                 userName: _userName,
                 email: _email,
                 password: _password,
-                verifyCode: 0
+                verifyCode: 0,
+                logStatus: false
             });
         });
         return 0;
@@ -81,21 +84,63 @@ export function checkCode(_userName, _code){
     return 1;
 }
 
-export function changePassword(_userName, _password, _newPassword){
-    if(!(findAccount(_userName, false))){
-        return 1;
-    }
-    if(checkPassword(_userName, _password)){
-        return 2;
-    }
+export function changePassword(_userName, _newPassword){
     realm.write(() => {
-        var account = realm.objectForPrimaryKey('Account',_userName);
+        var account = realm.objectForPrimaryKey('Account', _userName);
         account['password'] = _newPassword;
+        console.log(account);
         return 0;
     })
 }
 
+export function removeAccount(_userName){
+    realm.write(() => {
+        var account = realm.objectForPrimaryKey('Account', _userName);
+        realm.delete(account);
+        return 0;
+    })
+}
 
-let realm = new Realm({schema: [AccountSchema], schemaVersion: 2});
+export function removeAll(){
+    realm.write(() => {
+        realm.deleteAll();
+        return 0;
+    })
+}
+
+export function loggedIn(_userName){
+    realm.write(() => {
+        var account = realm.objectForPrimaryKey('Account', _userName);
+        console.log(account);
+        account['logStatus'] = true;
+        return 0;
+    })
+}
+
+export function loggedOff(_userName){
+    realm.write(() => {
+        var account = realm.objectForPrimaryKey('Account', _userName);
+        account['logStatus'] = false;
+        return 0;
+    })
+}
+
+export function findLoggedIn(){
+    var account = realm.objects("Account").filtered('logStatus == true');
+    if(account == undefined || account.length > 1){
+        console.log("Error finding logged in account");
+        return 1;
+    } else{
+        console.log("Account correctly logged in");
+        return 0;
+    }
+}
+
+export function findPassword(_userName){
+    var account = realm.objectForPrimaryKey("Account", _userName);
+    return new Account(_userName, account['email'], account['password']);
+}
+
+let realm = new Realm({schema: [AccountSchema], schemaVersion: 5});
 
 export default realm;
