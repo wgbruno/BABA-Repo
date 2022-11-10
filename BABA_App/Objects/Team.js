@@ -1,10 +1,12 @@
-import RegisterTeam from '../DAOs/AddTeamDao.js';
+import { insertDBTeam, deleteDBTeam, updateDBName, updateDBWins, updateDBLosses, updateDBSeed, addDBPlayer} from '../DAOs/AddTeamDao.js';
 
 export class Team {
-    //create team
-    constructor(teamName, record, seed, players, navigation){
+    // Create team
+    constructor(teamName, wins, losses, seed, players){
         this.teamName = teamName;
         this.record = record;
+        this.wins = wins;
+        this.losses = losses;
         this.seed = seed;
         this.players = players;
 
@@ -12,8 +14,8 @@ export class Team {
     }
 
     //needed for sqlite execute call from RegisterTeam
-    getProfile(){
-        return [this.teamName, this.record, this.seed, this.players]
+    getTeam(){
+        return [this.teamName, this.wins, this.losses, this.seed, this.players]
     }
 
     //view team
@@ -21,14 +23,18 @@ export class Team {
         return this.teamName;
     }
 
-    getRecord(){
-        return this.record;
+    getWins(){
+        return this.wins;
+    }
+
+    getLosses(){
+        return this.losses;
     }
 
     getSeed(){
         return this.seed;
     }
-
+    
     getPlayers(){
         return this.players;
     }
@@ -36,23 +42,36 @@ export class Team {
     //update team
     updateTeamName(newName){
         this.teamName = newName;
+        updateDBName(newName);
     }
 
-    updateRecord(newRecord){
-        this.record = newRecord;
+    updateWins(newWins){
+        this.wins = newSeed;
+        updateDBWins(newWins);
+    }
+
+    updateLosses(newLosses){
+        this.losses = newSeed;
+        updateDBLosses(newLosses);
     }
 
     updateSeed(newSeed){
         this.seed = newSeed;
+        updateDBSeed(newSeed);
     }
 
-    updatePlayers(newPlayers){
-        this.players = newPlayers;
+    // Needs work
+    addPlayer(newPlayer){
+        this.player = newPlayer;
+        addDBPlayer(newPlayer);
     }
 
-    /*
-    deleteTeam(){
-        //nullify team attributes and do something to remove from db
-        //keep player objects? would make sense so users don't have to make a new profile
-    }*/
+    deleteTeam(_teamName){
+        this.teamName = null;
+        this.wins = null;
+        this.losses = null;
+        this.seed = null;
+        this.players = null;
+        deleteDBTeam(_teamName);
+    }
 }

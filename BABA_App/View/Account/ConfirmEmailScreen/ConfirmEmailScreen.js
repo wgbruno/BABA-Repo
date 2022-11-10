@@ -32,12 +32,15 @@ export default function ConfirmEmailScreen({navigation}){
     <ScrollView showsVerticalScrollIndicator={false}>
       <View style={styles.root}>
         <Text style={styles.title}>Confirm your email</Text>
+<<<<<<< Updated upstream
 
         <CustomInput
           placeholder="Enter your username"
           value={userName}
           setValue={setUserName}
         />
+=======
+>>>>>>> Stashed changes
 
         <CustomInput
           placeholder="Enter your confirmation code"

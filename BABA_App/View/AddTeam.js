@@ -1,18 +1,38 @@
-import React, {useState, useEffect} from 'react';
-import { Alert, Button, Text, TextInput, TouchableOpacity, View } from 'react-native';
+import React, { useState } from 'react';
+import { Text, TextInput, TouchableOpacity, View, SafeAreaView, StatusBar } from 'react-native';
 import MainStyle from "../Style/MainStyle.style";
 import FormStyle from "../Style/Form.style";
-import { NavigationContainer } from 'react-native';
-import { openDatabase } from 'react-native-sqlite-storage';
+import realm, { insertDBTeam, getAllDBTeams } from "../DAOs/AddAccountDao";
+import realm, { insertDBTeam, getAllDBTeams } from "../DAOs/AddTeamDao";
 
-export var db = openDatabase({name: 'TeamDatabase.db'});
-
-export default function RegisterTeam({ navigation }){
-    const [teamName, setName] = useState("");
-    const [record, setRecord] = useState("");
-    const [seed, setSeed] = useState("");
-    const [players, setPlayers] = useState("");
-
+export default function RegisterTeam(){
+    //const [teamName, setName] = useState(insertDBTeam());
+    /*
+    return (
+        <>
+        <View style={FormStyle.groupView}>
+            <Text style={MainStyle.emphasisText}>Team Registration</Text>
+        </View>
+        <View style={FormStyle.groupView}>
+            <Text style={FormStyle.label}>Team Name:</Text>
+            <TextInput onChangeText={} style={FormStyle.input} autoCapitalize={false} />
+            <TouchableOpacity style={FormStyle.formButton} onPress={setName}>
+                <Text style={FormStyle.formButtonText}>Submit</Text>
+            </TouchableOpacity>
+        </View>
+        </>
+    );
+    */
+    return (
+    <>
+        <StatusBar barStyle="light-content" />
+        <SafeAreaView style={{padding: 8}}>
+        <Text>Some sample text</Text>
+        <Text>{JSON.stringify(getAllDBTeams())}</Text>
+        </SafeAreaView>
+    </>
+    );
+    /*
     useEffect(() => {
         db.transaction(function (txn) {
           txn.executeSql(
@@ -31,7 +51,6 @@ export default function RegisterTeam({ navigation }){
           );
         })
     }, []);
-
     const insertTeam = () => {
         db.transaction(function (tx) {
             tx.executeSql("INSERT INTO Team_Table(teamName, record, seed, players) "
@@ -52,7 +71,6 @@ export default function RegisterTeam({ navigation }){
         });
         viewTeam();
     }
-
     const viewTeam = () => {
         db.transaction(function (tx) {
             tx.executeSql(
@@ -66,8 +84,8 @@ export default function RegisterTeam({ navigation }){
                 }
             );
         });
-    }
-
+    }*/
+    /*
     return (<>
         <View style={FormStyle.groupView}>
             <Text style={MainStyle.emphasisText}>Team Registration</Text>
@@ -84,11 +102,11 @@ export default function RegisterTeam({ navigation }){
             
             <Text style={FormStyle.label}>Players:</Text>
             <TextInput onChangeText={setPlayers} style={FormStyle.input} autoCapitalize={false} />
-
             <TouchableOpacity style={FormStyle.formButton} onPress={insertTeam}>
                 <Text style={FormStyle.formButtonText}>Submit</Text>
             </TouchableOpacity>
         </View>
         </>
-    );
+    );*/
+    
 };
