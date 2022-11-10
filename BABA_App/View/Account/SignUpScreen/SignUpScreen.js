@@ -23,7 +23,6 @@ export default function SignUpScreen({navigation}){
       Alert.alert("This username already exists.", "Please try a different username.");
       console.log("Duplicate username");
     } else{
-<<<<<<< Updated upstream
       account.sendEmail();
       navigation.navigate('ConfirmEmail');
     }

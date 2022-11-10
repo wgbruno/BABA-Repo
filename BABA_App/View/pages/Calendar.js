@@ -3,6 +3,8 @@ import { Text, View } from 'react-native';
 import Realm from 'realm';
 import Gameformat from './components/Gameformat';
 import Mytext from './components/Mytext';
+import { NavigationContainer } from 'react-native';
+
 let realm;
  
 export default class Calendar extends React.Component {
