@@ -8,10 +8,12 @@ import SignUpScreen from "./View/Account/SignUpScreen/SignUpScreen.js";
 import ConfirmEmailScreen from "./View/Account/ConfirmEmailScreen/ConfirmEmailScreen.js";
 import ForgotPasswordScreen from "./View/Account/ForgotPasswordScreen/ForgotPasswordScreen.js";
 import NewPasswordScreen from "./View/Account/NewPasswordScreen/NewPasswordScreen.js";
+import DeleteAccountScreen from "./View/Account/DeleteAccount/DeleteAccount.js";
 import ViewAllPlayers from "./View/ViewAllPlayers.js";
 import EditPlayer from "./View/EditPlayer.js";
 import ViewAllTeams from "./View/ViewAllTeams.js";
 import EditTeam from "./View/EditTeam.js";
+import Calendar from './View/pages/Calendar'
 import FormStyle from "./Style/Form.style";
 import {createAppContainer} from 'react-navigation'; 
 import {createStackNavigator} from 'react-navigation-stack';
@@ -24,15 +26,17 @@ const AppNavigator = createStackNavigator(
       ConfirmEmail: ConfirmEmailScreen,
       ForgotPassword: ForgotPasswordScreen,
       NewPassword: NewPasswordScreen,
+      DeleteAccount: DeleteAccountScreen,
       PlayerReg: AddPlayer,
       ViewPlayers: ViewAllPlayers, 
       UpdatePlayers: EditPlayer,
       TeamReg: AddTeam,
       ViewTeams: ViewAllTeams,
-      UpdateTeams: EditTeam
+      UpdateTeams: EditTeam,
+      CalendarScreen: Calendar
   },  
   {  
-      initialRouteName: "HomeScreen"  
+      initialRouteName: "CalendarScreen"  
   }  
 ); 
 const AppContainer = createAppContainer(AppNavigator); 

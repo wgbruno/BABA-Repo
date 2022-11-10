@@ -25,7 +25,7 @@ teamSchema.schema = {
 };
 
 // Create Realm
-let realm = new Realm({schema: [teamSchema], schemaVersion: 1});
+let realm = new Realm({schema: [teamSchema], schemaVersion: 5});
 
 //Functions
 //Insert Team

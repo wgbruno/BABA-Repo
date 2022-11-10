@@ -50,7 +50,12 @@ export default class Home extends React.Component{
                 <Button 
                     style={FormStyle.formButton} 
                     onPress={() => this.props.navigation.navigate('NewPassword')}
-                    title="New Password">
+                    title="Change Password">
+                </Button>
+                <Button 
+                    style={FormStyle.formButton} 
+                    onPress={() => this.props.navigation.navigate('DeleteAccount')}
+                    title="Delete Account">
                 </Button>
             </View>    
         </>);

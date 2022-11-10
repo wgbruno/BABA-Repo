@@ -10,20 +10,18 @@ export default function NewPasswordScreen({navigation}){
   const [password, setPassword] = useState('');
   const [newPassword, setNewPassword] = useState('');
   const [rePassword, setRePassword] = useState('');
-  
-  const account = new Account(userName, null, password);
 
   const onSubmitPressed = () => {
+    const account = new Account(userName, null, password);
     if(newPassword != rePassword){
       Alert.alert("New passwords Do Not Match!", "Please submit passwords again.");
-    } 
-    if(account.newPassword(newPassword) == 1){
+    } else if(account.search()){
       Alert.alert("Username does not exist","The username you entered does not exist. Try again.");
-    }
-    if(account.newPassword(newPassword) == 2){
+    }else if(account.passCheck()){
       Alert.alert("Incorrect Password","Please reenter your current password.");
     }
     else{
+      account.newPassword(newPassword)
       Alert.alert('Password Changed', 'You have succesfully changed your password.');
       navigation.navigate('HomeScreen');
     }
@@ -37,7 +35,7 @@ export default function NewPasswordScreen({navigation}){
   return (
     <ScrollView showsVerticalScrollIndicator={false}>
       <View style={styles.root}>
-        <Text style={styles.title}>Reset your password</Text>
+        <Text style={styles.title}>Change your password</Text>
 
         <CustomInput placeholder="Username" value={userName} setValue={setUserName} />
         
