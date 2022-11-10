@@ -1,6 +1,6 @@
 import {Alert, Linking} from 'react-native';
-import AddAccountDao from '../DAOs/AccountDao.js';
-import realm, {createAccount, findAccount, changePassword, checkPassword, checkCode, addCode} from '../DAOs/AccountDao.js';
+import AddAccountDao, { findPassword } from '../DAOs/AccountDao.js';
+import realm, {createAccount, findAccount, changePassword, checkPassword, checkCode, addCode, removeAccount, removeAll, loggedIn, sendPassword} from '../DAOs/AccountDao.js';
 
 export class Account{
     constructor(userName, email, password, accountType, verifyCode){
@@ -28,7 +28,7 @@ export class Account{
     sendEmail(){
         var code = Math.floor(1000 + Math.random() * 9000);
         this.verifyCode = code;
-        let url = 'mailto:$'+this.email;
+        let url = 'mailto:'+this.email;
         let sub = '?subject=Email Verification for BABA';
         let message = '&body=This is your 4 digit verification code: '+code+' Please enter this code in app to verify your account.';
         url += sub;
@@ -44,7 +44,26 @@ export class Account{
         return checkCode(this.userName, this.verifyCode);
     }
     newPassword(newPassword){
-        return changePassword(this.userName, this.password, newPassword)
+        return changePassword(this.userName, newPassword)
+    }
+    deleteAccount(){
+        return removeAccount(this.userName);
+    }
+    deleteAll(){
+        return removeAll();
+    }
+    logInAccount(){
+        return loggedIn(this.userName);
+    }
+    sendPassword(){
+        var account = findPassword(this.userName);
+        let url = 'mailto:'+account.email;
+        let sub = '?subject=BABA Account Password';
+        let message = '&body=This is your account password for BABA: '+account.password;
+        url += sub;
+        url += message;
+        console.log(account.getAccount());
+        return Linking.openURL(url);
     }
 =======
 >>>>>>> Stashed changes

@@ -8,6 +8,7 @@ import SignUpScreen from "./View/Account/SignUpScreen/SignUpScreen.js";
 import ConfirmEmailScreen from "./View/Account/ConfirmEmailScreen/ConfirmEmailScreen.js";
 import ForgotPasswordScreen from "./View/Account/ForgotPasswordScreen/ForgotPasswordScreen.js";
 import NewPasswordScreen from "./View/Account/NewPasswordScreen/NewPasswordScreen.js";
+import DeleteAccountScreen from "./View/Account/DeleteAccount/DeleteAccount.js";
 import ViewAllPlayers from "./View/ViewAllPlayers.js";
 import EditPlayer from "./View/EditPlayer.js";
 import ViewAllTeams from "./View/ViewAllTeams.js";
@@ -24,6 +25,7 @@ const AppNavigator = createStackNavigator(
       ConfirmEmail: ConfirmEmailScreen,
       ForgotPassword: ForgotPasswordScreen,
       NewPassword: NewPasswordScreen,
+      DeleteAccount: DeleteAccountScreen,
       PlayerReg: AddPlayer,
       ViewPlayers: ViewAllPlayers, 
       UpdatePlayers: EditPlayer,

@@ -26,12 +26,6 @@ export default function SignUpScreen({navigation}){
 <<<<<<< Updated upstream
       account.sendEmail();
       navigation.navigate('ConfirmEmail');
-      Alert.alert("Success","Account Created!");
-      
-=======
-      Alert.alert("Success","Account Created!");
-      navigation.navigate('HomeScreen');
->>>>>>> Stashed changes
     }
   };
 
