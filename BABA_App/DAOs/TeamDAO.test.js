@@ -4,9 +4,11 @@ import dao from './AddTeamDao';
 //import dao from './AddTeamDao';
 
 let players = [];
+
 insertDBTeam('testTeam', 5, 0, 1, players);
+
 test('Getting team', function(){
-    let team = getDBTeam("testTeam");
+    let team = getAllDBTeams()[0];
     expect(team.teamName).toBe("testTeam");
     expect(team.wins).toBe(5);
     expect(team.losses).toBe(0);
