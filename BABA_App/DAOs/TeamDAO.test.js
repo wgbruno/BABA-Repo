@@ -1,17 +1,35 @@
-import realm, { insertDBTeam, getAllDBTeams, getDBTeam, updateDBName, updateDBWins, updateDBLosses, updateDBSeed } from "../DAOs/AddTeamDao"
-import {expect, jest, test} from '@jest/globals';
-import dao from './AddTeamDao';
-//import dao from './AddTeamDao';
+import realm, { insertDBTeam, DBisEmpty, getAllDBTeams, getDBTeam, updateDBName, updateDBWins, updateDBLosses, updateDBSeed, deleteDBTeam, deleteAllDBTeams } from "../DAOs/AddTeamDao"
+import {expect, test} from '@jest/globals';
 
-let players = [];
+let players = ['Ron', 'Harry', 'Hermione'];
 
-insertDBTeam('testTeam', 5, 0, 1, players);
+test('Insert Teams', function(){
+    insertDBTeam('testTeam1', 5, 0, 1, players);
+    insertDBTeam('testTeam2', 0, 5, 3, players);
+    insertDBTeam('testTeam3', 2, 3, 2, players);
+})
 
-test('Getting team', function(){
-    let team = getAllDBTeams()[0];
-    expect(team.teamName).toBe("testTeam");
-    expect(team.wins).toBe(5);
-    expect(team.losses).toBe(0);
-    expect(team.seed).toBe(1);  
-    expect(team.players).toBe(null);
+test('Test all teams in realm', function(){
+    let teams = getAllDBTeams();
+
+})
+/*
+test('Get specific team', function(){
+    let team = getDBTeam("testTeam2");
+    expect(team.teamName).toBe("testTeam2");
+    expect(team.wins).toBe(0);
+    expect(team.losses).toBe(5);
+    expect(team.seed).toBe(3);
+    expect(team.players).toBe(['Ron', 'Harry', 'Hermione']);
+})*/
+
+test('Deleting Team', function(){
+    deleteDBTeam('testTeam1');
+    //deleteDBTeam('testTeam2');
+    //deleteDBTeam('testTeam3');
+})
+
+test('Delete all teams', function(){
+    deleteAllDBTeams();
+    expect(DBisEmpty());
 })

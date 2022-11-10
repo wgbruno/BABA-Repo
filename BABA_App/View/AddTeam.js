@@ -5,6 +5,7 @@ import FormStyle from "../Style/Form.style";
 import realm, { insertDBTeam, getAllDBTeams } from "../DAOs/AddTeamDao";
 
 export default function RegisterTeam(){
+    insertDBTeam('testTeam', 5, 0, 1, []);
     //const [teamName, setName] = useState(insertDBTeam());
     /*
     return (
