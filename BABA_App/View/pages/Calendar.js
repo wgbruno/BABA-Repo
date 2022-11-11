@@ -29,6 +29,10 @@ export default class Calendar extends React.Component {
                 <Mytext text="Games This Week"/>
                 <Gameformat teamName1='Ballers' teamName2='Hoopers' time='8:00pm'/>
                 <Mytext text="Upcoming"/>
+                <Mybutton
+                title="Schedule a Game"
+                customClick={() => this.props.navigation.navigate('NewGame')}
+                />
             </View></>
         )
     }
