@@ -1,14 +1,59 @@
 import React, {useEffect, useState} from 'react';
 import { Button, Text, TextInput, TouchableOpacity, View, StyleSheet } from 'react-native';
 import { FlatList } from 'react-native-gesture-handler';
+import {SafeAreaView, StatusBar} from 'react-native';
 import { NavigationContainer } from 'react-native';
 import {createStackNavigator} from 'react-navigation-stack';
-import { db } from './AddTeam';
+import realm, { getAllDBTeams } from '../DAOs/AddTeamDao';
 
 export default function ViewAllTeams({ navigation }){
-    const [items, setItems] = useState([]);
+    const [teams, setTeams] = useState(getAllDBTeams());
     const [empty, setEmpty] = useState([]);
 
+    /*const listAllTeams = () => {
+        return(
+            <View 
+            style={{height: 1, width: '100%', backgroundColor: '#000'}}
+            />
+        );
+    };*/
+
+    let emptyDatabase = () => {
+        return(
+            <View style={{justifyContent: 'center', alignItems: 'center', flex: 1}}>
+                <Text style={{fontSize: 25, textAlign: 'center'}}>
+                    No Teams Have Registered Yet
+                </Text>
+            </View>
+        );
+    }
+
+    return(
+    <>
+        <StatusBar barStyle="light-content" />
+        <SafeAreaView style={{padding: 8}}>
+        <Text>{JSON.stringify(getAllDBTeams())}</Text>
+        </SafeAreaView>
+        {/* List for all teams */}
+        <Text style={{marginTop: 8, fontWeight: 'bold'}}>Team name                          Wins            Losses             Seed Players</Text>
+                <FlatList
+                    data={teams}
+                    keyExtractor={(item, index) => index.toString()}
+                    renderItem={({item, index}) => {
+                        return (
+                            <View style={{flexDirection: 'row', justifyContent: 'space-between'}}>
+                                <Text>{item.teamName}</Text>
+                                <Text>{item.wins}</Text>
+                                <Text>{item.losses}</Text>
+                                <Text>{item.seed}</Text>
+                                <Text>{item.players}</Text>
+                            </View>
+                        )
+                    }} />
+    </>
+    );
+
+    /*
     useEffect(() =>{
         db.transaction((tx) => {
             tx.executeSql(
@@ -80,5 +125,5 @@ export default function ViewAllTeams({ navigation }){
             />
             }
         </View>
-    </>);
+    </>);*/
 }
