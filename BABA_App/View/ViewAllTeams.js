@@ -36,6 +36,7 @@ export default function ViewAllTeams({ navigation }){
         </SafeAreaView>
         {/* List for all teams */}
         <Text style={{marginTop: 8, fontWeight: 'bold'}}>Team name                          Wins            Losses             Seed Players</Text>
+                {empty ? emptyDatabase(empty):
                 <FlatList
                     data={teams}
                     keyExtractor={(item, index) => index.toString()}
@@ -50,55 +51,10 @@ export default function ViewAllTeams({ navigation }){
                             </View>
                         )
                     }} />
+                }
     </>
     );
-
-    /*
-    useEffect(() =>{
-        db.transaction((tx) => {
-            tx.executeSql(
-                'SELECT * FROM Team_Table', [], (tx, results) => {
-                    var temp = [];
-                    for(let i = 0; i < results.rows.length; i++){
-                        temp.push(results.rows.item(i));
-                    }
-                    setItems(temp);
-
-                    if(results.rows.length >= 1){
-                        setEmpty(false);
-                    } else{
-                        setEmpty(true);
-                    }
-                }
-            );
-        });
-    }, []);
-
-    const listAllTeams = () => {
-        return(
-            <View 
-            style={{height: 1, width: '100%', backgroundColor: '#000'}}
-            />
-        );
-    };
-
-    const emptyDatabase = () => {
-        return(
-            <View style={{justifyContent: 'center', alignItems: 'center', flex: 1}}>
-                <Text style={{fontSize: 25, textAlign: 'center'}}>
-                    No Teams Have Registered Yet
-                </Text>
-            </View>
-        );
-    }
-
-    const styles = StyleSheet.create({
-        itemsStyle:{
-            fontSize:22,
-            color: '#000'
-        }
-    });
-
+                    /*
     return(<>
         <View style={{flex: 1}}>
             {empty ? emptyDatabase(empty):
