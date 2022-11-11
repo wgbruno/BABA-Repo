@@ -9,7 +9,7 @@ export class Game{
         this.teamScore1 = teamScore1;
         this.teamScore2 = teamScore2;
 
-        GameDao();
+        CreateGame(navigation, this.getGameProfile);
     }
 
     getTeamName1(){

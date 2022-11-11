@@ -4,7 +4,6 @@ import { Account } from '../Objects/AccountCont';
 class GameSchema extends Realm.Object {}
 GameSchema.schema = {
     name: 'Game',
-    primaryKey: 'gameName',
     properties:{
         team1Name: 'string',
         team2Name: 'string',
@@ -16,7 +15,39 @@ GameSchema.schema = {
     }
 };
 
-export function createGame(name1, name2, start, gameName, gameDate){
+let realm = new Realm({schema: [GameSchema], schemaVersion: 5});
+
+let insertDBGame = (name1, name2, start, gameDate) => {
+    realm.write(() => {
+        const game = realm.create('Game', {
+            team1Name: name1,
+            team2Name: name2,
+            startTime: start,
+            team1Score: 0,
+            team1Score: 0,
+            date: gameDate
+        });
+    });
+}
+
+let getAllDBGames = () => {
+    return realm.objects('Game');
+}
+
+let DBisEmpty = () => {
+    return realm.length == 0;
+}
+
+export default realm;
+
+export {
+    insertDBGame,
+    getAllDBGames,
+    DBisEmpty
+}
+
+/*
+export function CreateGame(name1, name2, start, gameName, gameDate){
     realm.write(() => {
         const account = realm.create('Game', {
             primaryKey: gameName,
@@ -54,6 +85,5 @@ export function findGame(gameName, verify){
     }
 }
 
-let realm = new Realm({schema: [AccountSchema], schemaVersion: 5});
-
-export default realm;
+//let realm = new Realm({schema: [AccountSchema], schemaVersion: 5});
+*/
