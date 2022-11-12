@@ -1,5 +1,5 @@
 import Realm from "realm";
-import { Account } from '../Objects/AccountCont';
+import React from 'react';
 
 class GameSchema extends Realm.Object {}
 GameSchema.schema = {
@@ -10,12 +10,11 @@ GameSchema.schema = {
         startTime: 'string',
         team1Score: 'int',
         team2Score: 'int',
-        date: 'int' //ideally input this as an int with no delimeters to calculate games occuring in next week(7), month(30)
+        date: 'string' //ideally input this as an int with no delimeters to calculate games occuring in next week(7), month(30)
         //look into if there is a data type that is better to use here
     }
 };
 
-let realm = new Realm({schema: [GameSchema], schemaVersion: 5});
 
 let insertDBGame = (name1, name2, start, gameDate) => {
     realm.write(() => {
@@ -24,26 +23,29 @@ let insertDBGame = (name1, name2, start, gameDate) => {
             team2Name: name2,
             startTime: start,
             team1Score: 0,
-            team1Score: 0,
+            team2Score: 0,
             date: gameDate
         });
     });
 }
 
+/*
 let getAllDBGames = () => {
     return realm.objects('Game');
 }
 
 let DBisEmpty = () => {
     return realm.length == 0;
-}
+}*/
 
 export default realm;
+let realm = new Realm({schema: [GameSchema], schemaVersion: 5});
+
 
 export {
-    insertDBGame,
-    getAllDBGames,
-    DBisEmpty
+    insertDBGame
+    //getAllDBGames,
+    //DBisEmpty
 }
 
 /*

@@ -1,4 +1,4 @@
-import GameDao from '../DAOs/GameDao.js';
+import { insertDBGame } from '../DAOs/GameDao.js';
 
 export class Game{
     constructor(teamName1, teamName2, date, tipoff, teamScore1, teamScore2){
@@ -9,7 +9,8 @@ export class Game{
         this.teamScore1 = teamScore1;
         this.teamScore2 = teamScore2;
 
-        CreateGame(navigation, this.getGameProfile);
+        insertDBGame(this.team1, this.team2, this.startTime, this.date)
+        //CreateGame(navigation);
     }
 
     getTeamName1(){
@@ -36,6 +37,7 @@ export class Game{
         return this.teamScore2;
     }
 
+    /*
     updateDate(newDate){
         this.date = newDate;
     }
@@ -50,7 +52,7 @@ export class Game{
 
     updateTeamScore2(newScore){
         this.teamScore2 = newScore;
-    }
+    }*/
 }
 
  

@@ -1,11 +1,7 @@
 import {expect, jest, test} from '@jest/globals';
 import { Game } from '../Objects/GameCont';
-import Realm, {createAccount, findAccount, changePassword, checkPassword, checkCode, addCode, removeAccount, removeAll, loggedIn, getAccountDB, findLoggedIn, loggedOff} from '../DAOs/AccountDao.js';
 
-var game = null;
-beforeEach(function(){
-    game = new Game("Ballers", "Ringers", "11/20", "9", 10, 4);
-})
+var game = new Game("Ballers", "Ringers", "11/20", "9", 10, 4);
 
 test("Get Team 1 Info", function (){
     expect(game.getTeamName1()).toBe("Ballers");
