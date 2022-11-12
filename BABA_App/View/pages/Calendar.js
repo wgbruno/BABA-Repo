@@ -2,55 +2,59 @@ import React from 'react';
 import { Button, Text, View } from 'react-native';
 import Realm from 'realm';
 import Gameformat from './components/Gameformat';
-import Mytext from './components/Mytext';
 import { NavigationContainer } from 'react-native';
 import { getAllDBGames } from '../../DAOs/GameDao';
 
 let realm;
  
 export default class Calendar extends React.Component {
+    //is this constructor even needed?
     constructor(props) {
         super(props);
         realm = new Realm({ path: 'UserDatabase.realm' });
-        /*
+        
             //figure out how this is going to work/are games states?
             //game objects/where do games exist? how to access them to be displayed here   
         
-    */}
-    //const [games, setGames] = useState(getAllDBGames());
-
-    /*
-    emptyDatabase = () => {
-        return(
-            <View style={{justifyContent: 'center', alignItems: 'center', flex: 1}}>
-                <Text style={{fontSize: 25, textAlign: 'center'}}>
-                    No Games Scheduled
-                </Text>
-            </View>
-        );
-    }*/
+    }
 
     render() {
-        return (<>
-            <View
-                style={{ //or just use FormStyle like in Home.js
-                    flex: 1,
-                    backgroundColor: 'white',
-                    flexDirection: 'column'
-                }}>
-                <Mytext text="Schedule"/>
-                <Button 
-                    style={FormStyle.formButton} 
-                    onPress={() => this.props.navigation.navigate('ScheduleGame')}
-                    title="Schedule New Game">
-                </Button>
-                <Mytext text="Games This Week"/>
-                <Gameformat teamName1='Ballers' teamName2='Hoopers' time='8:00pm'/>
-                <Mytext text="Upcoming"/>
-            </View></>
-        )
+        return (
+            <ScrollView showsVerticalScrollIndicator={false}>
+                <View style={styles.root}>
+                    <Text style={styles.title}>Calendar</Text>
+                    <Text style={styles.section}>Games This Week</Text>
+                    <Gameformat teamName1='Ballers' teamName2='Hoopers' time='8:00pm'/>
+                    <Text style={styles.section}>Upcoming</Text>
+                    <Button 
+                        style={FormStyle.formButton} 
+                        onPress={() => this.props.navigation.navigate('ScheduleGame')}
+                        title="Schedule New Game">
+                    </Button>
+                </View>
+            </ScrollView>
+        );
     }
 }
+
+const styles = StyleSheet.create({
+    root: {
+      alignItems: 'center',
+      padding: 20,
+    },
+    title: {
+      fontSize: 28,
+      fontWeight: 'bold',
+      color: '#051C60',
+      margin: 10,
+    },
+    section: {
+        fontSize: 23,
+        fontWeight: 'bold',
+        color: '#051C60',
+        margin: 10,
+    }
+  });
 
 /*
 <StatusBar barStyle="light-content" />
