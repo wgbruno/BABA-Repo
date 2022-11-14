@@ -39,7 +39,7 @@ FNDA:3,loggedIn
 FNDA:3,(anonymous_15)
 FNDA:1,loggedOff
 FNDA:1,(anonymous_17)
-FNDA:2,findLoggedIn
+FNDA:1,findLoggedIn
 DA:7,2
 DA:21,3
 DA:22,3
@@ -86,17 +86,17 @@ DA:116,2
 DA:121,3
 DA:122,3
 DA:123,3
-DA:125,3
-DA:126,3
+DA:125,2
+DA:126,2
 DA:131,1
 DA:132,1
 DA:133,1
 DA:135,1
 DA:136,1
-DA:141,2
-DA:142,2
-DA:143,2
-DA:144,2
+DA:141,1
+DA:142,1
+DA:143,1
+DA:144,1
 DA:146,0
 DA:150,2
 LF:59
@@ -121,17 +121,21 @@ BRDA:106,8,0,3
 BRDA:106,8,1,0
 BRDA:115,9,0,2
 BRDA:115,9,1,0
-BRDA:125,10,0,3
+BRDA:125,10,0,2
 BRDA:125,10,1,0
 BRDA:135,11,0,1
 BRDA:135,11,1,0
-BRDA:143,12,0,2
+BRDA:143,12,0,1
 BRDA:143,12,1,0
 BRF:26
 BRH:19
 end_of_record
 TN:
+<<<<<<< Updated upstream
 SF:DAOs/AddTeamDao.js
+=======
+SF:DAOs\AddTeamDao.js
+>>>>>>> Stashed changes
 FN:32,(anonymous_0)
 FN:33,(anonymous_1)
 FN:45,(anonymous_2)
