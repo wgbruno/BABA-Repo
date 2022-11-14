@@ -64,6 +64,7 @@ export function findAccount(_userName, verify){
 
 export function checkPassword(_userName, _password){
     var account = realm.objectForPrimaryKey("Account", _userName);
+    console.log(account);
     if(account["password"] == _password){
         return 0;
     }
