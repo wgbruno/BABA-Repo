@@ -1,9 +1,10 @@
 import React from "react";
 import { Alert } from "react-native";
 import Realm from "realm";
+import realm from "./SchemaDao";
 import { Account } from '../Objects/AccountCont';
 
-class AccountSchema extends Realm.Object {}
+/*class AccountSchema extends Realm.Object {}
 AccountSchema.schema = {
     name: 'Account',
     primaryKey: 'userName',
@@ -15,7 +16,7 @@ AccountSchema.schema = {
         verifyCode: 'int',
         logStatus: 'bool'
     }
-};
+};*/
 
 export function getAccountDB(_userName){
     var account = realm.objectForPrimaryKey("Account", _userName);
@@ -147,6 +148,6 @@ export function findLoggedIn(){
     }
 }
 
-let realm = new Realm({schema: [AccountSchema], schemaVersion: 5});
+//let realm = new Realm({schema: [AccountSchema], schemaVersion: 5});
 
-export default realm;
+//export default realm;

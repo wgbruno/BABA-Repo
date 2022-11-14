@@ -1,4 +1,5 @@
 import Realm from "realm";
+import realm from "./SchemaDao";
 
 // Returns the shared instance of the Realm app.
 /*export function getRealmApp() {
@@ -10,7 +11,7 @@ import Realm from "realm";
    return new Realm.App(appConfig);
  }*/
 
-class teamSchema extends Realm.Object {}
+/*class teamSchema extends Realm.Object {}
 
 //export default function RegisterTeam({ navigation }){
 teamSchema.schema = {
@@ -22,10 +23,10 @@ teamSchema.schema = {
         seed : 'int',
         players : {type : "list", objectType : "string"}
     }
-};
+};*/
 
 // Create Realm
-let realm = new Realm({schema: [teamSchema], schemaVersion: 5});
+//let realm = new Realm({schema: [teamSchema], schemaVersion: 5});
 
 //Functions
 //Insert Team
@@ -102,7 +103,7 @@ export function addDBPlayer(teamName, newPlayer){
 }*/
 
 // Export the realm
-export default realm;
+//export default realm;
 
 export {
     insertDBTeam,

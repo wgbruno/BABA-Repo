@@ -1,6 +1,6 @@
 import {Alert, Linking} from 'react-native';
 import AddAccountDao, { findPassword } from '../DAOs/AccountDao.js';
-import realm, {createAccount, findAccount, changePassword, checkPassword, checkCode, addCode, removeAccount, removeAll, loggedIn, getAccountDB} from '../DAOs/AccountDao.js';
+import {createAccount, findAccount, changePassword, checkPassword, checkCode, addCode, removeAccount, removeAll, loggedIn, getAccountDB} from '../DAOs/AccountDao.js';
 
 export class Account{
     constructor(userName, email, password, accountType, verifyCode, logStatus){

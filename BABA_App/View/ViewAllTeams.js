@@ -4,7 +4,7 @@ import { FlatList } from 'react-native-gesture-handler';
 import {SafeAreaView, StatusBar} from 'react-native';
 import { NavigationContainer } from 'react-native';
 import {createStackNavigator} from 'react-navigation-stack';
-import realm, { getAllDBTeams } from '../DAOs/AddTeamDao';
+import { getAllDBTeams } from '../DAOs/TeamDao';
 
 export default function ViewAllTeams({ navigation }){
     const [teams, setTeams] = useState(getAllDBTeams());

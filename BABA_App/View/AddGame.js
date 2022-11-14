@@ -4,7 +4,6 @@ import CustomInput from '../src/components/CustomInput/CustomInput';
 import CustomButton from '../src/components/CustomButton/CustomButton';
 import realm, { insertDBGame } from "../DAOs/GameDao";
 import { NavigationContainer } from '@react-navigation/native';
-import { insertDBGame } from '../DAOs/GameDao';
 
 export default function CreateGame({navigation}){
     const [name1, setTeam1] = useState('');
