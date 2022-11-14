@@ -33,9 +33,8 @@ const BABA_DB = new Realm({
             team2Score: 'int',
             date: 'int' 
         } 
-    }]
+    }],
+    schemaVersion: 5
 });
 
-let realm = new Realm({schema: [AccountSchema], schemaVersion: 1});
-
-export default realm;
+export default BABA_DB;

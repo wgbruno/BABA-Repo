@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { View, Text, Image, StyleSheet, useWindowDimensions, ScrollView,Alert } from 'react-native';
 import CustomInput from '../src/components/CustomInput/CustomInput';
 import CustomButton from '../src/components/CustomButton/CustomButton';
-import realm, { insertDBGame } from "../DAOs/GameDao";
+import { insertDBGame } from "../DAOs/GameDao";
 import { NavigationContainer } from '@react-navigation/native';
 
 export default function CreateGame({navigation}){

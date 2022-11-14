@@ -1,4 +1,3 @@
-import Realm from "realm";
 import realm from "./SchemaDao";
 
 // Returns the shared instance of the Realm app.

@@ -1,5 +1,6 @@
-import realm, { insertDBTeam, DBisEmpty, getAllDBTeams, getDBTeam, updateDBName, updateDBWins, updateDBLosses, updateDBSeed, deleteDBTeam, deleteAllDBTeams } from "../DAOs/AddTeamDao"
+import { insertDBTeam, DBisEmpty, getAllDBTeams, getDBTeam, updateDBName, updateDBWins, updateDBLosses, updateDBSeed, deleteDBTeam, deleteAllDBTeams } from "../DAOs/AddTeamDao"
 import {expect, test} from '@jest/globals';
+import realm from "../DAOs/SchemaDao";
 
 let players = ['Ron', 'Harry', 'Hermione'];
 

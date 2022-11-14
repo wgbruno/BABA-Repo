@@ -1,6 +1,5 @@
 import React from "react";
 import { Alert } from "react-native";
-import Realm from "realm";
 import realm from "./SchemaDao";
 import { Account } from '../Objects/AccountCont';
 

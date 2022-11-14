@@ -15,7 +15,6 @@ export default function SignUpScreen({navigation}){
 
   const onRegisterPlayer = () => {
     var account = new Account(username, email, password, "N/A", "N/A");
-    console.log(account.getAccount());
     if(password != passwordRepeat){
       Alert.alert("Passwords Do Not Match!", "Please submit passwords again.")
     } 

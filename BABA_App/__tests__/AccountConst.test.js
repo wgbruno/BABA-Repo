@@ -1,6 +1,6 @@
 import {expect, jest, test} from '@jest/globals';
 import { Account } from '../Objects/AccountCont.js';
-import Realm, {createAccount, findAccount, changePassword, checkPassword, checkCode, addCode, removeAccount, removeAll, loggedIn, getAccountDB, findLoggedIn, loggedOff} from '../DAOs/AccountDao.js';
+import {createAccount, findAccount, changePassword, checkPassword, checkCode, addCode, removeAccount, removeAll, loggedIn, getAccountDB, findLoggedIn, loggedOff} from '../DAOs/AccountDao.js';
 
 var account = new Account("TestName", "TestEmail", "TestPassword", null, 0, false);
 

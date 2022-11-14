@@ -1,7 +1,7 @@
-import Realm from "realm";
 import React from 'react';
+import realm from "./SchemaDao";
 
-class GameSchema extends Realm.Object {}
+/*class GameSchema extends Realm.Object {}
 GameSchema.schema = {
     name: 'Game',
     properties:{
@@ -13,7 +13,7 @@ GameSchema.schema = {
         date: 'string' //ideally input this as an int with no delimeters to calculate games occuring in next week(7), month(30)
         //look into if there is a data type that is better to use here
     }
-};
+};*/
 
 
 let insertDBGame = (name1, name2, start, gameDate) => {
@@ -38,8 +38,8 @@ let DBisEmpty = () => {
     return realm.length == 0;
 }*/
 
-export default realm;
-let realm = new Realm({schema: [GameSchema], schemaVersion: 5});
+//export default realm;
+//let realm = new Realm({schema: [GameSchema], schemaVersion: 5});
 
 
 export {
