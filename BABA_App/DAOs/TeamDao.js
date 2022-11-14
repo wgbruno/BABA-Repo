@@ -54,7 +54,8 @@ let DBisEmpty = () => {
 
 //Get individual team by name
 let getDBTeam = (_teamName) => {
-    let team = getAllDBTeams().filter(userTeam => userTeam.teamName == _teamName);
+    let team = realm.objectForPrimaryKey("Team", _teamName);
+    //let team = getAllDBTeams().filter(userTeam => userTeam.teamName == _teamName);
     return team;
 }
 

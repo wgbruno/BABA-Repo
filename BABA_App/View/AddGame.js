@@ -18,29 +18,45 @@ export default function CreateGame({navigation}){
     }
 
     return (
-    <>
-        <CustomInput
-          placeholder="Team Name 1"
-          value={name1}
-          setValue={setTeam1}
-        />
-        <CustomInput
-          placeholder="Team Name 2"
-          value={name2}
-          setValue={setTeam2}
-        />
-        <CustomInput
-          placeholder="Start Time"
-          value={time}
-          setValue={setTime}
-        />
-        <CustomInput
-          placeholder="Date"
-          value={date}
-          setValue={setDate}
-        />
+      <ScrollView showsVerticalScrollIndicator={false}>
+        <View style={styles.root}>
+          <Text style={styles.title}>Schedule a new game</Text>
+          <CustomInput
+            placeholder="Team Name 1"
+            value={name1}
+            setValue={setTeam1}
+          />
+          <CustomInput
+            placeholder="Team Name 2"
+            value={name2}
+            setValue={setTeam2}
+          />
+          <CustomInput
+            placeholder="Start Time"
+            value={time}
+            setValue={setTime}
+          />
+          <CustomInput
+            placeholder="Date"
+            value={date}
+            setValue={setDate}
+          />
 
-        <CustomButton text="Create Game" onPress={onAddGamePressed} />
-    </>
+          <CustomButton text="Create Game" onPress={onAddGamePressed} />
+        </View>
+      </ScrollView>
     );    
 };
+
+const styles = StyleSheet.create({
+  root: {
+    alignItems: 'center',
+    padding: 20,
+  },
+  title: {
+    fontSize: 28,
+    fontWeight: 'bold',
+    color: '#051C60',
+    margin: 10,
+  },
+});
