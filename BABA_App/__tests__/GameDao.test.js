@@ -1,6 +1,6 @@
 import {expect, jest, test} from '@jest/globals';
 import { Game } from '../Objects/GameCont';
-import { insertDBGame, getAllDBGames, DBisEmpty } from '../DAOs/GameDao.js'
+import Realm, { DBisEmpty } from '../DAOs/GameDao.js'
 
 test("Empty Database Detected", function (){
     expect(DBisEmpty).toBeTruthy();

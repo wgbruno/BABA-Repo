@@ -1,36 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<<<<<<< Updated upstream
 <coverage generated="1668211632366" clover="3.2.0">
   <project timestamp="1668211632366" name="All files">
     <metrics statements="157" coveredstatements="119" conditionals="26" coveredconditionals="19" methods="60" coveredmethods="42" elements="243" coveredelements="180" complexity="0" loc="157" ncloc="157" packages="2" files="4" classes="4"/>
     <package name="DAOs">
       <metrics statements="89" coveredstatements="78" conditionals="26" coveredconditionals="19" methods="34" coveredmethods="28"/>
       <file name="AccountDao.js" path="/Users/keenan/BABA/BABA-Repo/BABA_App/DAOs/AccountDao.js">
-=======
-<coverage generated="1668110804359" clover="3.2.0">
-  <project timestamp="1668110804359" name="All files">
-    <metrics statements="157" coveredstatements="119" conditionals="26" coveredconditionals="19" methods="60" coveredmethods="42" elements="243" coveredelements="180" complexity="0" loc="157" ncloc="157" packages="2" files="4" classes="4"/>
-    <package name="DAOs">
-      <metrics statements="89" coveredstatements="78" conditionals="26" coveredconditionals="19" methods="34" coveredmethods="28"/>
-      <file name="AccountDao.js" path="C:\Users\billy\AndroidStudioProjects\BABA-Repo\BABA_App\DAOs\AccountDao.js">
->>>>>>> Stashed changes
         <metrics statements="59" coveredstatements="58" conditionals="26" coveredconditionals="19" methods="19" coveredmethods="19"/>
         <line num="7" count="2" type="stmt"/>
-        <line num="21" count="3" type="stmt"/>
-        <line num="22" count="3" type="stmt"/>
+        <line num="21" count="4" type="stmt"/>
+        <line num="22" count="4" type="stmt"/>
         <line num="27" count="13" type="cond" truecount="2" falsecount="0"/>
-        <line num="28" count="11" type="stmt"/>
-        <line num="29" count="11" type="stmt"/>
-        <line num="38" count="11" type="stmt"/>
-        <line num="41" count="2" type="stmt"/>
+        <line num="28" count="12" type="stmt"/>
+        <line num="29" count="12" type="stmt"/>
+        <line num="38" count="12" type="stmt"/>
+        <line num="41" count="1" type="stmt"/>
         <line num="46" count="21" type="stmt"/>
         <line num="47" count="21" type="cond" truecount="2" falsecount="0"/>
         <line num="48" count="6" type="cond" truecount="2" falsecount="0"/>
         <line num="49" count="4" type="stmt"/>
         <line num="52" count="2" type="stmt"/>
         <line num="56" count="15" type="cond" truecount="2" falsecount="0"/>
-        <line num="57" count="3" type="stmt"/>
-        <line num="60" count="12" type="stmt"/>
+        <line num="57" count="2" type="stmt"/>
+        <line num="60" count="13" type="stmt"/>
         <line num="66" count="3" type="stmt"/>
         <line num="67" count="3" type="cond" truecount="2" falsecount="0"/>
         <line num="68" count="2" type="stmt"/>
@@ -75,11 +66,7 @@
         <line num="146" count="0" type="stmt"/>
         <line num="150" count="2" type="stmt"/>
       </file>
-<<<<<<< Updated upstream
       <file name="AddTeamDao.js" path="/Users/keenan/BABA/BABA-Repo/BABA_App/DAOs/AddTeamDao.js">
-=======
-      <file name="AddTeamDao.js" path="C:\Users\billy\AndroidStudioProjects\BABA-Repo\BABA_App\DAOs\AddTeamDao.js">
->>>>>>> Stashed changes
         <metrics statements="30" coveredstatements="20" conditionals="0" coveredconditionals="0" methods="15" coveredmethods="9"/>
         <line num="16" count="3" type="stmt"/>
         <line num="28" count="3" type="stmt"/>
@@ -95,38 +82,29 @@
         <line num="57" count="0" type="stmt"/>
         <line num="61" count="3" type="stmt"/>
         <line num="62" count="1" type="stmt"/>
-        <line num="63" count="3" type="stmt"/>
-        <line num="68" count="3" type="stmt"/>
-        <line num="69" count="1" type="stmt"/>
+        <line num="63" count="0" type="stmt"/>
+        <line num="64" count="0" type="stmt"/>
+        <line num="66" count="1" type="stmt"/>
+        <line num="67" count="0" type="stmt"/>
+        <line num="68" count="0" type="stmt"/>
         <line num="70" count="1" type="stmt"/>
-        <line num="75" count="3" type="stmt"/>
+        <line num="71" count="0" type="stmt"/>
+        <line num="72" count="0" type="stmt"/>
+        <line num="74" count="1" type="stmt"/>
+        <line num="75" count="0" type="stmt"/>
         <line num="76" count="0" type="stmt"/>
-        <line num="77" count="0" type="stmt"/>
-        <line num="81" count="3" type="stmt"/>
-        <line num="82" count="0" type="stmt"/>
-        <line num="83" count="0" type="stmt"/>
-        <line num="87" count="3" type="stmt"/>
-        <line num="88" count="0" type="stmt"/>
-        <line num="89" count="0" type="stmt"/>
-        <line num="93" count="3" type="stmt"/>
-        <line num="94" count="0" type="stmt"/>
-        <line num="95" count="0" type="stmt"/>
       </file>
     </package>
     <package name="Objects">
       <metrics statements="68" coveredstatements="41" conditionals="0" coveredconditionals="0" methods="26" coveredmethods="14"/>
-<<<<<<< Updated upstream
       <file name="AccountCont.js" path="/Users/keenan/BABA/BABA-Repo/BABA_App/Objects/AccountCont.js">
-=======
-      <file name="AccountCont.js" path="C:\Users\billy\AndroidStudioProjects\BABA-Repo\BABA_App\Objects\AccountCont.js">
->>>>>>> Stashed changes
         <metrics statements="39" coveredstatements="39" conditionals="0" coveredconditionals="0" methods="13" coveredmethods="13"/>
-        <line num="7" count="7" type="stmt"/>
-        <line num="8" count="7" type="stmt"/>
-        <line num="9" count="7" type="stmt"/>
-        <line num="10" count="7" type="stmt"/>
-        <line num="11" count="7" type="stmt"/>
-        <line num="12" count="7" type="stmt"/>
+        <line num="7" count="8" type="stmt"/>
+        <line num="8" count="8" type="stmt"/>
+        <line num="9" count="8" type="stmt"/>
+        <line num="10" count="8" type="stmt"/>
+        <line num="11" count="8" type="stmt"/>
+        <line num="12" count="8" type="stmt"/>
         <line num="16" count="2" type="stmt"/>
         <line num="20" count="1" type="stmt"/>
         <line num="23" count="1" type="stmt"/>
@@ -151,7 +129,7 @@
         <line num="56" count="1" type="stmt"/>
         <line num="57" count="1" type="stmt"/>
         <line num="58" count="1" type="stmt"/>
-        <line num="63" count="1" type="stmt"/>
+        <line num="63" count="2" type="stmt"/>
         <line num="68" count="1" type="stmt"/>
         <line num="69" count="1" type="stmt"/>
         <line num="70" count="1" type="stmt"/>
@@ -161,11 +139,7 @@
         <line num="74" count="1" type="stmt"/>
         <line num="75" count="1" type="stmt"/>
       </file>
-<<<<<<< Updated upstream
       <file name="Team.js" path="/Users/keenan/BABA/BABA-Repo/BABA_App/Objects/Team.js">
-=======
-      <file name="Team.js" path="C:\Users\billy\AndroidStudioProjects\BABA-Repo\BABA_App\Objects\Team.js">
->>>>>>> Stashed changes
         <metrics statements="29" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="13" coveredmethods="1"/>
         <line num="6" count="1" type="stmt"/>
         <line num="7" count="1" type="stmt"/>
