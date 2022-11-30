@@ -1,7 +1,7 @@
 import React, {useEffect, useState} from 'react';
 import { Button, Text, TextInput, TouchableOpacity, View, ScrollView, Alert } from 'react-native';
 import { NavigationContainer } from 'react-native';
-import MainStyle from "../Style/MainStyle.style";
+import MainStyle from "../Style/Main.style";
 import FormStyle from "../Style/Form.style";
 import { db } from './AddPlayer';
 

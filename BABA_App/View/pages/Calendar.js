@@ -1,5 +1,7 @@
 import React from 'react';
-import { Button, Text, View, StyleSheet } from 'react-native';
+import { Button, Text, View, StyleSheet, ScrollView } from 'react-native';
+import MainStyle from '../../Style/Main.style';
+import FormStyle from '../../Style/Form.style';
 import Realm from 'realm';
 import Gameformat from './components/Gameformat';
 import { NavigationContainer } from 'react-native';

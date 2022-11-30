@@ -26,15 +26,16 @@ const BABA_DB = new Realm({
     }, {
         name: 'Game',
         properties:{
+            gameID: 'int',
             team1Name: 'string',
             team2Name: 'string',
             startTime: 'string',
             team1Score: 'int',
             team2Score: 'int',
-            date: 'int' 
+            date: 'date' 
         } 
     }],
-    schemaVersion: 5
+    schemaVersion: 6
 });
 
 export default BABA_DB;

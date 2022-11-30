@@ -19,6 +19,7 @@ GameSchema.schema = {
 let insertDBGame = (name1, name2, start, gameDate) => {
     realm.write(() => {
         const game = realm.create('Game', {
+            gameID: realm.objects('Game').length + 1,
             team1Name: name1,
             team2Name: name2,
             startTime: start,

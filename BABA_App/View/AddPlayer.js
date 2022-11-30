@@ -1,6 +1,6 @@
 import React, {useState, useEffect} from 'react';
 import { Alert, Button, Text, TextInput, TouchableOpacity, View } from 'react-native';
-import MainStyle from "../Style/MainStyle.style";
+import MainStyle from "../Style/Main.style";
 import FormStyle from "../Style/Form.style";
 import { NavigationContainer } from 'react-native';
 import { openDatabase } from "react-native-sqlite-storage";
