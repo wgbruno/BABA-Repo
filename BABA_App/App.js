@@ -1,6 +1,5 @@
 import React, {useState, useEffect} from "react";
 import { Button, Text, TextInput, TouchableOpacity, View, StyleSheet, SafeAreaView } from 'react-native';
-import AddTeam from "./View/AddTeam.js";
 import Home from "./View/Home.js";
 import SignInScreen from "./View/Account/SignInScreen/SignInScreen.js";
 import SignUpScreen from "./View/Account/SignUpScreen/SignUpScreen.js";
@@ -8,13 +7,14 @@ import ConfirmEmailScreen from "./View/Account/ConfirmEmailScreen/ConfirmEmailSc
 import ForgotPasswordScreen from "./View/Account/ForgotPasswordScreen/ForgotPasswordScreen.js";
 import NewPasswordScreen from "./View/Account/NewPasswordScreen/NewPasswordScreen.js";
 import DeleteAccountScreen from "./View/Account/DeleteAccount/DeleteAccount.js";
+import AddTeam from './View/AddTeam.js';
 import ViewAllTeams from "./View/ViewAllTeams.js";
 import EditTeam from "./View/EditTeam.js";
 import Calendar from './View/pages/Calendar'
 import CreateGame from "./View/AddGame.js";
 import GameScoreScreen from "./View/LiveScore/GameScoreScreen.js";
 import ManagerHomeScreen from "./View/Manager/ManagerHomeScreen.js";
-import DisplayTeamScren from './View'
+//import DisplayTeamScreen from './View/'
 import FormStyle from "./Style/Form.style";
 import {createAppContainer} from 'react-navigation'; 
 import {createStackNavigator} from 'react-navigation-stack';
