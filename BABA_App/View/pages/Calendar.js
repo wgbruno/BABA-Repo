@@ -55,6 +55,11 @@ export default function ViewAllGames({ navigation }){
                                 <Text>{item.tipoff}</Text>
 
                             </TouchableOpacity>
+                            <Button 
+                                style={FormStyle.formButton} 
+                                onPress={() => navigation.navigate('ScheduleGame')}
+                                title="Schedule New Game">
+                            </Button>
                         </View>
                     } />
                 }
