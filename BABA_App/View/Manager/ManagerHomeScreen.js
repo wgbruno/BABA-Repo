@@ -22,7 +22,9 @@ export default function ManagerHomeScreen({navigation}){
     navigation.navigate("DisplayTeam", {paramTeamName: teamName});
   }
   
-  
+  const freeAgents = () => {
+    navigation.navigate('FreeAgents');
+  }
   
   
   return (
@@ -36,7 +38,11 @@ export default function ManagerHomeScreen({navigation}){
           <CustomButton
             text={"View Team"}
             onPress={toTeam}
-          
+          />
+
+          <CustomButton
+            text={"Free Agents"}
+            onPress={freeAgents}
           />
       </View>
     </ScrollView>

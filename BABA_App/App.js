@@ -15,6 +15,7 @@ import CreateGame from "./View/AddGame.js";
 import GameScoreScreen from "./View/LiveScore/GameScoreScreen.js";
 import ManagerHomeScreen from "./View/Manager/ManagerHomeScreen.js";
 //import DisplayTeamScreen from './View/'
+import FreeAgentScreen from './View/Manager/FreeAgentScreen.js'
 import FormStyle from "./Style/Form.style";
 import {createAppContainer} from 'react-navigation'; 
 import {createStackNavigator} from 'react-navigation-stack';

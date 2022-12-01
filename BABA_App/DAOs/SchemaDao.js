@@ -56,8 +56,17 @@ const BABA_DB = new Realm({
             team2Score: 'int',
             date: 'date' 
         } 
+    }, {
+        name: 'Request',
+        primaryKey: 'requestID',
+        properties:{
+            requestID: 'int',
+            message: 'string',
+            requestType: 'string',
+            senderID: 'string'
+        }
     }],
-    schemaVersion: 11
+    schemaVersion: 12
 });
 
 export default BABA_DB;
