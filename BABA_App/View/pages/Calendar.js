@@ -2,7 +2,6 @@ import React, {useEffect, useState} from 'react';
 import { Button, Text, View, StyleSheet, ScrollView, TouchableOpacity } from 'react-native';
 import MainStyle from '../../Style/Main.style';
 import FormStyle from '../../Style/Form.style';
-import Realm from 'realm';
 import Gameformat from './components/Gameformat';
 import { NavigationContainer, SafeAreaView, StatusBar } from 'react-native';
 import { FlatList } from 'react-native-gesture-handler';
@@ -30,34 +29,34 @@ export default function ViewAllGames({ navigation }){
     return(<>
         <StatusBar barStyle="light-content" />
         <SafeAreaView style={{padding: 8}}>
-        <Text>{JSON.stringify(getAllDBGames())}</Text>
+        <Text>{JSON.stringify(games)}</Text>
         </SafeAreaView>
         {/* List for all games*/}
         <Text style={{marginTop: 8, fontWeight: 'bold'}}>Upcoming Games</Text>
-                {empty ? emptyDatabase(empty):
-                <FlatList
-                    data={games}
-                    keyExtractor={(item, index) => index.toString()}
-                    renderItem={({item, index}) => 
-                        <View style={{flexDirection: 'row', justifyContent: 'space-between'}}>
-                            <TouchableOpacity
-                                onPress={() => {navigation.navigate('GameView', {
-                                    paramTeam1: item.teamName1,
-                                    paramTeam2: item.teamName2,
-                                    paramDate: item.date,
-                                    paramStart: item.tipoff,
-                                    paramScore1: item.teamScore1,
-                                    paramScore2: item.teamScore2,
-                                    paramID: item.gameID });}}>
-                                <Text>{item.teamName1}      {item.teamName2}</Text>
-                                <Text>{item.teamScore1}      {item.teamScore2}</Text>
-                                <Text>{item.date}</Text>
-                                <Text>{item.tipoff}</Text>
+            {empty ? emptyDatabase():
+            <FlatList
+                data={games}
+                keyExtractor={(item, index) => index.toString()}
+                renderItem={({item, index}) => 
+                    <View style={{flexDirection: 'row', justifyContent: 'space-between'}}>
+                        <TouchableOpacity
+                            onPress={() => {navigation.navigate('GameView', {
+                                paramTeam1: item.teamName1,
+                                paramTeam2: item.teamName2,
+                                paramDate: item.date,
+                                paramStart: item.tipoff,
+                                paramScore1: item.teamScore1,
+                                paramScore2: item.teamScore2,
+                                paramID: item.gameID });}}>
+                            <Text>{item.teamName1}      {item.teamName2}</Text>
+                            <Text>{item.teamScore1}      {item.teamScore2}</Text>
+                            <Text>{item.date}</Text>
+                            <Text>{item.tipoff}</Text>
 
-                            </TouchableOpacity>
-                        </View>
-                    } />
-                }
+                        </TouchableOpacity>
+                    </View>
+                } />
+            }
     </>);
 }
   /*  

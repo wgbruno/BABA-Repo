@@ -51,11 +51,11 @@ export function findGame(_gameID){
         return 0;
     }
 }
-/*
-let getAllDBGames = () => {
+
+export function getAllDBGames(){
     return realm.objects('Game');
 }
-
+/*
 let DBisEmpty = () => {
     return realm.length == 0;
 }*/
