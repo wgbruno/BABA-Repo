@@ -1,14 +1,73 @@
-import React from 'react';
+import React, {useEffect, useState} from 'react';
 import { Button, Text, View, StyleSheet, ScrollView } from 'react-native';
 import MainStyle from '../../Style/Main.style';
 import FormStyle from '../../Style/Form.style';
 import Realm from 'realm';
 import Gameformat from './components/Gameformat';
-import { NavigationContainer } from 'react-native';
+import { NavigationContainer, SafeAreaView, StatusBar } from 'react-native';
+import { FlatList } from 'react-native-gesture-handler';
 import { getAllDBGames } from '../../DAOs/GameDao';
+//import formButton from '../../Style/Form.style'
+// need this import??
 
 let realm;
  
+export default function ViewAllGames({ navigation }){
+    const [games, setGames] = useState(getAllDBGames());
+    const [empty, setEmpty] = useState([]);
+
+    let emptyDatabase = () => {
+        return(
+            <View style={{justifyContent: 'center', alignItems: 'center', flex: 1}}>
+                <Text style={{fontSize: 25, textAlign: 'center'}}>
+                    No Games Have Been Scheduled Yet
+                </Text>
+            </View>
+        );
+    }
+
+//flat list is what makes them a list
+    return(<>
+        <StatusBar barStyle="light-content" />
+        <SafeAreaView style={{padding: 8}}>
+        <Text>{JSON.stringify(getAllDBGames())}</Text>
+        </SafeAreaView>
+        {/* List for all games*/}
+        <Text style={{marginTop: 8, fontWeight: 'bold'}}>Upcoming Games</Text>
+                {empty ? emptyDatabase(empty):
+                <FlatList
+                    data={games}
+                    keyExtractor={(item, index) => index.toString()}
+                    renderItem={({item, index}) => {
+                        return (
+                            <View style={{flexDirection: 'row', justifyContent: 'space-between'}}>
+                                <Text>{item.teamName1}      {item.teamName2}</Text>
+                                <Text>{item.teamScore1}      {item.teamScore2}</Text>
+                                <Text>{item.date}</Text>
+                                <Text>{item.tipoff}</Text>
+                            </View>
+                        )
+                    }} />
+                }
+    </>);
+}
+  /*  
+const listAllGames = () => {
+    return(
+        <View 
+        style={{height: 1, width: '100%', backgroundColor: '#000'}}
+        />
+    );
+};
+
+const styles = StyleSheet.create({
+    itemsStyle:{
+        fontSize:22,
+        color: '#000'
+    }
+});*/
+
+/*
 export default class Calendar extends React.Component {
     //is this constructor even needed?
     constructor(props) {
@@ -25,9 +84,8 @@ export default class Calendar extends React.Component {
             <ScrollView showsVerticalScrollIndicator={false}>
                 <View style={styles.root}>
                     <Text style={styles.title}>Calendar</Text>
-                    <Text style={styles.section}>Games This Week</Text>
+                    <Text style={styles.section}>Upcoming Games</Text>
                     <Gameformat teamName1='Ballers' teamName2='Hoopers' time='8:00pm'/>
-                    <Text style={styles.section}>Upcoming</Text>
                     <Button 
                         style={FormStyle.formButton} 
                         onPress={() => this.props.navigation.navigate('ScheduleGame')}
