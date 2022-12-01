@@ -16,7 +16,7 @@ const BABA_DB = new Realm({
         }
     }, {
         name : "Team",
-        primaryKey: 'teamName'
+        primaryKey: 'teamName',
         properties : {
             teamName : 'string',
             wins : 'int',
@@ -26,7 +26,7 @@ const BABA_DB = new Realm({
         }
     }, {
         name: 'Game',
-        primaryKey: 'gameID'
+        primaryKey: 'gameID',
         properties:{
             gameID: 'int',
             team1Name: 'string',
@@ -37,7 +37,7 @@ const BABA_DB = new Realm({
             date: 'date' 
         } 
     }],
-    schemaVersion: 7
+    schemaVersion: 8
 });
 
 export default BABA_DB;

@@ -40,7 +40,7 @@ const AppNavigator = createStackNavigator(
       GameScore: GameScoreScreen
   },  
   {  
-      initialRouteName: "CalendarScreen"  
+      initialRouteName: "GameScore"  
   }  
 ); 
 const AppContainer = createAppContainer(AppNavigator); 

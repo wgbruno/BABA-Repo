@@ -1,35 +1,50 @@
 import React from 'react';
+import { Game } from '../Objects/GameCont';
 import realm from "./SchemaDao";
 
-/*class GameSchema extends Realm.Object {}
-GameSchema.schema = {
-    name: 'Game',
-    properties:{
-        team1Name: 'string',
-        team2Name: 'string',
-        startTime: 'string',
-        team1Score: 'int',
-        team2Score: 'int',
-        date: 'string' //ideally input this as an int with no delimeters to calculate games occuring in next week(7), month(30)
-        //look into if there is a data type that is better to use here
-    }
-};*/
-
-
-let insertDBGame = (name1, name2, start, gameDate) => {
-    realm.write(() => {
-        const game = realm.create('Game', {
-            gameID: realm.objects('Game').length + 1,
-            team1Name: name1,
-            team2Name: name2,
-            startTime: start,
-            team1Score: 0,
-            team2Score: 0,
-            date: gameDate
-        });
-    });
+export function getGameDB(_gameID){
+    var game = realm.objectForPrimaryKey("Game", _gameID);
+    return new Game(_gameID, game['team1Name'], game['team2Name'], game['date'], game['startTime'], game['team1Score'], game['team2Score']);
 }
 
+export function insertDBGame(_name1, _name2, _start, _gameDate){
+    realm.write(() => {
+        const game = realm.create('Game', {
+            gameID: realm.objects('Game').length + 1, //This creates a gameID that can be used to search for games
+            team1Name: _name1,
+            team2Name: _name2,
+            startTime: _start,
+            team1Score: 0,
+            team2Score: 0,
+            date: Date(_gameDate)
+        });
+        return 0;
+    });
+   
+}
+
+export function addPointsDB(_gameID, _team, _points){
+    if(!(findGame(_gameID))){
+        realm.write(() => {
+            var game = realm.objectForPrimaryKey('Game',_gameID);
+            game[_team] += _points;
+            return 0;
+        })
+    } else {
+        return 1;
+    }
+}
+
+export function findGame(_gameID){
+    var game = realm.objectForPrimaryKey("Game", _gameID);
+    if(game == undefined){
+        return 1;
+    }
+    else{
+        //console.log("Found matching game");
+        return 0;
+    }
+}
 /*
 let getAllDBGames = () => {
     return realm.objects('Game');
@@ -43,11 +58,6 @@ let DBisEmpty = () => {
 //let realm = new Realm({schema: [GameSchema], schemaVersion: 5});
 
 
-export {
-    insertDBGame
-    //getAllDBGames,
-    //DBisEmpty
-}
 
 /*
 export function CreateGame(name1, name2, start, gameName, gameDate){
@@ -65,28 +75,7 @@ export function CreateGame(name1, name2, start, gameName, gameDate){
         });
     });
 }
-
-export function findGame(gameName, verify){
-    var game = realm.objectForPrimaryKey("Game", gameName);
-    if(verify){
-        if(game == undefined){
-            return 1;
-        }
-        else{
-            console.log("Found matching account");
-            return 0;
-        }
-    }
-    else{
-        if(game != undefined){
-            return 1;
-        }
-        else{
-            console.log("Unique GameName");
-            return 0;
-        }
-    }
-}
-
-//let realm = new Realm({schema: [AccountSchema], schemaVersion: 5});
 */
+
+
+
