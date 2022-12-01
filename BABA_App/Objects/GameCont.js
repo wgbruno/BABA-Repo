@@ -14,10 +14,10 @@ export class Game{
         }else{
             this.gameID = gameID;
         }
-    }
+    } 
 
-    addPoints(team, points, teamID){
-        var result = addPointsDB(this.gameID, team, points);
+    addPoints(points, teamID){
+        var result = addPointsDB(this.gameID, points, teamID);
         if(result == 0 && points == 1 && teamID == 1){
             this.teamScore1 += 1;
             return 0;
@@ -31,6 +31,8 @@ export class Game{
             this.teamScore2 -= 1;
             return 0;
         }
+        this.teamScore1 = 0;
+        this.teamScore2 = 0;
         return 1;
     }
     

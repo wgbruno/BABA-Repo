@@ -23,11 +23,17 @@ export function insertDBGame(_name1, _name2, _start, _gameDate){
    
 }
 
-export function addPointsDB(_gameID, _team, _points){
-    if(!(findGame(_gameID))){
+export function addPointsDB(_gameID, _points, _teamID){
+    if(findGame(_gameID)){
         realm.write(() => {
-            var game = realm.objectForPrimaryKey('Game',_gameID);
-            game[_team] += _points;
+            var game = realm.objectForPrimaryKey('Game', _gameID);
+            if(_teamID == 1){
+                game["team1Score"] += _points;
+            } else if(_teamID == 2){
+                game["team2Score"] += _points;
+            }else{
+                return 1;
+            }
             return 0;
         })
     } else {

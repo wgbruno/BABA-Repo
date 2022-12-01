@@ -31,20 +31,23 @@ export default function GameScoreScreen({navigation}){
   const game = new Game(gameID, team1Name, team2Name, date, startTime, team1Score, team2Score);
   
   const onAddPoint1 = () => {
-    game.addPoints("team1Score", 1, 1);
-    refreshPage();
+    game.addPoints(1, 1);
+    setScore1(game.getTeamScore1);
   }
 
   const onAddPoint2 = () => {
-    game.addPoints("team2Score", 1, 2);
+    game.addPoints(1, 2);
+    refreshPage();
   }
 
   const onRemovePoint1 = () => {
-    game.addPoints("team1Score", -1, 1);
+    game.addPoints(-1, 1);
+    refreshPage();
   }
 
   const onRemovePoint2 = () => {
-    game.addPoints("team2Score", -1, 2);
+    game.addPoints(-1, 2);
+    refreshPage();
   }
 
   const refreshPage = () => {

@@ -22,8 +22,16 @@ export default function SignInScreen({navigation}){
       if(account.logInAccount()){
         Alert.alert("Error","Problem Logging in. Try again.");
       }else{
-        Alert.alert("Success", "You have logged in!");
-        navigation.navigate('HomeScreen');
+        if(account.accountType == null){
+          Alert.alert("Success", "You have logged in!");
+          navigation.navigate('HomeScreen');
+        } else if(account.accountType == 'Admin'){
+          Alert.alert("Success", "You have logged in as admin!");
+          navigation.navigate('AdminScreen');
+        } else if(account.accountType == 'Manager'){
+          Alert.alert("Success", "You have logged in as manager!");
+          navigation.navigate('ManagerHome');
+        }
       }
     }
   };
