@@ -176,3 +176,12 @@ export function findLoggedIn(){
         return 1;
     }
 }
+
+export function getID(_userName){
+    var account = realm.objectForPrimaryKey("Account", _userName);
+    if(account['playerID'] != null){
+        return account['playerID'];
+    }else{
+        return 1;
+    }
+}

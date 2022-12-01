@@ -1,10 +1,10 @@
 import { Alert } from 'react-native';
-import AddPlayerDao from '../DAOs/AddPlayerDao.js';
+import { getTeam } from '../DAOs/PlayerDao';
 
 // rename this to PlayerController?? or PlayerDao?
 export class Player{
     //create player
-    constructor(ID, firstName, lastName, number, age, height, points, rebounds, assists, blocks, steals, fouls, turnovers){
+    constructor(ID, firstName, lastName, number, age, height, points, rebounds, assists, blocks, steals, fouls, turnovers, teamName){
         this.ID = ID;
         this.firstName = firstName;
         this.lastName = lastName;
@@ -18,8 +18,11 @@ export class Player{
         this.steals = steals;
         this.fouls = fouls;
         this.turnovers = turnovers;
+        this.teamName = teamName
+    }
 
-        AddPlayerDao();
+    getTeamName(){
+        return getTeam(this.ID);
     }
 
     //call this method to use in sqllite execute call from AddPlayer

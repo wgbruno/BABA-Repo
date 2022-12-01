@@ -12,7 +12,27 @@ const BABA_DB = new Realm({
             password: 'string',
             accountType: 'string?',
             verifyCode: 'int',
-            logStatus: 'bool'
+            logStatus: 'bool',
+            playerID: 'string'
+        }
+    }, {
+        name: "Player",
+        primaryKey: 'playerID',
+        properties:{
+            playerID: 'int',
+            firstName: 'string',
+            lastName: 'string',
+            age: 'int',
+            number: 'int',
+            height: 'string',
+            points: 'int',
+            rebounds: 'int',
+            assists: 'int',
+            blocks: 'int',
+            steals: 'int',
+            fouls: 'int',
+            turnovers: 'int',
+            teamName: 'string'
         }
     }, {
         name : "Team",
@@ -37,7 +57,7 @@ const BABA_DB = new Realm({
             date: 'date' 
         } 
     }],
-    schemaVersion: 8
+    schemaVersion: 11
 });
 
 export default BABA_DB;
