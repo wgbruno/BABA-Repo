@@ -30,7 +30,7 @@ export default function SignInScreen({navigation}){
           navigation.navigate('AdminScreen');
         } else if(account.accountType == 'Manager'){
           Alert.alert("Success", "You have logged in as manager!");
-          navigation.navigate('ManagerHome');
+          navigation.navigate('ManagerHome', {paramUser: account.userName});
         }
       }
     }
