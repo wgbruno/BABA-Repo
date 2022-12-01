@@ -10,7 +10,7 @@ import DeleteAccountScreen from "./View/Account/DeleteAccount/DeleteAccount.js";
 import AddTeam from './View/AddTeam.js';
 import ViewAllTeams from "./View/ViewAllTeams.js";
 import EditTeam from "./View/EditTeam.js";
-import Calendar from './View/pages/Calendar'
+import Calendar from './View/pages/Calendar';
 import CreateGame from "./View/AddGame.js";
 import GameScoreScreen from "./View/LiveScore/GameScoreScreen.js";
 import ManagerHomeScreen from "./View/Manager/ManagerHomeScreen.js";
@@ -18,6 +18,7 @@ import ManagerHomeScreen from "./View/Manager/ManagerHomeScreen.js";
 import FormStyle from "./Style/Form.style";
 import {createAppContainer} from 'react-navigation'; 
 import {createStackNavigator} from 'react-navigation-stack';
+import ViewGame from './View/pages/ViewGame';
 
 const AppNavigator = createStackNavigator(  
   {  
@@ -33,6 +34,7 @@ const AppNavigator = createStackNavigator(
       UpdateTeams: EditTeam,
       ScheduleGame: CreateGame,
       CalendarScreen: Calendar,
+      GameView: ViewGame,
       GameScore: GameScoreScreen,
       ManagerHome: ManagerHomeScreen
   },  

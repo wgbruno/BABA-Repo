@@ -1,5 +1,5 @@
 import React, {useEffect, useState} from 'react';
-import { Button, Text, View, StyleSheet, ScrollView } from 'react-native';
+import { Button, Text, View, StyleSheet, ScrollView, TouchableOpacity } from 'react-native';
 import MainStyle from '../../Style/Main.style';
 import FormStyle from '../../Style/Form.style';
 import Realm from 'realm';
@@ -38,16 +38,25 @@ export default function ViewAllGames({ navigation }){
                 <FlatList
                     data={games}
                     keyExtractor={(item, index) => index.toString()}
-                    renderItem={({item, index}) => {
-                        return (
-                            <View style={{flexDirection: 'row', justifyContent: 'space-between'}}>
+                    renderItem={({item, index}) => 
+                        <View style={{flexDirection: 'row', justifyContent: 'space-between'}}>
+                            <TouchableOpacity
+                                onPress={() => {navigation.navigate('GameView', {
+                                    paramTeam1: item.teamName1,
+                                    paramTeam2: item.teamName2,
+                                    paramDate: item.date,
+                                    paramStart: item.tipoff,
+                                    paramScore1: item.teamScore1,
+                                    paramScore2: item.teamScore2,
+                                    paramID: item.gameID });}}>
                                 <Text>{item.teamName1}      {item.teamName2}</Text>
                                 <Text>{item.teamScore1}      {item.teamScore2}</Text>
                                 <Text>{item.date}</Text>
                                 <Text>{item.tipoff}</Text>
-                            </View>
-                        )
-                    }} />
+
+                            </TouchableOpacity>
+                        </View>
+                    } />
                 }
     </>);
 }
