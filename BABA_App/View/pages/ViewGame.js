@@ -29,8 +29,8 @@ export default function GameScoreScreen({navigation}){
     setScore1(navigation.getParam('paramScore1', 0));
     setScore2(navigation.getParam('paramScore2', 0));
     setDate(navigation.getParam('paramDate', null));
-    setRecord1(navigation.getParam('paramRecord1', "1-0"));
-    setRecord2(navigation.getParam('paramRecord2', "1-1"));
+    //setRecord1(navigation.getParam('paramRecord1', "1-0"));
+    //setRecord2(navigation.getParam('paramRecord2', "1-1"));
   }, []);
 
   //const game = new Game(gameID, team1Name, team2Name, date, startTime, team1Score, team2Score);
@@ -49,7 +49,7 @@ export default function GameScoreScreen({navigation}){
         />
         <Text style={styles.teamText}>{team1Name}                {team2Name}</Text>
         <Text style={styles.teanScore}>{team1Score}            {team2Score}</Text>
-        <Text style={styles.teamRecord}>{record1}            {record2}</Text>
+        <Text style={styles.teamRecord}>1-0            1-1</Text>
         <CustomButton
           text="Return Home"
           onPress={goHome}
