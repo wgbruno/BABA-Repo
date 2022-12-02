@@ -1,6 +1,11 @@
-import { insertDBTeam, DBisEmpty, getAllDBTeams, getDBTeam, updateDBName, updateDBWins, updateDBLosses, updateDBSeed, deleteDBTeam, deleteAllDBTeams } from "../DAOs/AddTeamDao"
+import { insertDBTeam, DBisEmpty, getAllDBTeams, getDBTeam, updateDBName, updateDBWins, updateDBLosses, updateDBSeed, deleteDBTeam, deleteAllDBTeams } from "../DAOs/TeamDao"
 import {expect, test} from '@jest/globals';
 import realm from "../DAOs/SchemaDao";
+
+test('Delete all teams', function(){
+    deleteAllDBTeams();
+    expect(DBisEmpty());
+})
 
 let players = ['Ron', 'Harry', 'Hermione'];
 
@@ -12,7 +17,7 @@ test('Insert Teams', function(){
 
 test('Test all teams in realm', function(){
     let teams = getAllDBTeams();
-
+    
 })
 /*
 test('Get specific team', function(){

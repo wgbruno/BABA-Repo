@@ -20,7 +20,7 @@ export default function GameScoreScreen({navigation}){
   const [record2, setRecord2] = useState("");
 
   
-
+//change these values so they are set to the params, if this is not already happening
   useEffect(() => {
     setID(navigation.getParam('paramID', 0));
     setTeam1(navigation.getParam('paramTeam1', "Team 1"));
@@ -48,8 +48,8 @@ export default function GameScoreScreen({navigation}){
           resizeMode="contain"
         />
         <Text style={styles.teamText}>{team1Name}                {team2Name}</Text>
+        <Text style={styles.teamRecord}>1-0                1-1</Text>
         <Text style={styles.teanScore}>{team1Score}            {team2Score}</Text>
-        <Text style={styles.teamRecord}>1-0            1-1</Text>
         <CustomButton
           text="Return Home"
           onPress={goHome}
@@ -84,7 +84,7 @@ const styles = StyleSheet.create({
     teamRecord: {
         color: 'darkblue',
         marginVertical: 10,
-        fontSize: 25,
+        fontSize: 20,
     }
   });
   

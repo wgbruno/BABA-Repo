@@ -15,6 +15,7 @@ import GameScoreScreen from "./View/LiveScore/GameScoreScreen.js";
 import ManagerHomeScreen from "./View/Manager/ManagerHomeScreen.js";
 //import DisplayTeamScreen from './View/'
 import FreeAgentScreen from './View/Manager/FreeAgentScreen.js'
+import Playoffs from "./View/Playoffs"
 import FormStyle from "./Style/Form.style";
 import {createAppContainer} from 'react-navigation'; 
 import {createStackNavigator} from 'react-navigation-stack';
@@ -46,7 +47,8 @@ const AppNavigator = createStackNavigator(
       ManagerHome: ManagerHomeScreen,
       FreeAgent: FreeAgentScreen,
       SendTeamRequest: SendTeamRequestScreen,
-      RequestManager: RequestManagerScreen
+      RequestManager: RequestManagerScreen,
+      PlayoffScreen: Playoffs
   },  
   {  
       initialRouteName: "SignIn"  

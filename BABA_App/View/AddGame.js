@@ -4,6 +4,7 @@ import CustomInput from '../src/components/CustomInput/CustomInput';
 import CustomButton from '../src/components/CustomButton/CustomButton';
 import { insertDBGame } from "../DAOs/GameDao";
 import { NavigationContainer } from '@react-navigation/native';
+import Logo from "../assets/images/Logo_1.png";
 
 export default function CreateGame({navigation}){
     const [name1, setTeam1] = useState('');
@@ -20,6 +21,11 @@ export default function CreateGame({navigation}){
     return (
       <ScrollView showsVerticalScrollIndicator={false}>
         <View style={styles.root}>
+          <Image
+            source={Logo}
+            style={[styles.logo, {height: height * 20}]}
+            resizeMode="contain"
+          />
           <Text style={styles.title}>Schedule a new game</Text>
           <CustomInput
             placeholder="Team Name 1"
@@ -54,9 +60,9 @@ const styles = StyleSheet.create({
     padding: 20,
   },
   title: {
-    fontSize: 28,
+    fontSize: 40,
     fontWeight: 'bold',
-    color: '#051C60',
-    margin: 10,
-  },
+    color: 'darkblue',
+    marginVertical: 10,
+  }
 });

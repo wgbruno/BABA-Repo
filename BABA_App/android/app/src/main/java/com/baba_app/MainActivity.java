@@ -4,6 +4,8 @@ import com.facebook.react.ReactActivity;
 import com.facebook.react.ReactActivityDelegate;
 import com.facebook.react.ReactRootView;
 import android.os.Bundle;
+//import io.realm.Realm;
+//import io.realm.RealmConfiguration;
 
 public class MainActivity extends ReactActivity {
 
@@ -48,7 +50,19 @@ public class MainActivity extends ReactActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-      super.onCreate(null);
+      super.onCreate(savedInstanceState);
+      /*Realm.init(this);
+      RealmConfiguration realmConfig = new RealmConfiguration.Builder()
+                .name("BABA.realm")
+                .schemaVersion(5)
+                .build();
+        Realm.setDefaultConfiguration(realmConfig);*/
+    }
+
+    @Override
+    protected void onDestroy() {
+      super.onDestroy();
+      //realm.close();
     }
   }
 }

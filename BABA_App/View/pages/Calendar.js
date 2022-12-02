@@ -2,37 +2,54 @@ import React, {useEffect, useState} from 'react';
 import { Button, Text, View, StyleSheet, ScrollView, TouchableOpacity } from 'react-native';
 import MainStyle from '../../Style/Main.style';
 import FormStyle from '../../Style/Form.style';
+import Realm from 'realm';
 import Gameformat from './components/Gameformat';
 import { NavigationContainer, SafeAreaView, StatusBar } from 'react-native';
 import { FlatList } from 'react-native-gesture-handler';
 import { getAllDBGames } from '../../DAOs/GameDao';
-//import formButton from '../../Style/Form.style'
-// need this import??
+import Logo from '../../assets/images/Logo_1.png'
 
 let realm;
  
 export default function ViewAllGames({ navigation }){
     const [games, setGames] = useState(getAllDBGames());
-    const [empty, setEmpty] = useState([]);
+    const [empty, setEmpty] = useState(true);
 
-    let emptyDatabase = () => {
+    useEffect(() => {
+        console.log(games);
+        if(games != undefined){
+            setEmpty(false);
+        }
+    })
+    
+    const emptyDatabase = () => {
         return(
-            <View style={{justifyContent: 'center', alignItems: 'center', flex: 1}}>
-                <Text style={{fontSize: 25, textAlign: 'center'}}>
+            <View style={styles.root}>
+                <Text style={styles.teamText}>
                     No Games Have Been Scheduled Yet
                 </Text>
             </View>
         );
     }
 
+// remove safe area view and JSON stuff when done
 //flat list is what makes them a list
     return(<>
         <StatusBar barStyle="light-content" />
         <SafeAreaView style={{padding: 8}}>
-        <Text>{JSON.stringify(games)}</Text>
+        <Text>{JSON.stringify(getAllDBGames())}</Text>
         </SafeAreaView>
+        {/* Above is just for testing, REMOVE when done!!!!*/}
         {/* List for all games*/}
-        <Text style={{marginTop: 8, fontWeight: 'bold'}}>Upcoming Games</Text>
+        <ScrollView showsVerticalScrollIndicator={false}>
+            <View style={styles.root}>
+                <Button 
+                    style={FormStyle.formButton} 
+                    onPress={() => navigation.navigate('ScheduleGame')}
+                    title="Schedule New Game">
+                </Button>
+                <Text style={styles.teamText}>Upcoming Games</Text>
+            </View>
             {empty ? emptyDatabase():
             <FlatList
                 data={games}
@@ -57,8 +74,22 @@ export default function ViewAllGames({ navigation }){
                     </View>
                 } />
             }
+        </ScrollView>
     </>);
 }
+
+const styles = StyleSheet.create({
+    root: {
+      alignItems: 'center',
+      padding: 20,
+    },
+    teamText: {
+      color: 'darkblue',
+      marginVertical: 10,
+      fontSize: 25,
+    }
+  });
+
   /*  
 const listAllGames = () => {
     return(
@@ -95,7 +126,7 @@ export default class Calendar extends React.Component {
                     <Text style={styles.section}>Upcoming Games</Text>
                     <Gameformat teamName1='Ballers' teamName2='Hoopers' time='8:00pm'/>
                     <Button 
-                        style={FormStyle.formButton} 
+                        //style={FormStyle.formButton} 
                         onPress={() => this.props.navigation.navigate('ScheduleGame')}
                         title="Schedule New Game">
                     </Button>
