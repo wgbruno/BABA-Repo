@@ -134,6 +134,10 @@ android {
 
     compileSdkVersion rootProject.ext.compileSdkVersion
 
+    /*realm {
+        syncEnabled = true
+    }*/
+
     defaultConfig {
         applicationId "com.baba_app"
         minSdkVersion rootProject.ext.minSdkVersion
@@ -219,8 +223,10 @@ android {
         }
     }
     buildTypes {
+        def appID = "data-npbmz"
         debug {
             signingConfig signingConfigs.debug
+            //buildConfigField "String", "RealmAppId", "data-npbmz"
         }
         release {
             // Caution! In production, you need to generate your own keystore file.
@@ -228,6 +234,7 @@ android {
             signingConfig signingConfigs.debug
             minifyEnabled enableProguardInReleaseBuilds
             proguardFiles getDefaultProguardFile("proguard-android.txt"), "proguard-rules.pro"
+            buildConfigField "String", "RealmAppId", "data-npbmz"
         }
     }
 
@@ -250,6 +257,8 @@ android {
 
 dependencies {
     implementation fileTree(dir: "libs", include: ["*.jar"])
+
+    implementation 'io.realm:realm-gradle-plugin:10.10.1'
 
     //noinspection GradleDynamicVersion
     implementation "com.facebook.react:react-native:+"  // From node_modules

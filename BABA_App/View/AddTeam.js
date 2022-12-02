@@ -27,7 +27,7 @@ export default function RegisterTeam({navigation}){
           setValue={setTeam}
         />
 
-        <CustomButton text="Sign In" onPress={onAddTeamPressed} />
+        <CustomButton text="Register" onPress={onAddTeamPressed} />
     </>
     );    
 };

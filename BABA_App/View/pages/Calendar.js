@@ -101,7 +101,7 @@ export default class Calendar extends React.Component {
                     <Text style={styles.section}>Upcoming Games</Text>
                     <Gameformat teamName1='Ballers' teamName2='Hoopers' time='8:00pm'/>
                     <Button 
-                        style={FormStyle.formButton} 
+                        //style={FormStyle.formButton} 
                         onPress={() => this.props.navigation.navigate('ScheduleGame')}
                         title="Schedule New Game">
                     </Button>

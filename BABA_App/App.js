@@ -3,7 +3,7 @@ import { Button, Text, TextInput, TouchableOpacity, View, StyleSheet, SafeAreaVi
 import Home from "./View/Home.js";
 import SignInScreen from "./View/Account/SignInScreen/SignInScreen.js";
 import SignUpScreen from "./View/Account/SignUpScreen/SignUpScreen.js";
-import ConfirmEmailScreen from "./View/Account/ConfirmEmailScreen/ConfirmEmailScreen.js";
+//import ConfirmEmailScreen from "./View/Account/ConfirmEmailScreen/ConfirmEmailScreen.js";
 import ForgotPasswordScreen from "./View/Account/ForgotPasswordScreen/ForgotPasswordScreen.js";
 import NewPasswordScreen from "./View/Account/NewPasswordScreen/NewPasswordScreen.js";
 import DeleteAccountScreen from "./View/Account/DeleteAccount/DeleteAccount.js";
@@ -15,14 +15,15 @@ import CreateGame from "./View/AddGame.js";
 import GameScoreScreen from "./View/LiveScore/GameScoreScreen.js";
 import ManagerHomeScreen from "./View/Manager/ManagerHomeScreen.js";
 //import DisplayTeamScreen from './View/'
+import Playoffs from "./View/Playoffs"
 import FormStyle from "./Style/Form.style";
 import {createAppContainer} from 'react-navigation'; 
 import {createStackNavigator} from 'react-navigation-stack';
 import ViewGame from './View/pages/ViewGame';
-import AddPlayerScreen from "./View/Player/AddPlayerScreen.js";
-import ViewAllPlayersScreen from "./View/Player/ViewAllPlayersScreen.js";
-import EditPlayerScreen from './View/Player/EditPlayerScreen.js';
-import SendTeamRequestScreen from "./View/Manager/SendTeamRequestScreen.js";
+//import AddPlayerScreen from "./View/Player/AddPlayerScreen.js";
+//import ViewAllPlayersScreen from "./View/Player/ViewAllPlayersScreen.js";
+//import EditPlayerScreen from './View/Player/EditPlayerScreen.js';
+//import SendTeamRequestScreen from "./View/Manager/SendTeamRequestScreen.js";
 import RequestManagerScreen from "./View/Manager/RequestManagerScreen.js";
 
 const AppNavigator = createStackNavigator(  
@@ -30,7 +31,7 @@ const AppNavigator = createStackNavigator(
       HomeScreen: Home,  
       SignIn: SignInScreen,
       SignUp: SignUpScreen,
-      ConfirmEmail: ConfirmEmailScreen,
+      //ConfirmEmail: ConfirmEmailScreen,
       ForgotPassword: ForgotPasswordScreen,
       NewPassword: NewPasswordScreen,
       DeleteAccount: DeleteAccountScreen,
@@ -39,15 +40,15 @@ const AppNavigator = createStackNavigator(
       UpdateTeams: EditTeam,
       ScheduleGame: CreateGame,
       CalendarScreen: Calendar,
-      GameView: ViewGame,
       GameScore: GameScoreScreen,
       ManagerHome: ManagerHomeScreen,
-      FreeAgent: FreeAgentScreen,
-      SendTeamRequest: SendTeamRequestScreen,
-      RequestManager: RequestManagerScreen
+      //FreeAgent: FreeAgentScreen,
+      //SendTeamRequest: SendTeamRequestScreen,
+      RequestManager: RequestManagerScreen,
+      PlayoffScreen: Playoffs
   },  
   {  
-      initialRouteName: "SignIn"  
+      initialRouteName: "PlayoffScreen"  
   }  
 ); 
 const AppContainer = createAppContainer(AppNavigator); 

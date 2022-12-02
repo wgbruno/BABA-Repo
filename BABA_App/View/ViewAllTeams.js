@@ -32,7 +32,7 @@ export default function ViewAllTeams({ navigation }){
     <>
         <StatusBar barStyle="light-content" />
         <SafeAreaView style={{padding: 8}}>
-        <Text>{JSON.stringify(getAllDBTeams())}</Text>
+        {<Text>{JSON.stringify(getAllDBTeams())}</Text>}
         </SafeAreaView>
         {/* List for all teams */}
         <Text style={{marginTop: 8, fontWeight: 'bold'}}>Team name                          Wins            Losses             Seed Players</Text>
