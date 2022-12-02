@@ -66,7 +66,7 @@ const BABA_DB = new Realm({
             senderID: 'string'
         }
     }],
-    schemaVersion: 12
+    schemaVersion: 13
 });
 
 export default BABA_DB;

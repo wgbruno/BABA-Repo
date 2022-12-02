@@ -20,6 +20,9 @@ import FormStyle from "./Style/Form.style";
 import {createAppContainer} from 'react-navigation'; 
 import {createStackNavigator} from 'react-navigation-stack';
 import ViewGame from './View/pages/ViewGame';
+import AddPlayerScreen from "./View/Player/AddPlayerScreen.js";
+import ViewAllPlayersScreen from "./View/Player/ViewAllPlayersScreen.js";
+import EditPlayerScreen from './View/Player/EditPlayerScreen.js';
 
 const AppNavigator = createStackNavigator(  
   {  
@@ -30,6 +33,9 @@ const AppNavigator = createStackNavigator(
       ForgotPassword: ForgotPasswordScreen,
       NewPassword: NewPasswordScreen,
       DeleteAccount: DeleteAccountScreen,
+      PlayerReg: AddPlayerScreen,
+      ViewPlayers: ViewAllPlayersScreen,
+      EditPlayer: EditPlayerScreen,
       TeamReg: AddTeam,
       ViewTeams: ViewAllTeams,
       UpdateTeams: EditTeam,
@@ -37,10 +43,11 @@ const AppNavigator = createStackNavigator(
       CalendarScreen: Calendar,
       GameView: ViewGame,
       GameScore: GameScoreScreen,
-      ManagerHome: ManagerHomeScreen
+      ManagerHome: ManagerHomeScreen,
+      FreeAgent: FreeAgentScreen
   },  
   {  
-      initialRouteName: "CalendarScreen"  
+      initialRouteName: "HomeScreen"  
   }  
 ); 
 const AppContainer = createAppContainer(AppNavigator); 
