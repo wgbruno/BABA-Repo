@@ -14,6 +14,7 @@ export default function SignInScreen({navigation}){
 
   const onSignInPressed = () => {
     var account = new Account(username, password);
+    console.log(account.userName);
     if(account.search()){
       Alert.alert("Unable to login","No account matching this Username.");
     } else if(!account.passCheck()){
@@ -24,13 +25,13 @@ export default function SignInScreen({navigation}){
       }else{
         if(account.accountType == null){
           Alert.alert("Success", "You have logged in!");
-          navigation.navigate('HomeScreen');
+          navigation.navigate('HomeScreen', {paramUserName: account.userName, paramAccountType: account.accountType});
         } else if(account.accountType == 'Admin'){
           Alert.alert("Success", "You have logged in as admin!");
           navigation.navigate('AdminScreen');
         } else if(account.accountType == 'Manager'){
           Alert.alert("Success", "You have logged in as manager!");
-          navigation.navigate('ManagerHome', {paramUser: account.userName});
+          navigation.navigate('ManagerHome', {paramUserName: account.userName});
         }
       }
     }
@@ -45,7 +46,7 @@ export default function SignInScreen({navigation}){
   };
 
   const onGuest = () => {
-    navigation.navigate('HomeScreen');
+    navigation.navigate('HomeScreen', {paramUserName: username});
   };
 
   
