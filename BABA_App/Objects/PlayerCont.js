@@ -1,5 +1,5 @@
 import { Alert } from 'react-native';
-import { addPlayerDB, getTeam } from '../DAOs/PlayerDao';
+import { addPlayerDB, getFirstNameDB, getLastNameDB, getTeam } from '../DAOs/PlayerDao';
 
 // rename this to PlayerController?? or PlayerDao?
 export class Player{
@@ -39,10 +39,10 @@ export class Player{
         return this.ID;
     }
     getFirstName(){
-        return this.firstName;
+        return getFirstNameDB(this.ID);
     }
     getLastName(){
-        return this.lastName;
+        return getLastNameDB(this.ID);
     }
     getNumber(){
         return this.number;
