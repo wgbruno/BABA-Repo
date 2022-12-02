@@ -12,7 +12,7 @@ export default function ManagerHomeScreen({navigation}){
   const [userName, setUser] = useState("");
 
   useEffect(() => {
-    setUser(navigation.getParam('paramUser', ""));
+    setUser(navigation.getParam('paramUser', "test"));
   })
 
   const account = new Account(/*userName*/"test", "test", "test", "Manager", 1111, true);

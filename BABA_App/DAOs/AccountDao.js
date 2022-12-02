@@ -20,7 +20,7 @@ export /*async*/ function createAccount(_userName, _email, _password){
                     userName: _userName,
                     email: _email,
                     password: _password,
-                    accountType: "Manager",
+                    accountType: "Player",
                     verifyCode: 0,
                     logStatus: false,
                     playerID: 0
@@ -184,6 +184,17 @@ export function getID(_userName){
     if(account['playerID'] != null){
         return account['playerID'];
     }else{
+        return 1;
+    }
+}
+
+export function changeTypeDB(_userName){
+    var account = realm.objectForPrimaryKey("Account", _userName);
+    account['accountType'] = "Manager";
+    if(account['accountType']){
+        return 0;
+    }
+    else{
         return 1;
     }
 }

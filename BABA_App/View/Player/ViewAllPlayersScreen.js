@@ -1,5 +1,5 @@
 import React, {useEffect, useState} from 'react';
-import { Button, Text, TextInput, TouchableOpacity, View, StyleSheet, FlatList, Image, useWindowDimensions, ScrollView } from 'react-native';
+import { Button, Text, TextInput, TouchableOpacity, View, StyleSheet, FlatList, Image, useWindowDimensions } from 'react-native';
 import { NavigationContainer } from 'react-native';
 import Logo from '../../assets/images/Logo_1.png'
 import { getAllPlayers } from '../../DAOs/PlayerDao';

@@ -46,10 +46,9 @@ export default function FreeAgentScreen({navigation}){
                         <TouchableOpacity
                             onPress={() => {navigation.navigate('SendTeamRequest', {
                                 paramPlayerID: item.playerID,
-                                paramManagerID: userName,
-                                
+                                paramManagerID: userName,    
                             });}}>
-                            <Text style={styles.list}>{item.firstName} {item.lastName}   Team: {item.teamName}</Text>
+                            <Text style={styles.list}>{item.firstName} {item.lastName}   Team: {item.teamName} ID: {item.playerID}</Text>
                             <Text style={styles.list}>Age: {item.age}      Height: {item.height}      Number: {item.number}</Text>
                         </TouchableOpacity>
                     </View>

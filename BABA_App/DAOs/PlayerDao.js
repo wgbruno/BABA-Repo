@@ -56,3 +56,13 @@ export function findPlayer(_ID){
         return 0;
     }
 }
+
+export function getFirstNameDB(_ID){
+    var player = realm.objectForPrimaryKey("Player", _ID);
+    return player['firstName'];
+}
+
+export function getLastNameDB(_ID){
+    var player = realm.objectForPrimaryKey("Player", _ID);
+    return player['lastName'];
+}
