@@ -51,6 +51,11 @@ export function findGame(_gameID){
         return 0;
     }
 }
+
+export function getAllDBGames(){
+    return realm.objects('Game');
+}
+
 /*
 let getAllDBGames = () => {
     return realm.objects('Game');
