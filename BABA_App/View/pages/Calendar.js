@@ -7,16 +7,21 @@ import Gameformat from './components/Gameformat';
 import { NavigationContainer, SafeAreaView, StatusBar } from 'react-native';
 import { FlatList } from 'react-native-gesture-handler';
 import { getAllDBGames } from '../../DAOs/GameDao';
-//import formButton from '../../Style/Form.style'
-// need this import??
 
 let realm;
  
 export default function ViewAllGames({ navigation }){
     const [games, setGames] = useState(getAllDBGames());
-    const [empty, setEmpty] = useState([]);
+    const [empty, setEmpty] = useState(true);
 
-    let emptyDatabase = () => {
+    useEffect(() => {
+        console.log(games);
+        if(games != undefined){
+            setEmpty(false);
+        }
+    })
+    
+    const emptyDatabase = () => {
         return(
             <View style={{justifyContent: 'center', alignItems: 'center', flex: 1}}>
                 <Text style={{fontSize: 25, textAlign: 'center'}}>
@@ -34,7 +39,7 @@ export default function ViewAllGames({ navigation }){
         </SafeAreaView>
         {/* List for all games*/}
         <Text style={{marginTop: 8, fontWeight: 'bold'}}>Upcoming Games</Text>
-                {empty ? emptyDatabase(empty):
+                {empty ? emptyDatabase():
                 <FlatList
                     data={games}
                     keyExtractor={(item, index) => index.toString()}
