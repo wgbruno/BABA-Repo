@@ -23,6 +23,7 @@ import ViewGame from './View/pages/ViewGame';
 import AddPlayerScreen from "./View/Player/AddPlayerScreen.js";
 import ViewAllPlayersScreen from "./View/Player/ViewAllPlayersScreen.js";
 import EditPlayerScreen from './View/Player/EditPlayerScreen.js';
+import SendTeamRequestScreen from "./View/Manager/SendTeamRequestScreen.js";
 
 const AppNavigator = createStackNavigator(  
   {  
@@ -44,10 +45,11 @@ const AppNavigator = createStackNavigator(
       GameView: ViewGame,
       GameScore: GameScoreScreen,
       ManagerHome: ManagerHomeScreen,
-      FreeAgent: FreeAgentScreen
+      FreeAgent: FreeAgentScreen,
+      SendTeamRequest: SendTeamRequestScreen
   },  
   {  
-      initialRouteName: "HomeScreen"  
+      initialRouteName: "ManagerHome"  
   }  
 ); 
 const AppContainer = createAppContainer(AppNavigator); 
