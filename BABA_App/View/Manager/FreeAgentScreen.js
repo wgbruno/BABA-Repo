@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { NavigationContainer } from 'react-native';
-import { View, Text, Image, StyleSheet, useWindowDimensions, ScrollView, Alert, FlatList } from 'react-native';
+import { View, Text, Image, StyleSheet, useWindowDimensions, ScrollView, Alert, FlatList, TouchableOpacity } from 'react-native';
+import { UserState } from "realm";
 import Logo from '../../assets/images/Logo_1.png'
 import { getFreeAgents } from "../../DAOs/PlayerDao";
 
@@ -9,9 +10,10 @@ export default function FreeAgentScreen({navigation}){
     const {height} = useWindowDimensions();
     const [players, setPlayers] = useState(getFreeAgents());
     const [empty, setEmpty] = useState(true);
+    const [userName, setUser] = useState("");
 
     useEffect(() => {
-        console.log(players);
+        setUser(navigation.getParam('paramName', "N/A"))
         if(players != undefined){
             setEmpty(false);
         }
@@ -43,14 +45,12 @@ export default function FreeAgentScreen({navigation}){
                     <View style={{flexDirection: 'row', justifyContent: 'space-between'}}>
                         <TouchableOpacity
                             onPress={() => {navigation.navigate('SendTeamRequest', {
-                                paramFirstName: item.firstName,
-                                paramLastName: item.lastName,
-                                paramAge: item.age,
-                                paramNumber: item.number,
-                                paramHeight: item.height
+                                paramPlayerID: item.playerID,
+                                paramManagerID: userName,
+                                
                             });}}>
-                            <Text>{item.firstName}      {item.lastName}</Text>
-                            <Text>{item.height}      {item.age}</Text>
+                            <Text style={styles.list}>{item.firstName} {item.lastName}   Team: {item.teamName}</Text>
+                            <Text style={styles.list}>Age: {item.age}      Height: {item.height}      Number: {item.number}</Text>
                         </TouchableOpacity>
                     </View>
                 } />
@@ -60,9 +60,16 @@ export default function FreeAgentScreen({navigation}){
 };
 
 const styles = StyleSheet.create({
+    list: {
+        marginTop: 8, 
+        fontWeight: 'bold', 
+        color: 'red', 
+        fontSize: 20
+    },
     root: {
       alignItems: 'center',
       padding: 10,
+      flex: 1
     },
     logo: {
       width: '3000%',

@@ -5,17 +5,21 @@ import { View, Text, Image, StyleSheet, useWindowDimensions, ScrollView, Alert }
 import Logo from '../../assets/images/Logo_1.png'
 import { Account } from "../../Objects/AccountCont";
 import { Player } from "../../Objects/PlayerCont";
+import { getNewIDDB } from "../../DAOs/PlayerDao";
 
 export default function ManagerHomeScreen({navigation}){
+  const {height} = useWindowDimensions();
   const [userName, setUser] = useState("");
 
   useEffect(() => {
     setUser(navigation.getParam('paramUser', ""));
   })
 
-  const account = new Account(userName);
+  const account = new Account(/*userName*/"test", "test", "test", "Manager", 1111, true);
+  account.create();
   var playerID = account.getPlayerID();
-  const player = new Player(playerID);
+  const player = new Player(/*playerID*/getNewIDDB(), "test", "test", 0, 0, "test");
+  player.createPlayer();
   var teamName = player.getTeamName();
 
   const toTeam = () => {
@@ -23,7 +27,7 @@ export default function ManagerHomeScreen({navigation}){
   }
   
   const freeAgents = () => {
-    navigation.navigate('FreeAgents');
+    navigation.navigate('FreeAgent', {paramUser: userName});
   }
   
   
