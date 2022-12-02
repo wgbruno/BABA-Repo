@@ -48,11 +48,6 @@ export default function Home ({navigation}){
             </Button>
             <Button 
                 style={FormStyle.formButton} 
-                onPress={() => this.props.navigation.navigate('ConfirmEmail')}
-                title="Confirm Email">
-            </Button>
-            <Button 
-                style={FormStyle.formButton} 
                 onPress={() => this.props.navigation.navigate('ForgotPassword')}
                 title="Forgot Password">
             </Button>

@@ -3,7 +3,6 @@ import { Button, Text, TextInput, TouchableOpacity, View, StyleSheet, SafeAreaVi
 import Home from "./View/Home.js";
 import SignInScreen from "./View/Account/SignInScreen/SignInScreen.js";
 import SignUpScreen from "./View/Account/SignUpScreen/SignUpScreen.js";
-import ConfirmEmailScreen from "./View/Account/ConfirmEmailScreen/ConfirmEmailScreen.js";
 import ForgotPasswordScreen from "./View/Account/ForgotPasswordScreen/ForgotPasswordScreen.js";
 import NewPasswordScreen from "./View/Account/NewPasswordScreen/NewPasswordScreen.js";
 import DeleteAccountScreen from "./View/Account/DeleteAccount/DeleteAccount.js";
@@ -31,7 +30,6 @@ const AppNavigator = createStackNavigator(
       HomeScreen: Home,  
       SignIn: SignInScreen,
       SignUp: SignUpScreen,
-      ConfirmEmail: ConfirmEmailScreen,
       ForgotPassword: ForgotPasswordScreen,
       NewPassword: NewPasswordScreen,
       DeleteAccount: DeleteAccountScreen,

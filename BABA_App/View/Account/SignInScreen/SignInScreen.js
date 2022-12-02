@@ -23,7 +23,7 @@ export default function SignInScreen({navigation}){
       if(account.logInAccount()){
         Alert.alert("Error","Problem Logging in. Try again.");
       }else{
-        if(account.accountType == null){
+        if(account.accountType == "Player"){
           Alert.alert("Success", "You have logged in!");
           navigation.navigate('HomeScreen', {paramUserName: account.userName, paramAccountType: account.accountType});
         } else if(account.accountType == 'Admin'){
