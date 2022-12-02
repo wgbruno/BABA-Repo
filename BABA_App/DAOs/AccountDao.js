@@ -6,7 +6,7 @@ import { Account } from '../Objects/AccountCont';
 
 export function getAccountDB(_userName){
     var account = realm.objectForPrimaryKey("Account", _userName);
-    return new Account(_userName, account['email'], account['password'], account['accountType'], account['verifyCode'], account['logStatus']);
+    return new Account(_userName, account['email'], account['password'], account['accountType'], account['verifyCode'], account['logStatus'], account['playerID']);
 }
 
 //Creates account in DB, returns 0 on success, 1 on failure or duplicate username
@@ -20,8 +20,10 @@ export /*async*/ function createAccount(_userName, _email, _password){
                     userName: _userName,
                     email: _email,
                     password: _password,
+                    accountType: "Manager",
                     verifyCode: 0,
-                    logStatus: false
+                    logStatus: false,
+                    playerID: 0
                 });
             });
             return 0;

@@ -2,13 +2,14 @@ import {Alert, Linking} from 'react-native';
 import {createAccount, findAccount, changePassword, checkPassword, checkCode, addCode, removeAccount, removeAll, loggedIn, getAccountDB, AddAccountDB, findPassword, getID} from '../DAOs/AccountDao';
 
 export class Account{
-    constructor(userName, email, password, accountType, verifyCode, logStatus){
+    constructor(userName, email, password, accountType, verifyCode, logStatus, playerID){
         this.userName = userName;
         this.email = email;
         this.password = password;
         this.accountType = accountType;
         this.verifyCode = verifyCode;
-        this.logStatus = logStatus
+        this.logStatus = logStatus;
+        this.playerID = playerID;
     }
     //Creates account in DB, returns 0 on success, 1 on failure or duplicate username
     create(){

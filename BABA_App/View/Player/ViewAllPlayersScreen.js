@@ -1,5 +1,5 @@
 import React, {useEffect, useState} from 'react';
-import { Button, Text, TextInput, TouchableOpacity, View, StyleSheet, FlatList, Image, useWindowDimensions } from 'react-native';
+import { Button, Text, TextInput, TouchableOpacity, View, StyleSheet, FlatList, Image, useWindowDimensions, ScrollView } from 'react-native';
 import { NavigationContainer } from 'react-native';
 import Logo from '../../assets/images/Logo_1.png'
 import { getAllPlayers } from '../../DAOs/PlayerDao';
@@ -38,7 +38,7 @@ export default function ViewAllPlayersScreen({navigation}){
                 data={players}
                 keyExtractor={(item, index) => index.toString()}
                 renderItem={({item, index}) => 
-                    <View style={{flexDirection: 'row', justifyContent: 'space-evenly', margin: 10}}>
+                    <View style={{flexDirection: 'row', justifyContent: 'space-evenly', margin: 10, flexGrow: 1}}>
                         <TouchableOpacity
                             onPress={() => {navigation.navigate('EditPlayer', {
                                 paramFirstName: item.firstName,
@@ -46,14 +46,13 @@ export default function ViewAllPlayersScreen({navigation}){
                                 paramAge: item.age,
                                 paramNumber: item.number,
                                 paramHeight: item.height
-                            });}}>
-                                
+                            });}}>  
                             <Text style={styles.list}>{item.firstName} {item.lastName}   Team: {item.teamName}</Text>
                             <Text style={styles.list}>Age: {item.age}      Height: {item.height}      Number: {item.number}</Text>
                         </TouchableOpacity>
                     </View>
-                } />
-            }
+                } 
+            />}
         </View>
     );
 };
@@ -68,6 +67,7 @@ const styles = StyleSheet.create({
     root: {
       alignItems: 'center',
       padding: 10,
+      flex: 1
     },
     logo: {
       width: '3000%',

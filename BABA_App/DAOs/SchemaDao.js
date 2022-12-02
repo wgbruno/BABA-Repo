@@ -13,7 +13,7 @@ const BABA_DB = new Realm({
             accountType: 'string?',
             verifyCode: 'int',
             logStatus: 'bool',
-            playerID: 'string'
+            playerID: 'int'
         }
     }, {
         name: "Player",
@@ -63,10 +63,11 @@ const BABA_DB = new Realm({
             requestID: 'int',
             message: 'string',
             requestType: 'string',
-            senderID: 'string'
+            senderID: 'string',
+            toID: 'string'
         }
     }],
-    schemaVersion: 13
+    schemaVersion: 15
 });
 
 export default BABA_DB;
