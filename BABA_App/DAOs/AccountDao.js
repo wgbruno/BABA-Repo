@@ -20,8 +20,10 @@ export /*async*/ function createAccount(_userName, _email, _password){
                     userName: _userName,
                     email: _email,
                     password: _password,
+                    accountType: "Player",
                     verifyCode: 0,
-                    logStatus: false
+                    logStatus: false,
+                    playerID: 0
                 });
             });
             return 0;
@@ -179,9 +181,18 @@ export function findLoggedIn(){
 
 export function getID(_userName){
     var account = realm.objectForPrimaryKey("Account", _userName);
-    if(account['playerID'] != null){
-        return account['playerID'];
-    }else{
-        return 1;
-    }
+    return account['playerID'];
+}
+
+export function changeTypeDB(_userName){
+    realm.write(() => {
+        var account = realm.objectForPrimaryKey('Account', _userName);
+        account['accountType'] = "Manager";
+    });
+    return 0;
+}
+
+export function getAccountTypeDB(_userName){
+    var account = realm.objectForPrimaryKey("Account", _userName);
+    return account["accountType"];
 }

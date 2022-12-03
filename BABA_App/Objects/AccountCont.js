@@ -1,5 +1,5 @@
 import {Alert, Linking} from 'react-native';
-import {createAccount, findAccount, changePassword, checkPassword, checkCode, addCode, removeAccount, removeAll, loggedIn, getAccountDB, AddAccountDB, findPassword, getID, changeTypeDB} from '../DAOs/AccountDao';
+import {createAccount, findAccount, changePassword, checkPassword, checkCode, addCode, removeAccount, removeAll, loggedIn, getAccountDB, AddAccountDB, findPassword, getID, changeTypeDB, getAccountTypeDB} from '../DAOs/AccountDao';
 
 export class Account{
     constructor(userName, email, password, accountType, verifyCode, logStatus, playerID){
@@ -67,6 +67,10 @@ export class Account{
     //Get method
     getAccount(){
         return getAccountDB(this.userName);
+    }
+
+    getAccountType(){
+        return getAccountTypeDB(this.userName);
     }
 
     //Set method

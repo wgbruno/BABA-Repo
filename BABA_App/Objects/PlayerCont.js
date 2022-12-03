@@ -74,66 +74,6 @@ export class Player{
     getTurnovers(){
         return this.turnovers;
     }
-    updateProfile(p){
-        this.firstName = p.firstName;
-        this.lastName = p.lastName;
-        this.number = p.number;
-        this.age = p.age;
-        this.height = p.height;
-        this.points = p.points;
-        this.rebounds = p.rebounds;
-        this.assists = p.assists;
-        this.blocks = p.blocks;
-        this.steals = p.steals;
-        this.fouls = p.fouls;
-        this.turnovers = p.turnovers;
-        InsertPlayerDao(p);
-    }
-    //update player
-    updateFirstName(newFirst){
-        this.firstName = newFirst;
-    }
-    updateLastName(newLast){
-        this.lastName = newLast;
-    }
-    updateNumber(newNumber){
-        this.number = newNumber;
-    }
-    updateAge(newAge){
-        this.age = newAge;
-    }
-    updateHeight(newHeight){
-        this.height = newHeight;
-    }
-    updatePoints(newPoints){
-        this.points = newPoints;
-    }
-    updateHeight(newHeight){
-        this.height = newHeight;
-    }
-    updateHeight(newHeight){
-        this.height = newHeight;
-    }
-    updateHeight(newHeight){
-        this.height = newHeight;
-    }
-    updateHeight(newHeight){
-        this.height = newHeight;
-    }
-    updateHeight(newHeight){
-        this.height = newHeight;
-    }
-    updateHeight(newHeight){
-        this.height = newHeight;
-    }
-
- 
-
-    /*
-    deletePlayer(){
-        //nullify all the attributes and do something to remove from db?
-    }*/
-    //delete player: anything needed here, or just remove entry from db?
 }
 
  
