@@ -1,0 +1,530 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly 1`] = `
+<RCTScrollView
+  showsVerticalScrollIndicator={false}
+>
+  <View>
+    <View
+      style={
+        Object {
+          "padding": 20,
+        }
+      }
+    >
+      <Text
+        style={
+          Object {
+            "color": "#051C60",
+            "fontSize": 28,
+            "fontWeight": "bold",
+            "lineHeight": 100,
+            "textAlign": "center",
+          }
+        }
+      >
+        PLAYOFFS
+      </Text>
+      <Text
+        style={
+          Object {
+            "color": "#051C60",
+            "fontSize": 14,
+            "fontWeight": "bold",
+            "textAlign": "left",
+          }
+        }
+      >
+        Quarterfinal 1
+      </Text>
+      <View>
+        <Text>
+          Team 1
+           vs. 
+          Team 2
+        </Text>
+        <Text>
+          Tipoff @ 
+          5:00pm
+        </Text>
+      </View>
+      <View
+        style={
+          Object {
+            "alignItems": "center",
+            "flexDirection": "row",
+          }
+        }
+      >
+        <View
+          style={
+            Object {
+              "backgroundColor": "black",
+              "flex": 0.4,
+              "height": 1,
+            }
+          }
+        />
+      </View>
+      <Text
+        style={
+          Object {
+            "lineHeight": 50,
+            "textAlign": "left",
+          }
+        }
+      >
+         
+      </Text>
+      <View
+        style={
+          Object {
+            "alignItems": "center",
+            "flexDirection": "row",
+          }
+        }
+      >
+        <View
+          style={
+            Object {
+              "backgroundColor": "black",
+              "flex": 0.72,
+              "height": 0,
+            }
+          }
+        />
+        <View>
+          <Text
+            style={
+              Object {
+                "color": "#111825",
+                "fontSize": 12,
+              }
+            }
+          >
+            Winner of QF 1 vs. Winner of QF 2
+          </Text>
+        </View>
+        <View
+          style={
+            Object {
+              "backgroundColor": "black",
+              "flex": 0,
+              "height": 0,
+            }
+          }
+        />
+      </View>
+      <View
+        style={
+          Object {
+            "alignItems": "center",
+            "flexDirection": "row",
+          }
+        }
+      >
+        <View
+          style={
+            Object {
+              "backgroundColor": "black",
+              "flex": 0.62,
+              "height": 0,
+            }
+          }
+        />
+        <View>
+          <Text
+            style={
+              Object {
+                "color": "#111825",
+                "fontSize": 12,
+              }
+            }
+          >
+            Tipoff @ 9:00pm
+          </Text>
+        </View>
+        <View
+          style={
+            Object {
+              "backgroundColor": "black",
+              "flex": 0,
+              "height": 0,
+            }
+          }
+        />
+      </View>
+      <View
+        style={
+          Object {
+            "alignItems": "center",
+            "flexDirection": "row",
+          }
+        }
+      >
+        <View
+          style={
+            Object {
+              "backgroundColor": "black",
+              "flex": 0.5,
+              "height": 0,
+            }
+          }
+        />
+        <View>
+          <Text
+            style={
+              Object {
+                "borderRightWidth": 1,
+                "color": "#051C60",
+                "fontSize": 14,
+                "fontWeight": "bold",
+                "textAlign": "center",
+              }
+            }
+          >
+            Semifinal 1
+          </Text>
+        </View>
+        <View
+          style={
+            Object {
+              "backgroundColor": "black",
+              "flex": 0.3,
+              "height": 1,
+            }
+          }
+        />
+      </View>
+      <Text
+        style={
+          Object {
+            "lineHeight": 50,
+            "textAlign": "left",
+          }
+        }
+      >
+         
+      </Text>
+      <View
+        style={
+          Object {
+            "alignItems": "center",
+            "flexDirection": "row",
+          }
+        }
+      >
+        <View
+          style={
+            Object {
+              "backgroundColor": "black",
+              "flex": 0.4,
+              "height": 1,
+            }
+          }
+        />
+      </View>
+      <Text
+        style={
+          Object {
+            "color": "#051C60",
+            "fontSize": 14,
+            "fontWeight": "bold",
+            "textAlign": "left",
+          }
+        }
+      >
+        Quarterfinal 2
+      </Text>
+      <View>
+        <Text>
+          Team 3
+           vs. 
+          Team 4
+        </Text>
+        <Text>
+          Tipoff @ 
+          6:00pm
+        </Text>
+      </View>
+      <Text
+        style={
+          Object {
+            "lineHeight": 15,
+            "textAlign": "left",
+          }
+        }
+      >
+         
+      </Text>
+      <Text
+        style={
+          Object {
+            "color": "#051C60",
+            "fontSize": 14,
+            "fontWeight": "bold",
+            "textAlign": "right",
+          }
+        }
+      >
+        Finals
+      </Text>
+      <Text
+        style={
+          Object {
+            "color": "#111825",
+            "fontSize": 12,
+            "textAlign": "right",
+          }
+        }
+      >
+        Winner of SF 1 vs. Winner of SF 2
+      </Text>
+      <Text
+        style={
+          Object {
+            "color": "#111825",
+            "fontSize": 12,
+            "textAlign": "right",
+          }
+        }
+      >
+        Tipoff @ 11:00pm
+      </Text>
+      <Text
+        style={
+          Object {
+            "lineHeight": 15,
+            "textAlign": "left",
+          }
+        }
+      >
+         
+      </Text>
+      <Text
+        style={
+          Object {
+            "color": "#051C60",
+            "fontSize": 14,
+            "fontWeight": "bold",
+            "lineHeight": 25,
+            "textAlign": "left",
+          }
+        }
+      >
+        Quartefinal 3
+      </Text>
+      <View>
+        <Text>
+          Team 5
+           vs. 
+          Team 6
+        </Text>
+        <Text>
+          Tipoff @ 
+          7:00pm
+        </Text>
+      </View>
+      <View
+        style={
+          Object {
+            "alignItems": "center",
+            "flexDirection": "row",
+          }
+        }
+      >
+        <View
+          style={
+            Object {
+              "backgroundColor": "black",
+              "flex": 0.4,
+              "height": 1,
+            }
+          }
+        />
+      </View>
+      <Text
+        style={
+          Object {
+            "lineHeight": 50,
+            "textAlign": "left",
+          }
+        }
+      >
+         
+      </Text>
+      <View
+        style={
+          Object {
+            "alignItems": "center",
+            "flexDirection": "row",
+          }
+        }
+      >
+        <View
+          style={
+            Object {
+              "backgroundColor": "black",
+              "flex": 0.5,
+              "height": 0,
+            }
+          }
+        />
+        <View>
+          <Text
+            style={
+              Object {
+                "color": "#051C60",
+                "fontSize": 14,
+                "fontWeight": "bold",
+                "textAlign": "center",
+              }
+            }
+          >
+            Semifinal 2
+          </Text>
+        </View>
+        <View
+          style={
+            Object {
+              "backgroundColor": "black",
+              "flex": 0.3,
+              "height": 1,
+            }
+          }
+        />
+      </View>
+      <View
+        style={
+          Object {
+            "alignItems": "center",
+            "flexDirection": "row",
+          }
+        }
+      >
+        <View
+          style={
+            Object {
+              "backgroundColor": "black",
+              "flex": 0.72,
+              "height": 0,
+            }
+          }
+        />
+        <View>
+          <Text
+            style={
+              Object {
+                "color": "#111825",
+                "fontSize": 12,
+              }
+            }
+          >
+            Winner of QF 3 vs. Winner of QF 4
+          </Text>
+        </View>
+        <View
+          style={
+            Object {
+              "backgroundColor": "black",
+              "flex": 0,
+              "height": 0,
+            }
+          }
+        />
+      </View>
+      <View
+        style={
+          Object {
+            "alignItems": "center",
+            "flexDirection": "row",
+          }
+        }
+      >
+        <View
+          style={
+            Object {
+              "backgroundColor": "black",
+              "flex": 0.62,
+              "height": 0,
+            }
+          }
+        />
+        <View>
+          <Text
+            style={
+              Object {
+                "color": "#111825",
+                "fontSize": 12,
+              }
+            }
+          >
+            Tipoff @ 10:00pm
+          </Text>
+        </View>
+        <View
+          style={
+            Object {
+              "backgroundColor": "black",
+              "flex": 0,
+              "height": 0,
+            }
+          }
+        />
+      </View>
+      <Text
+        style={
+          Object {
+            "lineHeight": 50,
+            "textAlign": "left",
+          }
+        }
+      >
+         
+      </Text>
+      <View
+        style={
+          Object {
+            "alignItems": "center",
+            "flexDirection": "row",
+          }
+        }
+      >
+        <View
+          style={
+            Object {
+              "backgroundColor": "black",
+              "flex": 0.4,
+              "height": 1,
+            }
+          }
+        />
+      </View>
+      <Text
+        style={
+          Object {
+            "color": "#051C60",
+            "fontSize": 14,
+            "fontWeight": "bold",
+            "lineHeight": 25,
+            "textAlign": "left",
+          }
+        }
+      >
+        Quarterfinal 4
+      </Text>
+      <View>
+        <Text>
+          Team 7
+           vs. 
+          Team 8
+        </Text>
+        <Text>
+          Tipoff @ 
+          8:00pm
+        </Text>
+      </View>
+    </View>
+  </View>
+</RCTScrollView>
+`;

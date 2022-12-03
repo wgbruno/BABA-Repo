@@ -1,0 +1,70 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Register New Team Screen 1`] = `
+Array [
+  <View
+    style={
+      Object {
+        "backgroundColor": "white",
+        "borderColor": "#e8e8e8",
+        "borderRadius": 5,
+        "borderWidth": 1,
+        "marginVertical": 5,
+        "paddingHorizontal": 10,
+        "width": "100%",
+      }
+    }
+  >
+    <TextInput
+      onChangeText={[Function]}
+      placeholder="Team Name"
+      style={Object {}}
+      value=""
+    />
+  </View>,
+  <View
+    accessible={true}
+    collapsable={false}
+    focusable={true}
+    onBlur={[Function]}
+    onClick={[Function]}
+    onFocus={[Function]}
+    onResponderGrant={[Function]}
+    onResponderMove={[Function]}
+    onResponderRelease={[Function]}
+    onResponderTerminate={[Function]}
+    onResponderTerminationRequest={[Function]}
+    onStartShouldSetResponder={[Function]}
+    style={
+      Array [
+        Object {
+          "alignItems": "center",
+          "borderRadius": 5,
+          "marginVertical": 5,
+          "padding": 10,
+          "width": "100%",
+        },
+        Object {
+          "backgroundColor": "#DD4D44",
+        },
+        Object {},
+      ]
+    }
+  >
+    <Text
+      style={
+        Array [
+          Object {
+            "color": "white",
+            "fontWeight": "bold",
+          },
+          undefined,
+          Object {},
+        ]
+      }
+    >
+      Register
+    </Text>
+  </View>,
+]
+`;

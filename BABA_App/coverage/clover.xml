@@ -1,27 +1,26 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<<<<<<< Updated upstream
-<coverage generated="1670028331439" clover="3.2.0">
-  <project timestamp="1670028331439" name="All files">
-    <metrics statements="236" coveredstatements="181" conditionals="58" coveredconditionals="21" methods="95" coveredmethods="76" elements="389" coveredelements="278" complexity="0" loc="236" ncloc="236" packages="2" files="8" classes="8"/>
+<coverage generated="1670099603583" clover="3.2.0">
+  <project timestamp="1670099603583" name="All files">
+    <metrics statements="424" coveredstatements="265" conditionals="97" coveredconditionals="25" methods="148" coveredmethods="94" elements="669" coveredelements="384" complexity="0" loc="424" ncloc="424" packages="13" files="26" classes="26"/>
     <package name="DAOs">
-      <metrics statements="131" coveredstatements="97" conditionals="36" coveredconditionals="20" methods="53" coveredmethods="39"/>
-      <file name="AccountDao.js" path="C:\Users\hunte\OneDrive\Desktop\CS_482\BABA-Repo\BABA_App\DAOs\AccountDao.js">
+      <metrics statements="137" coveredstatements="106" conditionals="36" coveredconditionals="21" methods="56" coveredmethods="44"/>
+      <file name="AccountDao.js" path="C:\Users\billy\AndroidStudioProjects\BABA-Repo\BABA_App\DAOs\AccountDao.js">
         <metrics statements="66" coveredstatements="65" conditionals="26" coveredconditionals="19" methods="23" coveredmethods="23"/>
-        <line num="8" count="4" type="stmt"/>
-        <line num="9" count="4" type="stmt"/>
+        <line num="8" count="3" type="stmt"/>
+        <line num="9" count="3" type="stmt"/>
         <line num="16" count="13" type="cond" truecount="2" falsecount="0"/>
-        <line num="17" count="12" type="stmt"/>
-        <line num="18" count="12" type="stmt"/>
-        <line num="29" count="12" type="stmt"/>
-        <line num="32" count="1" type="stmt"/>
+        <line num="17" count="11" type="stmt"/>
+        <line num="18" count="11" type="stmt"/>
+        <line num="29" count="11" type="stmt"/>
+        <line num="32" count="2" type="stmt"/>
         <line num="44" count="21" type="stmt"/>
         <line num="45" count="21" type="cond" truecount="2" falsecount="0"/>
         <line num="46" count="6" type="cond" truecount="2" falsecount="0"/>
         <line num="47" count="4" type="stmt"/>
         <line num="50" count="2" type="stmt"/>
         <line num="54" count="15" type="cond" truecount="2" falsecount="0"/>
-        <line num="55" count="2" type="stmt"/>
-        <line num="58" count="13" type="stmt"/>
+        <line num="55" count="3" type="stmt"/>
+        <line num="58" count="12" type="stmt"/>
         <line num="71" count="3" type="stmt"/>
         <line num="72" count="3" type="stmt"/>
         <line num="73" count="3" type="cond" truecount="2" falsecount="0"/>
@@ -74,82 +73,9 @@
         <line num="196" count="2" type="stmt"/>
         <line num="197" count="2" type="stmt"/>
       </file>
-      <file name="GameDao.js" path="C:\Users\hunte\OneDrive\Desktop\CS_482\BABA-Repo\BABA_App\DAOs\GameDao.js">
-=======
-<coverage generated="1670037598269" clover="3.2.0">
-  <project timestamp="1670037598269" name="All files">
-    <metrics statements="197" coveredstatements="97" conditionals="63" coveredconditionals="7" methods="69" coveredmethods="43" elements="329" coveredelements="147" complexity="0" loc="197" ncloc="197" packages="6" files="10" classes="10"/>
-    <package name="DAOs">
-      <metrics statements="111" coveredstatements="51" conditionals="36" coveredconditionals="6" methods="41" coveredmethods="25"/>
-      <file name="AccountDao.js" path="C:\Users\billy\AndroidStudioProjects\BABA-Repo\BABA_App\DAOs\AccountDao.js">
-        <metrics statements="62" coveredstatements="32" conditionals="28" coveredconditionals="6" methods="20" coveredmethods="16"/>
-        <line num="8" count="2" type="stmt"/>
-        <line num="9" count="2" type="stmt"/>
-        <line num="16" count="11" type="cond" truecount="1" falsecount="1"/>
-        <line num="17" count="11" type="stmt"/>
-        <line num="18" count="11" type="stmt"/>
-        <line num="27" count="0" type="stmt"/>
-        <line num="30" count="0" type="stmt"/>
-        <line num="42" count="12" type="stmt"/>
-        <line num="43" count="12" type="cond" truecount="2" falsecount="0"/>
-        <line num="44" count="1" type="cond" truecount="1" falsecount="1"/>
-        <line num="45" count="1" type="stmt"/>
-        <line num="48" count="0" type="stmt"/>
-        <line num="52" count="11" type="cond" truecount="1" falsecount="1"/>
-        <line num="53" count="0" type="stmt"/>
-        <line num="56" count="11" type="stmt"/>
-        <line num="69" count="1" type="stmt"/>
-        <line num="70" count="1" type="stmt"/>
-        <line num="71" count="1" type="cond" truecount="0" falsecount="2"/>
-        <line num="72" count="0" type="stmt"/>
-        <line num="74" count="0" type="stmt"/>
-        <line num="85" count="2" type="stmt"/>
-        <line num="86" count="2" type="stmt"/>
-        <line num="87" count="2" type="stmt"/>
-        <line num="89" count="0" type="cond" truecount="0" falsecount="2"/>
-        <line num="90" count="0" type="stmt"/>
-        <line num="102" count="1" type="stmt"/>
-        <line num="103" count="1" type="cond" truecount="0" falsecount="2"/>
-        <line num="104" count="0" type="stmt"/>
-        <line num="106" count="0" type="stmt"/>
-        <line num="115" count="1" type="stmt"/>
-        <line num="116" count="1" type="stmt"/>
-        <line num="117" count="1" type="stmt"/>
-        <line num="119" count="0" type="cond" truecount="0" falsecount="2"/>
-        <line num="120" count="0" type="stmt"/>
-        <line num="125" count="2" type="stmt"/>
-        <line num="126" count="2" type="stmt"/>
-        <line num="127" count="2" type="stmt"/>
-        <line num="129" count="0" type="cond" truecount="0" falsecount="2"/>
-        <line num="130" count="0" type="stmt"/>
-        <line num="137" count="2" type="stmt"/>
-        <line num="138" count="2" type="stmt"/>
-        <line num="140" count="2" type="cond" truecount="1" falsecount="1"/>
-        <line num="141" count="2" type="stmt"/>
-        <line num="151" count="0" type="stmt"/>
-        <line num="152" count="0" type="stmt"/>
-        <line num="153" count="0" type="stmt"/>
-        <line num="155" count="0" type="cond" truecount="0" falsecount="2"/>
-        <line num="156" count="0" type="stmt"/>
-        <line num="161" count="1" type="stmt"/>
-        <line num="162" count="1" type="stmt"/>
-        <line num="163" count="1" type="stmt"/>
-        <line num="165" count="0" type="cond" truecount="0" falsecount="2"/>
-        <line num="166" count="0" type="stmt"/>
-        <line num="171" count="0" type="stmt"/>
-        <line num="172" count="0" type="stmt"/>
-        <line num="173" count="0" type="cond" truecount="0" falsecount="2"/>
-        <line num="174" count="0" type="stmt"/>
-        <line num="176" count="0" type="stmt"/>
-        <line num="181" count="0" type="stmt"/>
-        <line num="182" count="0" type="cond" truecount="0" falsecount="2"/>
-        <line num="183" count="0" type="stmt"/>
-        <line num="185" count="0" type="stmt"/>
-      </file>
       <file name="GameDao.js" path="C:\Users\billy\AndroidStudioProjects\BABA-Repo\BABA_App\DAOs\GameDao.js">
->>>>>>> Stashed changes
-        <metrics statements="20" coveredstatements="0" conditionals="8" coveredconditionals="0" methods="7" coveredmethods="0"/>
-        <line num="6" count="0" type="stmt"/>
+        <metrics statements="26" coveredstatements="8" conditionals="8" coveredconditionals="0" methods="10" coveredmethods="5"/>
+        <line num="6" count="1" type="stmt"/>
         <line num="7" count="0" type="stmt"/>
         <line num="11" count="0" type="stmt"/>
         <line num="12" count="0" type="stmt"/>
@@ -168,75 +94,72 @@
         <line num="46" count="0" type="cond" truecount="0" falsecount="2"/>
         <line num="47" count="0" type="stmt"/>
         <line num="51" count="0" type="stmt"/>
-        <line num="56" count="0" type="stmt"/>
+        <line num="55" count="3" type="stmt"/>
+        <line num="56" count="1" type="stmt"/>
+        <line num="59" count="3" type="stmt"/>
+        <line num="60" count="1" type="stmt"/>
+        <line num="63" count="3" type="stmt"/>
+        <line num="64" count="1" type="stmt"/>
+        <line num="65" count="1" type="stmt"/>
       </file>
-<<<<<<< Updated upstream
-      <file name="PlayerDao.js" path="C:\Users\hunte\OneDrive\Desktop\CS_482\BABA-Repo\BABA_App\DAOs\PlayerDao.js">
-        <metrics statements="16" coveredstatements="13" conditionals="2" coveredconditionals="1" methods="9" coveredmethods="7"/>
-        <line num="6" count="2" type="stmt"/>
-        <line num="7" count="2" type="stmt"/>
-        <line num="25" count="1" type="stmt"/>
+      <file name="PlayerDao.js" path="C:\Users\billy\AndroidStudioProjects\BABA-Repo\BABA_App\DAOs\PlayerDao.js">
+        <metrics statements="16" coveredstatements="14" conditionals="2" coveredconditionals="2" methods="9" coveredmethods="7"/>
+        <line num="6" count="3" type="stmt"/>
+        <line num="7" count="3" type="stmt"/>
+        <line num="25" count="3" type="stmt"/>
         <line num="29" count="1" type="stmt"/>
         <line num="33" count="2" type="stmt"/>
         <line num="34" count="2" type="stmt"/>
         <line num="38" count="0" type="stmt"/>
         <line num="42" count="0" type="stmt"/>
-        <line num="46" count="1" type="stmt"/>
-        <line num="47" count="1" type="cond" truecount="1" falsecount="1"/>
-        <line num="48" count="0" type="stmt"/>
+        <line num="46" count="2" type="stmt"/>
+        <line num="47" count="2" type="cond" truecount="2" falsecount="0"/>
+        <line num="48" count="1" type="stmt"/>
         <line num="51" count="1" type="stmt"/>
         <line num="56" count="2" type="stmt"/>
         <line num="57" count="2" type="stmt"/>
         <line num="61" count="2" type="stmt"/>
         <line num="62" count="2" type="stmt"/>
       </file>
-      <file name="SchemaDao.js" path="C:\Users\hunte\OneDrive\Desktop\CS_482\BABA-Repo\BABA_App\DAOs\SchemaDao.js">
-        <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
-        <line num="5" count="7" type="stmt"/>
-      </file>
-      <file name="TeamDao.js" path="C:\Users\hunte\OneDrive\Desktop\CS_482\BABA-Repo\BABA_App\DAOs\TeamDao.js">
-=======
       <file name="SchemaDao.js" path="C:\Users\billy\AndroidStudioProjects\BABA-Repo\BABA_App\DAOs\SchemaDao.js">
         <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
-        <line num="5" count="5" type="stmt"/>
+        <line num="5" count="12" type="stmt"/>
       </file>
       <file name="TeamDao.js" path="C:\Users\billy\AndroidStudioProjects\BABA-Repo\BABA_App\DAOs\TeamDao.js">
->>>>>>> Stashed changes
         <metrics statements="28" coveredstatements="18" conditionals="0" coveredconditionals="0" methods="14" coveredmethods="9"/>
-        <line num="32" count="1" type="stmt"/>
+        <line num="32" count="4" type="stmt"/>
         <line num="33" count="3" type="stmt"/>
         <line num="34" count="3" type="stmt"/>
-        <line num="45" count="1" type="stmt"/>
+        <line num="45" count="4" type="stmt"/>
         <line num="46" count="4" type="stmt"/>
-        <line num="50" count="1" type="stmt"/>
+        <line num="50" count="4" type="stmt"/>
         <line num="51" count="2" type="stmt"/>
-        <line num="55" count="1" type="stmt"/>
+        <line num="55" count="4" type="stmt"/>
         <line num="56" count="0" type="stmt"/>
         <line num="58" count="0" type="stmt"/>
-        <line num="62" count="1" type="stmt"/>
+        <line num="62" count="4" type="stmt"/>
         <line num="63" count="1" type="stmt"/>
         <line num="64" count="3" type="stmt"/>
-        <line num="69" count="1" type="stmt"/>
+        <line num="69" count="4" type="stmt"/>
         <line num="70" count="2" type="stmt"/>
         <line num="71" count="2" type="stmt"/>
-        <line num="76" count="1" type="stmt"/>
+        <line num="76" count="4" type="stmt"/>
         <line num="77" count="0" type="stmt"/>
         <line num="78" count="0" type="stmt"/>
-        <line num="82" count="1" type="stmt"/>
+        <line num="82" count="4" type="stmt"/>
         <line num="83" count="0" type="stmt"/>
         <line num="84" count="0" type="stmt"/>
-        <line num="88" count="1" type="stmt"/>
+        <line num="88" count="4" type="stmt"/>
         <line num="89" count="0" type="stmt"/>
         <line num="90" count="0" type="stmt"/>
-        <line num="94" count="1" type="stmt"/>
+        <line num="94" count="4" type="stmt"/>
         <line num="95" count="0" type="stmt"/>
         <line num="96" count="0" type="stmt"/>
       </file>
     </package>
     <package name="Objects">
-<<<<<<< Updated upstream
-      <metrics statements="105" coveredstatements="84" conditionals="22" coveredconditionals="1" methods="42" coveredmethods="37"/>
-      <file name="AccountCont.js" path="C:\Users\hunte\OneDrive\Desktop\CS_482\BABA-Repo\BABA_App\Objects\AccountCont.js">
+      <metrics statements="134" coveredstatements="86" conditionals="22" coveredconditionals="1" methods="55" coveredmethods="38"/>
+      <file name="AccountCont.js" path="C:\Users\billy\AndroidStudioProjects\BABA-Repo\BABA_App\Objects\AccountCont.js">
         <metrics statements="43" coveredstatements="42" conditionals="0" coveredconditionals="0" methods="16" coveredmethods="15"/>
         <line num="6" count="8" type="stmt"/>
         <line num="7" count="8" type="stmt"/>
@@ -245,18 +168,6 @@
         <line num="10" count="8" type="stmt"/>
         <line num="11" count="8" type="stmt"/>
         <line num="12" count="8" type="stmt"/>
-=======
-      <metrics statements="74" coveredstatements="36" conditionals="22" coveredconditionals="1" methods="24" coveredmethods="16"/>
-      <file name="AccountCont.js" path="C:\Users\billy\AndroidStudioProjects\BABA-Repo\BABA_App\Objects\AccountCont.js">
-        <metrics statements="42" coveredstatements="24" conditionals="0" coveredconditionals="0" methods="15" coveredmethods="11"/>
-        <line num="6" count="3" type="stmt"/>
-        <line num="7" count="3" type="stmt"/>
-        <line num="8" count="3" type="stmt"/>
-        <line num="9" count="3" type="stmt"/>
-        <line num="10" count="3" type="stmt"/>
-        <line num="11" count="3" type="stmt"/>
-        <line num="12" count="3" type="stmt"/>
->>>>>>> Stashed changes
         <line num="16" count="2" type="stmt"/>
         <line num="20" count="1" type="stmt"/>
         <line num="23" count="1" type="stmt"/>
@@ -268,16 +179,11 @@
         <line num="31" count="1" type="stmt"/>
         <line num="32" count="1" type="stmt"/>
         <line num="33" count="1" type="stmt"/>
-<<<<<<< Updated upstream
         <line num="34" count="1" type="stmt"/>
-=======
-        <line num="34" count="0" type="stmt"/>
->>>>>>> Stashed changes
         <line num="37" count="0" type="stmt"/>
         <line num="40" count="1" type="stmt"/>
         <line num="43" count="1" type="stmt"/>
         <line num="46" count="1" type="stmt"/>
-<<<<<<< Updated upstream
         <line num="49" count="1" type="stmt"/>
         <line num="52" count="1" type="stmt"/>
         <line num="53" count="1" type="stmt"/>
@@ -288,7 +194,7 @@
         <line num="58" count="1" type="stmt"/>
         <line num="61" count="1" type="stmt"/>
         <line num="64" count="1" type="stmt"/>
-        <line num="69" count="2" type="stmt"/>
+        <line num="69" count="1" type="stmt"/>
         <line num="73" count="1" type="stmt"/>
         <line num="78" count="1" type="stmt"/>
         <line num="79" count="1" type="stmt"/>
@@ -299,30 +205,7 @@
         <line num="84" count="1" type="stmt"/>
         <line num="85" count="1" type="stmt"/>
       </file>
-      <file name="GameCont.js" path="C:\Users\hunte\OneDrive\Desktop\CS_482\BABA-Repo\BABA_App\Objects\GameCont.js">
-=======
-        <line num="49" count="0" type="stmt"/>
-        <line num="52" count="1" type="stmt"/>
-        <line num="53" count="0" type="stmt"/>
-        <line num="54" count="0" type="stmt"/>
-        <line num="55" count="0" type="stmt"/>
-        <line num="56" count="0" type="stmt"/>
-        <line num="57" count="0" type="stmt"/>
-        <line num="58" count="0" type="stmt"/>
-        <line num="61" count="0" type="stmt"/>
-        <line num="64" count="0" type="stmt"/>
-        <line num="69" count="1" type="stmt"/>
-        <line num="74" count="1" type="stmt"/>
-        <line num="75" count="0" type="stmt"/>
-        <line num="76" count="0" type="stmt"/>
-        <line num="77" count="0" type="stmt"/>
-        <line num="78" count="0" type="stmt"/>
-        <line num="79" count="0" type="stmt"/>
-        <line num="80" count="0" type="stmt"/>
-        <line num="81" count="0" type="stmt"/>
-      </file>
       <file name="GameCont.js" path="C:\Users\billy\AndroidStudioProjects\BABA-Repo\BABA_App\Objects\GameCont.js">
->>>>>>> Stashed changes
         <metrics statements="32" coveredstatements="12" conditionals="22" coveredconditionals="1" methods="9" coveredmethods="5"/>
         <line num="6" count="2" type="stmt"/>
         <line num="7" count="2" type="stmt"/>
@@ -357,8 +240,7 @@
         <line num="60" count="0" type="stmt"/>
         <line num="64" count="0" type="stmt"/>
       </file>
-<<<<<<< Updated upstream
-      <file name="PlayerCont.js" path="C:\Users\hunte\OneDrive\Desktop\CS_482\BABA-Repo\BABA_App\Objects\PlayerCont.js">
+      <file name="PlayerCont.js" path="C:\Users\billy\AndroidStudioProjects\BABA-Repo\BABA_App\Objects\PlayerCont.js">
         <metrics statements="30" coveredstatements="30" conditionals="0" coveredconditionals="0" methods="17" coveredmethods="17"/>
         <line num="8" count="1" type="stmt"/>
         <line num="9" count="1" type="stmt"/>
@@ -390,43 +272,275 @@
         <line num="69" count="1" type="stmt"/>
         <line num="72" count="1" type="stmt"/>
         <line num="75" count="1" type="stmt"/>
-=======
+      </file>
+      <file name="Team.js" path="C:\Users\billy\AndroidStudioProjects\BABA-Repo\BABA_App\Objects\Team.js">
+        <metrics statements="29" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="13" coveredmethods="1"/>
+        <line num="6" count="1" type="stmt"/>
+        <line num="7" count="1" type="stmt"/>
+        <line num="8" count="0" type="stmt"/>
+        <line num="9" count="0" type="stmt"/>
+        <line num="10" count="0" type="stmt"/>
+        <line num="11" count="0" type="stmt"/>
+        <line num="13" count="0" type="stmt"/>
+        <line num="18" count="0" type="stmt"/>
+        <line num="23" count="0" type="stmt"/>
+        <line num="27" count="0" type="stmt"/>
+        <line num="31" count="0" type="stmt"/>
+        <line num="35" count="0" type="stmt"/>
+        <line num="39" count="0" type="stmt"/>
+        <line num="44" count="0" type="stmt"/>
+        <line num="45" count="0" type="stmt"/>
+        <line num="49" count="0" type="stmt"/>
+        <line num="50" count="0" type="stmt"/>
+        <line num="54" count="0" type="stmt"/>
+        <line num="55" count="0" type="stmt"/>
+        <line num="59" count="0" type="stmt"/>
+        <line num="60" count="0" type="stmt"/>
+        <line num="65" count="0" type="stmt"/>
+        <line num="66" count="0" type="stmt"/>
+        <line num="70" count="0" type="stmt"/>
+        <line num="71" count="0" type="stmt"/>
+        <line num="72" count="0" type="stmt"/>
+        <line num="73" count="0" type="stmt"/>
+        <line num="74" count="0" type="stmt"/>
+        <line num="75" count="0" type="stmt"/>
+      </file>
+    </package>
+    <package name="Style">
+      <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      <file name="Form.style.js" path="C:\Users\billy\AndroidStudioProjects\BABA-Repo\BABA_App\Style\Form.style.js">
+        <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      </file>
+      <file name="Main.style.js" path="C:\Users\billy\AndroidStudioProjects\BABA-Repo\BABA_App\Style\Main.style.js">
+        <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      </file>
     </package>
     <package name="View">
-      <metrics statements="3" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+      <metrics statements="49" coveredstatements="24" conditionals="4" coveredconditionals="0" methods="15" coveredmethods="4"/>
+      <file name="AddGame.js" path="C:\Users\billy\AndroidStudioProjects\BABA-Repo\BABA_App\View\AddGame.js">
+        <metrics statements="11" coveredstatements="8" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="1"/>
+        <line num="10" count="1" type="stmt"/>
+        <line num="12" count="1" type="stmt"/>
+        <line num="13" count="1" type="stmt"/>
+        <line num="14" count="1" type="stmt"/>
+        <line num="15" count="1" type="stmt"/>
+        <line num="17" count="1" type="stmt"/>
+        <line num="18" count="0" type="stmt"/>
+        <line num="19" count="0" type="stmt"/>
+        <line num="20" count="0" type="stmt"/>
+        <line num="23" count="1" type="stmt"/>
+        <line num="59" count="1" type="stmt"/>
+      </file>
+      <file name="AddTeam.js" path="C:\Users\billy\AndroidStudioProjects\BABA-Repo\BABA_App\View\AddTeam.js">
+        <metrics statements="6" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="1"/>
+        <line num="9" count="1" type="stmt"/>
+        <line num="11" count="1" type="stmt"/>
+        <line num="16" count="0" type="stmt"/>
+        <line num="17" count="0" type="stmt"/>
+        <line num="18" count="0" type="stmt"/>
+        <line num="22" count="1" type="stmt"/>
+      </file>
+      <file name="EditTeam.js" path="C:\Users\billy\AndroidStudioProjects\BABA-Repo\BABA_App\View\EditTeam.js">
+        <metrics statements="29" coveredstatements="10" conditionals="4" coveredconditionals="0" methods="10" coveredmethods="1"/>
+        <line num="9" count="1" type="stmt"/>
+        <line num="10" count="1" type="stmt"/>
+        <line num="11" count="1" type="stmt"/>
+        <line num="12" count="1" type="stmt"/>
+        <line num="13" count="1" type="stmt"/>
+        <line num="14" count="1" type="stmt"/>
+        <line num="16" count="1" type="stmt"/>
+        <line num="17" count="0" type="stmt"/>
+        <line num="18" count="0" type="stmt"/>
+        <line num="19" count="0" type="stmt"/>
+        <line num="20" count="0" type="stmt"/>
+        <line num="21" count="0" type="stmt"/>
+        <line num="22" count="0" type="stmt"/>
+        <line num="25" count="1" type="stmt"/>
+        <line num="26" count="0" type="stmt"/>
+        <line num="27" count="0" type="stmt"/>
+        <line num="31" count="0" type="stmt"/>
+        <line num="32" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="33" count="0" type="stmt"/>
+        <line num="35" count="0" type="stmt"/>
+        <line num="39" count="0" type="stmt"/>
+        <line num="45" count="1" type="stmt"/>
+        <line num="46" count="0" type="stmt"/>
+        <line num="47" count="0" type="stmt"/>
+        <line num="50" count="0" type="stmt"/>
+        <line num="51" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="52" count="0" type="stmt"/>
+        <line num="54" count="0" type="stmt"/>
+        <line num="62" count="1" type="stmt"/>
+      </file>
       <file name="Playoffs.js" path="C:\Users\billy\AndroidStudioProjects\BABA-Repo\BABA_App\View\Playoffs.js">
         <metrics statements="3" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
-        <line num="18" count="1" type="stmt"/>
-        <line num="135" count="1" type="stmt"/>
-        <line num="154" count="1" type="stmt"/>
+        <line num="18" count="2" type="stmt"/>
+        <line num="135" count="2" type="stmt"/>
+        <line num="154" count="2" type="stmt"/>
+      </file>
+    </package>
+    <package name="View.Account.DeleteAccount">
+      <metrics statements="18" coveredstatements="7" conditionals="8" coveredconditionals="0" methods="3" coveredmethods="1"/>
+      <file name="DeleteAccount.js" path="C:\Users\billy\AndroidStudioProjects\BABA-Repo\BABA_App\View\Account\DeleteAccount\DeleteAccount.js">
+        <metrics statements="18" coveredstatements="7" conditionals="8" coveredconditionals="0" methods="3" coveredmethods="1"/>
+        <line num="9" count="1" type="stmt"/>
+        <line num="10" count="1" type="stmt"/>
+        <line num="12" count="1" type="stmt"/>
+        <line num="14" count="1" type="stmt"/>
+        <line num="15" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="16" count="0" type="stmt"/>
+        <line num="17" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="18" count="0" type="stmt"/>
+        <line num="20" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="21" count="0" type="stmt"/>
+        <line num="22" count="0" type="stmt"/>
+        <line num="27" count="1" type="stmt"/>
+        <line num="28" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="29" count="0" type="stmt"/>
+        <line num="30" count="0" type="stmt"/>
+        <line num="33" count="0" type="stmt"/>
+        <line num="37" count="1" type="stmt"/>
+        <line num="56" count="1" type="stmt"/>
+      </file>
+    </package>
+    <package name="View.Account.ForgotPasswordScreen">
+      <metrics statements="8" coveredstatements="5" conditionals="0" coveredconditionals="0" methods="3" coveredmethods="1"/>
+      <file name="ForgotPasswordScreen.js" path="C:\Users\billy\AndroidStudioProjects\BABA-Repo\BABA_App\View\Account\ForgotPasswordScreen\ForgotPasswordScreen.js">
+        <metrics statements="8" coveredstatements="5" conditionals="0" coveredconditionals="0" methods="3" coveredmethods="1"/>
+        <line num="9" count="1" type="stmt"/>
+        <line num="11" count="1" type="stmt"/>
+        <line num="12" count="0" type="stmt"/>
+        <line num="13" count="0" type="stmt"/>
+        <line num="16" count="1" type="stmt"/>
+        <line num="17" count="0" type="stmt"/>
+        <line num="20" count="1" type="stmt"/>
+        <line num="43" count="1" type="stmt"/>
+      </file>
+    </package>
+    <package name="View.Account.NewPasswordScreen">
+      <metrics statements="19" coveredstatements="8" conditionals="6" coveredconditionals="0" methods="3" coveredmethods="1"/>
+      <file name="NewPasswordScreen.js" path="C:\Users\billy\AndroidStudioProjects\BABA-Repo\BABA_App\View\Account\NewPasswordScreen\NewPasswordScreen.js">
+        <metrics statements="19" coveredstatements="8" conditionals="6" coveredconditionals="0" methods="3" coveredmethods="1"/>
+        <line num="9" count="1" type="stmt"/>
+        <line num="10" count="1" type="stmt"/>
+        <line num="11" count="1" type="stmt"/>
+        <line num="12" count="1" type="stmt"/>
+        <line num="14" count="1" type="stmt"/>
+        <line num="15" count="0" type="stmt"/>
+        <line num="16" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="17" count="0" type="stmt"/>
+        <line num="18" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="19" count="0" type="stmt"/>
+        <line num="20" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="21" count="0" type="stmt"/>
+        <line num="24" count="0" type="stmt"/>
+        <line num="25" count="0" type="stmt"/>
+        <line num="26" count="0" type="stmt"/>
+        <line num="31" count="1" type="stmt"/>
+        <line num="32" count="0" type="stmt"/>
+        <line num="35" count="1" type="stmt"/>
+        <line num="68" count="1" type="stmt"/>
+      </file>
+    </package>
+    <package name="View.Account.SignInScreen">
+      <metrics statements="28" coveredstatements="9" conditionals="12" coveredconditionals="0" methods="5" coveredmethods="1"/>
+      <file name="SignInScreen.js" path="C:\Users\billy\AndroidStudioProjects\BABA-Repo\BABA_App\View\Account\SignInScreen\SignInScreen.js">
+        <metrics statements="28" coveredstatements="9" conditionals="12" coveredconditionals="0" methods="5" coveredmethods="1"/>
+        <line num="10" count="1" type="stmt"/>
+        <line num="11" count="1" type="stmt"/>
+        <line num="13" count="1" type="stmt"/>
+        <line num="15" count="1" type="stmt"/>
+        <line num="16" count="0" type="stmt"/>
+        <line num="17" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="18" count="0" type="stmt"/>
+        <line num="19" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="20" count="0" type="stmt"/>
+        <line num="22" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="23" count="0" type="stmt"/>
+        <line num="25" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="26" count="0" type="stmt"/>
+        <line num="27" count="0" type="stmt"/>
+        <line num="28" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="29" count="0" type="stmt"/>
+        <line num="30" count="0" type="stmt"/>
+        <line num="31" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="32" count="0" type="stmt"/>
+        <line num="33" count="0" type="stmt"/>
+        <line num="39" count="1" type="stmt"/>
+        <line num="40" count="0" type="stmt"/>
+        <line num="43" count="1" type="stmt"/>
+        <line num="44" count="0" type="stmt"/>
+        <line num="47" count="1" type="stmt"/>
+        <line num="48" count="0" type="stmt"/>
+        <line num="52" count="1" type="stmt"/>
+        <line num="93" count="1" type="stmt"/>
+      </file>
+    </package>
+    <package name="View.Account.SignUpScreen">
+      <metrics statements="21" coveredstatements="10" conditionals="4" coveredconditionals="0" methods="5" coveredmethods="1"/>
+      <file name="SignUpScreen.js" path="C:\Users\billy\AndroidStudioProjects\BABA-Repo\BABA_App\View\Account\SignUpScreen\SignUpScreen.js">
+        <metrics statements="21" coveredstatements="10" conditionals="4" coveredconditionals="0" methods="5" coveredmethods="1"/>
+        <line num="10" count="1" type="stmt"/>
+        <line num="11" count="1" type="stmt"/>
+        <line num="12" count="1" type="stmt"/>
+        <line num="13" count="1" type="stmt"/>
+        <line num="15" count="1" type="stmt"/>
+        <line num="16" count="0" type="stmt"/>
+        <line num="17" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="18" count="0" type="stmt"/>
+        <line num="20" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="21" count="0" type="stmt"/>
+        <line num="22" count="0" type="stmt"/>
+        <line num="24" count="0" type="stmt"/>
+        <line num="25" count="0" type="stmt"/>
+        <line num="29" count="1" type="stmt"/>
+        <line num="30" count="0" type="stmt"/>
+        <line num="33" count="1" type="stmt"/>
+        <line num="34" count="0" type="stmt"/>
+        <line num="37" count="1" type="stmt"/>
+        <line num="38" count="0" type="stmt"/>
+        <line num="42" count="1" type="stmt"/>
+        <line num="88" count="1" type="stmt"/>
       </file>
     </package>
     <package name="View.pages.components">
       <metrics statements="3" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
       <file name="Gameformat.js" path="C:\Users\billy\AndroidStudioProjects\BABA-Repo\BABA_App\View\pages\components\Gameformat.js">
         <metrics statements="3" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
-        <line num="5" count="1" type="stmt"/>
-        <line num="6" count="4" type="stmt"/>
-        <line num="14" count="1" type="stmt"/>
+        <line num="5" count="2" type="stmt"/>
+        <line num="6" count="8" type="stmt"/>
+        <line num="14" count="2" type="stmt"/>
+      </file>
+    </package>
+    <package name="assets.images">
+      <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      <file name="Logo_1.png" path="C:\Users\billy\AndroidStudioProjects\BABA-Repo\BABA_App\assets\images\Logo_1.png">
+        <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+        <line num="1" count="2" type="stmt"/>
       </file>
     </package>
     <package name="src.components.CustomButton">
-      <metrics statements="3" coveredstatements="2" conditionals="5" coveredconditionals="0" methods="1" coveredmethods="0"/>
+      <metrics statements="3" coveredstatements="3" conditionals="5" coveredconditionals="3" methods="1" coveredmethods="1"/>
       <file name="CustomButton.js" path="C:\Users\billy\AndroidStudioProjects\BABA-Repo\BABA_App\src\components\CustomButton\CustomButton.js">
-        <metrics statements="3" coveredstatements="2" conditionals="5" coveredconditionals="0" methods="1" coveredmethods="0"/>
-        <line num="4" count="1" type="cond" truecount="0" falsecount="1"/>
-        <line num="5" count="0" type="stmt"/>
-        <line num="25" count="1" type="stmt"/>
+        <metrics statements="3" coveredstatements="3" conditionals="5" coveredconditionals="3" methods="1" coveredmethods="1"/>
+        <line num="4" count="6" type="cond" truecount="1" falsecount="0"/>
+        <line num="5" count="14" type="stmt"/>
+        <line num="25" count="6" type="stmt"/>
+      </file>
+      <file name="index.js" path="C:\Users\billy\AndroidStudioProjects\BABA-Repo\BABA_App\src\components\CustomButton\index.js">
+        <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
       </file>
     </package>
     <package name="src.components.CustomInput">
-      <metrics statements="3" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
+      <metrics statements="3" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
       <file name="CustomInput.js" path="C:\Users\billy\AndroidStudioProjects\BABA-Repo\BABA_App\src\components\CustomInput\CustomInput.js">
-        <metrics statements="3" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
-        <line num="4" count="1" type="stmt"/>
-        <line num="5" count="0" type="stmt"/>
-        <line num="18" count="1" type="stmt"/>
->>>>>>> Stashed changes
+        <metrics statements="3" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+        <line num="4" count="6" type="stmt"/>
+        <line num="5" count="18" type="stmt"/>
+        <line num="18" count="6" type="stmt"/>
+      </file>
+      <file name="index.js" path="C:\Users\billy\AndroidStudioProjects\BABA-Repo\BABA_App\src\components\CustomInput\index.js">
+        <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
       </file>
     </package>
   </project>

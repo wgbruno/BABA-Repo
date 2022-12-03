@@ -1,0 +1,67 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly 1`] = `
+<View
+  style={
+    Object {
+      "alignItems": "center",
+      "flex": 1,
+      "padding": 10,
+    }
+  }
+>
+  <Image
+    resizeMode="contain"
+    source={
+      Object {
+        "testUri": "../../../assets/images/Logo_1.png",
+      }
+    }
+    style={
+      Array [
+        Object {
+          "maxHeight": 150,
+          "maxWidth": 200,
+          "width": "3000%",
+        },
+        Object {
+          "height": 26680,
+        },
+      ]
+    }
+  />
+  <Text
+    style={
+      Object {
+        "color": "darkblue",
+        "fontSize": 20,
+        "fontWeight": "bold",
+        "marginTop": 8,
+      }
+    }
+  >
+    All Players
+  </Text>
+  <View
+    style={
+      Object {
+        "alignItems": "center",
+        "flex": 1,
+        "justifyContent": "center",
+      }
+    }
+  >
+    <Text
+      style={
+        Object {
+          "color": "darkblue",
+          "fontSize": 25,
+          "textAlign": "center",
+        }
+      }
+    >
+      There are no players.
+    </Text>
+  </View>
+</View>
+`;

@@ -1,0 +1,985 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Delete Account Screen 1`] = `
+<RCTScrollView
+  showsVerticalScrollIndicator={false}
+>
+  <View>
+    <View
+      style={
+        Object {
+          "alignItems": "center",
+          "padding": 20,
+        }
+      }
+    >
+      <Text
+        style={
+          Object {
+            "color": "#051C60",
+            "fontSize": 24,
+            "fontWeight": "bold",
+            "margin": 10,
+          }
+        }
+      >
+        Delete Account
+      </Text>
+      <View
+        style={
+          Object {
+            "backgroundColor": "white",
+            "borderColor": "#e8e8e8",
+            "borderRadius": 5,
+            "borderWidth": 1,
+            "marginVertical": 5,
+            "paddingHorizontal": 10,
+            "width": "100%",
+          }
+        }
+      >
+        <TextInput
+          onChangeText={[Function]}
+          placeholder="Username"
+          style={Object {}}
+          value=""
+        />
+      </View>
+      <View
+        style={
+          Object {
+            "backgroundColor": "white",
+            "borderColor": "#e8e8e8",
+            "borderRadius": 5,
+            "borderWidth": 1,
+            "marginVertical": 5,
+            "paddingHorizontal": 10,
+            "width": "100%",
+          }
+        }
+      >
+        <TextInput
+          onChangeText={[Function]}
+          placeholder="Password"
+          secureTextEntry={true}
+          style={Object {}}
+          value=""
+        />
+      </View>
+      <View
+        accessible={true}
+        collapsable={false}
+        focusable={true}
+        onBlur={[Function]}
+        onClick={[Function]}
+        onFocus={[Function]}
+        onResponderGrant={[Function]}
+        onResponderMove={[Function]}
+        onResponderRelease={[Function]}
+        onResponderTerminate={[Function]}
+        onResponderTerminationRequest={[Function]}
+        onStartShouldSetResponder={[Function]}
+        style={
+          Array [
+            Object {
+              "alignItems": "center",
+              "borderRadius": 5,
+              "marginVertical": 5,
+              "padding": 10,
+              "width": "100%",
+            },
+            Object {
+              "backgroundColor": "#DD4D44",
+            },
+            Object {},
+          ]
+        }
+      >
+        <Text
+          style={
+            Array [
+              Object {
+                "color": "white",
+                "fontWeight": "bold",
+              },
+              undefined,
+              Object {},
+            ]
+          }
+        >
+          Delete
+        </Text>
+      </View>
+      <View
+        accessible={true}
+        collapsable={false}
+        focusable={true}
+        onBlur={[Function]}
+        onClick={[Function]}
+        onFocus={[Function]}
+        onResponderGrant={[Function]}
+        onResponderMove={[Function]}
+        onResponderRelease={[Function]}
+        onResponderTerminate={[Function]}
+        onResponderTerminationRequest={[Function]}
+        onStartShouldSetResponder={[Function]}
+        style={
+          Array [
+            Object {
+              "alignItems": "center",
+              "borderRadius": 5,
+              "marginVertical": 5,
+              "padding": 10,
+              "width": "100%",
+            },
+            Object {
+              "backgroundColor": "#DD4D44",
+            },
+            Object {},
+          ]
+        }
+      >
+        <Text
+          style={
+            Array [
+              Object {
+                "color": "white",
+                "fontWeight": "bold",
+              },
+              undefined,
+              Object {},
+            ]
+          }
+        >
+          Delete All (Testing)
+        </Text>
+      </View>
+    </View>
+  </View>
+</RCTScrollView>
+`;
+
+exports[`Forgot Password Screen 1`] = `
+<RCTScrollView
+  showsVerticalScrollIndicator={false}
+>
+  <View>
+    <View
+      style={
+        Object {
+          "alignItems": "center",
+          "padding": 20,
+        }
+      }
+    >
+      <Text
+        style={
+          Object {
+            "color": "#051C60",
+            "fontSize": 24,
+            "fontWeight": "bold",
+            "margin": 10,
+          }
+        }
+      >
+        Email your password
+      </Text>
+      <View
+        style={
+          Object {
+            "backgroundColor": "white",
+            "borderColor": "#e8e8e8",
+            "borderRadius": 5,
+            "borderWidth": 1,
+            "marginVertical": 5,
+            "paddingHorizontal": 10,
+            "width": "100%",
+          }
+        }
+      >
+        <TextInput
+          onChangeText={[Function]}
+          placeholder="Username"
+          style={Object {}}
+          value=""
+        />
+      </View>
+      <View
+        accessible={true}
+        collapsable={false}
+        focusable={true}
+        onBlur={[Function]}
+        onClick={[Function]}
+        onFocus={[Function]}
+        onResponderGrant={[Function]}
+        onResponderMove={[Function]}
+        onResponderRelease={[Function]}
+        onResponderTerminate={[Function]}
+        onResponderTerminationRequest={[Function]}
+        onStartShouldSetResponder={[Function]}
+        style={
+          Array [
+            Object {
+              "alignItems": "center",
+              "borderRadius": 5,
+              "marginVertical": 5,
+              "padding": 10,
+              "width": "100%",
+            },
+            Object {
+              "backgroundColor": "#DD4D44",
+            },
+            Object {},
+          ]
+        }
+      >
+        <Text
+          style={
+            Array [
+              Object {
+                "color": "white",
+                "fontWeight": "bold",
+              },
+              undefined,
+              Object {},
+            ]
+          }
+        >
+          Send
+        </Text>
+      </View>
+      <View
+        accessible={true}
+        collapsable={false}
+        focusable={true}
+        onBlur={[Function]}
+        onClick={[Function]}
+        onFocus={[Function]}
+        onResponderGrant={[Function]}
+        onResponderMove={[Function]}
+        onResponderRelease={[Function]}
+        onResponderTerminate={[Function]}
+        onResponderTerminationRequest={[Function]}
+        onStartShouldSetResponder={[Function]}
+        style={
+          Array [
+            Object {
+              "alignItems": "center",
+              "borderRadius": 5,
+              "marginVertical": 5,
+              "padding": 10,
+              "width": "100%",
+            },
+            Object {},
+            Object {},
+          ]
+        }
+      >
+        <Text
+          style={
+            Array [
+              Object {
+                "color": "white",
+                "fontWeight": "bold",
+              },
+              Object {
+                "color": "gray",
+              },
+              Object {},
+            ]
+          }
+        >
+          Back to Sign in
+        </Text>
+      </View>
+    </View>
+  </View>
+</RCTScrollView>
+`;
+
+exports[`New Password Screen 1`] = `
+<RCTScrollView
+  showsVerticalScrollIndicator={false}
+>
+  <View>
+    <View
+      style={
+        Object {
+          "alignItems": "center",
+          "padding": 20,
+        }
+      }
+    >
+      <Text
+        style={
+          Object {
+            "color": "#051C60",
+            "fontSize": 24,
+            "fontWeight": "bold",
+            "margin": 10,
+          }
+        }
+      >
+        Change your password
+      </Text>
+      <View
+        style={
+          Object {
+            "backgroundColor": "white",
+            "borderColor": "#e8e8e8",
+            "borderRadius": 5,
+            "borderWidth": 1,
+            "marginVertical": 5,
+            "paddingHorizontal": 10,
+            "width": "100%",
+          }
+        }
+      >
+        <TextInput
+          onChangeText={[Function]}
+          placeholder="Username"
+          style={Object {}}
+          value=""
+        />
+      </View>
+      <View
+        style={
+          Object {
+            "backgroundColor": "white",
+            "borderColor": "#e8e8e8",
+            "borderRadius": 5,
+            "borderWidth": 1,
+            "marginVertical": 5,
+            "paddingHorizontal": 10,
+            "width": "100%",
+          }
+        }
+      >
+        <TextInput
+          onChangeText={[Function]}
+          placeholder="Old password"
+          style={Object {}}
+          value=""
+        />
+      </View>
+      <View
+        style={
+          Object {
+            "backgroundColor": "white",
+            "borderColor": "#e8e8e8",
+            "borderRadius": 5,
+            "borderWidth": 1,
+            "marginVertical": 5,
+            "paddingHorizontal": 10,
+            "width": "100%",
+          }
+        }
+      >
+        <TextInput
+          onChangeText={[Function]}
+          placeholder="Enter your new password"
+          style={Object {}}
+          value=""
+        />
+      </View>
+      <View
+        style={
+          Object {
+            "backgroundColor": "white",
+            "borderColor": "#e8e8e8",
+            "borderRadius": 5,
+            "borderWidth": 1,
+            "marginVertical": 5,
+            "paddingHorizontal": 10,
+            "width": "100%",
+          }
+        }
+      >
+        <TextInput
+          onChangeText={[Function]}
+          placeholder="Reenter your new password"
+          style={Object {}}
+          value=""
+        />
+      </View>
+      <View
+        accessible={true}
+        collapsable={false}
+        focusable={true}
+        onBlur={[Function]}
+        onClick={[Function]}
+        onFocus={[Function]}
+        onResponderGrant={[Function]}
+        onResponderMove={[Function]}
+        onResponderRelease={[Function]}
+        onResponderTerminate={[Function]}
+        onResponderTerminationRequest={[Function]}
+        onStartShouldSetResponder={[Function]}
+        style={
+          Array [
+            Object {
+              "alignItems": "center",
+              "borderRadius": 5,
+              "marginVertical": 5,
+              "padding": 10,
+              "width": "100%",
+            },
+            Object {
+              "backgroundColor": "#DD4D44",
+            },
+            Object {},
+          ]
+        }
+      >
+        <Text
+          style={
+            Array [
+              Object {
+                "color": "white",
+                "fontWeight": "bold",
+              },
+              undefined,
+              Object {},
+            ]
+          }
+        >
+          Submit
+        </Text>
+      </View>
+      <View
+        accessible={true}
+        collapsable={false}
+        focusable={true}
+        onBlur={[Function]}
+        onClick={[Function]}
+        onFocus={[Function]}
+        onResponderGrant={[Function]}
+        onResponderMove={[Function]}
+        onResponderRelease={[Function]}
+        onResponderTerminate={[Function]}
+        onResponderTerminationRequest={[Function]}
+        onStartShouldSetResponder={[Function]}
+        style={
+          Array [
+            Object {
+              "alignItems": "center",
+              "borderRadius": 5,
+              "marginVertical": 5,
+              "padding": 10,
+              "width": "100%",
+            },
+            Object {},
+            Object {},
+          ]
+        }
+      >
+        <Text
+          style={
+            Array [
+              Object {
+                "color": "white",
+                "fontWeight": "bold",
+              },
+              Object {
+                "color": "gray",
+              },
+              Object {},
+            ]
+          }
+        >
+          Back to Sign in
+        </Text>
+      </View>
+    </View>
+  </View>
+</RCTScrollView>
+`;
+
+exports[`Sign In Screen 1`] = `
+<RCTScrollView
+  showsVerticalScrollIndicator={false}
+>
+  <View>
+    <View
+      style={
+        Object {
+          "alignItems": "center",
+          "padding": 20,
+        }
+      }
+    >
+      <Image
+        resizeMode="contain"
+        source={
+          Object {
+            "testUri": "../../../assets/images/Logo_1.png",
+          }
+        }
+        style={
+          Array [
+            Object {
+              "maxHeight": 300,
+              "maxWidth": 400,
+              "width": "3000%",
+            },
+            Object {
+              "height": 26680,
+            },
+          ]
+        }
+      />
+      <View
+        style={
+          Object {
+            "backgroundColor": "white",
+            "borderColor": "#e8e8e8",
+            "borderRadius": 5,
+            "borderWidth": 1,
+            "marginVertical": 5,
+            "paddingHorizontal": 10,
+            "width": "100%",
+          }
+        }
+      >
+        <TextInput
+          onChangeText={[Function]}
+          placeholder="Username"
+          style={Object {}}
+          value=""
+        />
+      </View>
+      <View
+        style={
+          Object {
+            "backgroundColor": "white",
+            "borderColor": "#e8e8e8",
+            "borderRadius": 5,
+            "borderWidth": 1,
+            "marginVertical": 5,
+            "paddingHorizontal": 10,
+            "width": "100%",
+          }
+        }
+      >
+        <TextInput
+          onChangeText={[Function]}
+          placeholder="Password"
+          secureTextEntry={true}
+          style={Object {}}
+          value=""
+        />
+      </View>
+      <View
+        accessible={true}
+        collapsable={false}
+        focusable={true}
+        onBlur={[Function]}
+        onClick={[Function]}
+        onFocus={[Function]}
+        onResponderGrant={[Function]}
+        onResponderMove={[Function]}
+        onResponderRelease={[Function]}
+        onResponderTerminate={[Function]}
+        onResponderTerminationRequest={[Function]}
+        onStartShouldSetResponder={[Function]}
+        style={
+          Array [
+            Object {
+              "alignItems": "center",
+              "borderRadius": 5,
+              "marginVertical": 5,
+              "padding": 10,
+              "width": "100%",
+            },
+            Object {
+              "backgroundColor": "#DD4D44",
+            },
+            Object {},
+          ]
+        }
+      >
+        <Text
+          style={
+            Array [
+              Object {
+                "color": "white",
+                "fontWeight": "bold",
+              },
+              undefined,
+              Object {},
+            ]
+          }
+        >
+          Sign In
+        </Text>
+      </View>
+      <View
+        accessible={true}
+        collapsable={false}
+        focusable={true}
+        onBlur={[Function]}
+        onClick={[Function]}
+        onFocus={[Function]}
+        onResponderGrant={[Function]}
+        onResponderMove={[Function]}
+        onResponderRelease={[Function]}
+        onResponderTerminate={[Function]}
+        onResponderTerminationRequest={[Function]}
+        onStartShouldSetResponder={[Function]}
+        style={
+          Array [
+            Object {
+              "alignItems": "center",
+              "borderRadius": 5,
+              "marginVertical": 5,
+              "padding": 10,
+              "width": "100%",
+            },
+            Object {
+              "backgroundColor": "#DD4D44",
+            },
+            Object {},
+          ]
+        }
+      >
+        <Text
+          style={
+            Array [
+              Object {
+                "color": "white",
+                "fontWeight": "bold",
+              },
+              undefined,
+              Object {},
+            ]
+          }
+        >
+          Guest mode
+        </Text>
+      </View>
+      <View
+        accessible={true}
+        collapsable={false}
+        focusable={true}
+        onBlur={[Function]}
+        onClick={[Function]}
+        onFocus={[Function]}
+        onResponderGrant={[Function]}
+        onResponderMove={[Function]}
+        onResponderRelease={[Function]}
+        onResponderTerminate={[Function]}
+        onResponderTerminationRequest={[Function]}
+        onStartShouldSetResponder={[Function]}
+        style={
+          Array [
+            Object {
+              "alignItems": "center",
+              "borderRadius": 5,
+              "marginVertical": 5,
+              "padding": 10,
+              "width": "100%",
+            },
+            Object {},
+            Object {},
+          ]
+        }
+      >
+        <Text
+          style={
+            Array [
+              Object {
+                "color": "white",
+                "fontWeight": "bold",
+              },
+              Object {
+                "color": "gray",
+              },
+              Object {},
+            ]
+          }
+        >
+          Forgot password?
+        </Text>
+      </View>
+      <View
+        accessible={true}
+        collapsable={false}
+        focusable={true}
+        onBlur={[Function]}
+        onClick={[Function]}
+        onFocus={[Function]}
+        onResponderGrant={[Function]}
+        onResponderMove={[Function]}
+        onResponderRelease={[Function]}
+        onResponderTerminate={[Function]}
+        onResponderTerminationRequest={[Function]}
+        onStartShouldSetResponder={[Function]}
+        style={
+          Array [
+            Object {
+              "alignItems": "center",
+              "borderRadius": 5,
+              "marginVertical": 5,
+              "padding": 10,
+              "width": "100%",
+            },
+            Object {},
+            Object {},
+          ]
+        }
+      >
+        <Text
+          style={
+            Array [
+              Object {
+                "color": "white",
+                "fontWeight": "bold",
+              },
+              Object {
+                "color": "gray",
+              },
+              Object {},
+            ]
+          }
+        >
+          Don't have an account? Create one
+        </Text>
+      </View>
+    </View>
+  </View>
+</RCTScrollView>
+`;
+
+exports[`Sign Up Screen 1`] = `
+<RCTScrollView
+  showsVerticalScrollIndicator={false}
+>
+  <View>
+    <View
+      style={
+        Object {
+          "alignItems": "center",
+          "padding": 50,
+        }
+      }
+    >
+      <Text
+        style={
+          Object {
+            "color": "#051C60",
+            "fontSize": 28,
+            "fontWeight": "bold",
+            "margin": 10,
+          }
+        }
+      >
+        Create an account
+      </Text>
+      <View
+        style={
+          Object {
+            "backgroundColor": "white",
+            "borderColor": "#e8e8e8",
+            "borderRadius": 5,
+            "borderWidth": 1,
+            "marginVertical": 5,
+            "paddingHorizontal": 10,
+            "width": "100%",
+          }
+        }
+      >
+        <TextInput
+          onChangeText={[Function]}
+          placeholder="Username"
+          style={Object {}}
+          value=""
+        />
+      </View>
+      <View
+        style={
+          Object {
+            "backgroundColor": "white",
+            "borderColor": "#e8e8e8",
+            "borderRadius": 5,
+            "borderWidth": 1,
+            "marginVertical": 5,
+            "paddingHorizontal": 10,
+            "width": "100%",
+          }
+        }
+      >
+        <TextInput
+          onChangeText={[Function]}
+          placeholder="Email"
+          style={Object {}}
+          value=""
+        />
+      </View>
+      <View
+        style={
+          Object {
+            "backgroundColor": "white",
+            "borderColor": "#e8e8e8",
+            "borderRadius": 5,
+            "borderWidth": 1,
+            "marginVertical": 5,
+            "paddingHorizontal": 10,
+            "width": "100%",
+          }
+        }
+      >
+        <TextInput
+          onChangeText={[Function]}
+          placeholder="Password"
+          secureTextEntry={true}
+          style={Object {}}
+          value=""
+        />
+      </View>
+      <View
+        style={
+          Object {
+            "backgroundColor": "white",
+            "borderColor": "#e8e8e8",
+            "borderRadius": 5,
+            "borderWidth": 1,
+            "marginVertical": 5,
+            "paddingHorizontal": 10,
+            "width": "100%",
+          }
+        }
+      >
+        <TextInput
+          onChangeText={[Function]}
+          placeholder="Repeat Password"
+          secureTextEntry={true}
+          style={Object {}}
+          value=""
+        />
+      </View>
+      <View
+        accessible={true}
+        collapsable={false}
+        focusable={true}
+        onBlur={[Function]}
+        onClick={[Function]}
+        onFocus={[Function]}
+        onResponderGrant={[Function]}
+        onResponderMove={[Function]}
+        onResponderRelease={[Function]}
+        onResponderTerminate={[Function]}
+        onResponderTerminationRequest={[Function]}
+        onStartShouldSetResponder={[Function]}
+        style={
+          Array [
+            Object {
+              "alignItems": "center",
+              "borderRadius": 5,
+              "marginVertical": 5,
+              "padding": 10,
+              "width": "100%",
+            },
+            Object {
+              "backgroundColor": "#DD4D44",
+            },
+            Object {},
+          ]
+        }
+      >
+        <Text
+          style={
+            Array [
+              Object {
+                "color": "white",
+                "fontWeight": "bold",
+              },
+              undefined,
+              Object {},
+            ]
+          }
+        >
+          Register
+        </Text>
+      </View>
+      <Text
+        style={
+          Object {
+            "color": "gray",
+            "marginVertical": 30,
+          }
+        }
+      >
+        By registering, you confirm that you accept our
+         
+        <Text
+          onPress={[Function]}
+          style={
+            Object {
+              "color": "#FDB075",
+            }
+          }
+        >
+          Terms of Use
+        </Text>
+         
+        and
+         
+        <Text
+          onPress={[Function]}
+          style={
+            Object {
+              "color": "#FDB075",
+            }
+          }
+        >
+          Privacy Policy
+        </Text>
+      </Text>
+      <View
+        accessible={true}
+        collapsable={false}
+        focusable={true}
+        onBlur={[Function]}
+        onClick={[Function]}
+        onFocus={[Function]}
+        onResponderGrant={[Function]}
+        onResponderMove={[Function]}
+        onResponderRelease={[Function]}
+        onResponderTerminate={[Function]}
+        onResponderTerminationRequest={[Function]}
+        onStartShouldSetResponder={[Function]}
+        style={
+          Array [
+            Object {
+              "alignItems": "center",
+              "borderRadius": 5,
+              "marginVertical": 5,
+              "padding": 10,
+              "width": "100%",
+            },
+            Object {},
+            Object {},
+          ]
+        }
+      >
+        <Text
+          style={
+            Array [
+              Object {
+                "color": "white",
+                "fontWeight": "bold",
+              },
+              Object {
+                "color": "gray",
+              },
+              Object {},
+            ]
+          }
+        >
+          Have an account? Sign in
+        </Text>
+      </View>
+    </View>
+  </View>
+</RCTScrollView>
+`;

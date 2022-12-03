@@ -1,0 +1,171 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`New Game Screen 1`] = `
+<RCTScrollView
+  showsVerticalScrollIndicator={false}
+>
+  <View>
+    <View
+      style={
+        Object {
+          "alignItems": "center",
+          "padding": 20,
+        }
+      }
+    >
+      <Image
+        resizeMode="contain"
+        source={
+          Object {
+            "testUri": "../../../assets/images/Logo_1.png",
+          }
+        }
+        style={
+          Array [
+            undefined,
+            Object {
+              "height": 26680,
+            },
+          ]
+        }
+      />
+      <Text
+        style={
+          Object {
+            "color": "darkblue",
+            "fontSize": 40,
+            "fontWeight": "bold",
+            "marginVertical": 10,
+          }
+        }
+      >
+        Schedule a new game
+      </Text>
+      <View
+        style={
+          Object {
+            "backgroundColor": "white",
+            "borderColor": "#e8e8e8",
+            "borderRadius": 5,
+            "borderWidth": 1,
+            "marginVertical": 5,
+            "paddingHorizontal": 10,
+            "width": "100%",
+          }
+        }
+      >
+        <TextInput
+          onChangeText={[Function]}
+          placeholder="Team Name 1"
+          style={Object {}}
+          value=""
+        />
+      </View>
+      <View
+        style={
+          Object {
+            "backgroundColor": "white",
+            "borderColor": "#e8e8e8",
+            "borderRadius": 5,
+            "borderWidth": 1,
+            "marginVertical": 5,
+            "paddingHorizontal": 10,
+            "width": "100%",
+          }
+        }
+      >
+        <TextInput
+          onChangeText={[Function]}
+          placeholder="Team Name 2"
+          style={Object {}}
+          value=""
+        />
+      </View>
+      <View
+        style={
+          Object {
+            "backgroundColor": "white",
+            "borderColor": "#e8e8e8",
+            "borderRadius": 5,
+            "borderWidth": 1,
+            "marginVertical": 5,
+            "paddingHorizontal": 10,
+            "width": "100%",
+          }
+        }
+      >
+        <TextInput
+          onChangeText={[Function]}
+          placeholder="Start Time"
+          style={Object {}}
+          value=""
+        />
+      </View>
+      <View
+        style={
+          Object {
+            "backgroundColor": "white",
+            "borderColor": "#e8e8e8",
+            "borderRadius": 5,
+            "borderWidth": 1,
+            "marginVertical": 5,
+            "paddingHorizontal": 10,
+            "width": "100%",
+          }
+        }
+      >
+        <TextInput
+          onChangeText={[Function]}
+          placeholder="Date"
+          style={Object {}}
+          value=""
+        />
+      </View>
+      <View
+        accessible={true}
+        collapsable={false}
+        focusable={true}
+        onBlur={[Function]}
+        onClick={[Function]}
+        onFocus={[Function]}
+        onResponderGrant={[Function]}
+        onResponderMove={[Function]}
+        onResponderRelease={[Function]}
+        onResponderTerminate={[Function]}
+        onResponderTerminationRequest={[Function]}
+        onStartShouldSetResponder={[Function]}
+        style={
+          Array [
+            Object {
+              "alignItems": "center",
+              "borderRadius": 5,
+              "marginVertical": 5,
+              "padding": 10,
+              "width": "100%",
+            },
+            Object {
+              "backgroundColor": "#DD4D44",
+            },
+            Object {},
+          ]
+        }
+      >
+        <Text
+          style={
+            Array [
+              Object {
+                "color": "white",
+                "fontWeight": "bold",
+              },
+              undefined,
+              Object {},
+            ]
+          }
+        >
+          Create Game
+        </Text>
+      </View>
+    </View>
+  </View>
+</RCTScrollView>
+`;

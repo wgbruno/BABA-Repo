@@ -1,0 +1,281 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Live Score Screen 1`] = `
+<RCTScrollView
+  showsVerticalScrollIndicator={false}
+>
+  <View>
+    <View
+      style={
+        Object {
+          "alignItems": "center",
+          "padding": 20,
+        }
+      }
+    >
+      <Image
+        resizeMode="contain"
+        source={
+          Object {
+            "testUri": "../../../assets/images/Logo_1.png",
+          }
+        }
+        style={
+          Array [
+            Object {
+              "maxHeight": 150,
+              "maxWidth": 200,
+              "width": "3000%",
+            },
+            Object {
+              "height": 26680,
+            },
+          ]
+        }
+      />
+      <Text
+        style={
+          Object {
+            "color": "darkblue",
+            "fontSize": 25,
+            "marginVertical": 10,
+          }
+        }
+      >
+                        
+      </Text>
+      <Text
+        style={
+          Object {
+            "color": "gray",
+            "fontSize": 40,
+            "marginVertical": 10,
+          }
+        }
+      >
+                    
+      </Text>
+      <View
+        accessible={true}
+        collapsable={false}
+        focusable={true}
+        onBlur={[Function]}
+        onClick={[Function]}
+        onFocus={[Function]}
+        onResponderGrant={[Function]}
+        onResponderMove={[Function]}
+        onResponderRelease={[Function]}
+        onResponderTerminate={[Function]}
+        onResponderTerminationRequest={[Function]}
+        onStartShouldSetResponder={[Function]}
+        style={
+          Array [
+            Object {
+              "alignItems": "center",
+              "borderRadius": 5,
+              "marginVertical": 5,
+              "padding": 10,
+              "width": "100%",
+            },
+            Object {
+              "backgroundColor": "#DD4D44",
+            },
+            Object {},
+          ]
+        }
+      >
+        <Text
+          style={
+            Array [
+              Object {
+                "color": "white",
+                "fontWeight": "bold",
+              },
+              undefined,
+              Object {},
+            ]
+          }
+        >
+          Add 1 point to team 
+        </Text>
+      </View>
+      <View
+        accessible={true}
+        collapsable={false}
+        focusable={true}
+        onBlur={[Function]}
+        onClick={[Function]}
+        onFocus={[Function]}
+        onResponderGrant={[Function]}
+        onResponderMove={[Function]}
+        onResponderRelease={[Function]}
+        onResponderTerminate={[Function]}
+        onResponderTerminationRequest={[Function]}
+        onStartShouldSetResponder={[Function]}
+        style={
+          Array [
+            Object {
+              "alignItems": "center",
+              "borderRadius": 5,
+              "marginVertical": 5,
+              "padding": 10,
+              "width": "100%",
+            },
+            Object {
+              "backgroundColor": "#DD4D44",
+            },
+            Object {},
+          ]
+        }
+      >
+        <Text
+          style={
+            Array [
+              Object {
+                "color": "white",
+                "fontWeight": "bold",
+              },
+              undefined,
+              Object {},
+            ]
+          }
+        >
+          Remove 1 point from team 
+        </Text>
+      </View>
+      <View
+        accessible={true}
+        collapsable={false}
+        focusable={true}
+        onBlur={[Function]}
+        onClick={[Function]}
+        onFocus={[Function]}
+        onResponderGrant={[Function]}
+        onResponderMove={[Function]}
+        onResponderRelease={[Function]}
+        onResponderTerminate={[Function]}
+        onResponderTerminationRequest={[Function]}
+        onStartShouldSetResponder={[Function]}
+        style={
+          Array [
+            Object {
+              "alignItems": "center",
+              "borderRadius": 5,
+              "marginVertical": 5,
+              "padding": 10,
+              "width": "100%",
+            },
+            Object {
+              "backgroundColor": "#DD4D44",
+            },
+            Object {},
+          ]
+        }
+      >
+        <Text
+          style={
+            Array [
+              Object {
+                "color": "white",
+                "fontWeight": "bold",
+              },
+              undefined,
+              Object {},
+            ]
+          }
+        >
+          Add 1 point to team 
+        </Text>
+      </View>
+      <View
+        accessible={true}
+        collapsable={false}
+        focusable={true}
+        onBlur={[Function]}
+        onClick={[Function]}
+        onFocus={[Function]}
+        onResponderGrant={[Function]}
+        onResponderMove={[Function]}
+        onResponderRelease={[Function]}
+        onResponderTerminate={[Function]}
+        onResponderTerminationRequest={[Function]}
+        onStartShouldSetResponder={[Function]}
+        style={
+          Array [
+            Object {
+              "alignItems": "center",
+              "borderRadius": 5,
+              "marginVertical": 5,
+              "padding": 10,
+              "width": "100%",
+            },
+            Object {
+              "backgroundColor": "#DD4D44",
+            },
+            Object {},
+          ]
+        }
+      >
+        <Text
+          style={
+            Array [
+              Object {
+                "color": "white",
+                "fontWeight": "bold",
+              },
+              undefined,
+              Object {},
+            ]
+          }
+        >
+          Remove 1 point from team 
+        </Text>
+      </View>
+      <View
+        accessible={true}
+        collapsable={false}
+        focusable={true}
+        onBlur={[Function]}
+        onClick={[Function]}
+        onFocus={[Function]}
+        onResponderGrant={[Function]}
+        onResponderMove={[Function]}
+        onResponderRelease={[Function]}
+        onResponderTerminate={[Function]}
+        onResponderTerminationRequest={[Function]}
+        onStartShouldSetResponder={[Function]}
+        style={
+          Array [
+            Object {
+              "alignItems": "center",
+              "borderRadius": 5,
+              "marginVertical": 5,
+              "padding": 10,
+              "width": "100%",
+            },
+            Object {
+              "backgroundColor": "#DD4D44",
+            },
+            Object {},
+          ]
+        }
+      >
+        <Text
+          style={
+            Array [
+              Object {
+                "color": "white",
+                "fontWeight": "bold",
+              },
+              undefined,
+              Object {},
+            ]
+          }
+        >
+          Return Home
+        </Text>
+      </View>
+    </View>
+  </View>
+</RCTScrollView>
+`;

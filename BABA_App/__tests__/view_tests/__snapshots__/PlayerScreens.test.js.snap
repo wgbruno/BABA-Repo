@@ -1,0 +1,286 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Add Player Screen 1`] = `
+<RCTScrollView
+  showsVerticalScrollIndicator={false}
+>
+  <View>
+    <View
+      style={
+        Object {
+          "alignItems": "center",
+          "padding": 50,
+        }
+      }
+    >
+      <Text
+        style={
+          Object {
+            "color": "#051C60",
+            "fontSize": 28,
+            "fontWeight": "bold",
+            "margin": 10,
+          }
+        }
+      >
+        Create a player
+      </Text>
+      <View
+        style={
+          Object {
+            "backgroundColor": "white",
+            "borderColor": "#e8e8e8",
+            "borderRadius": 5,
+            "borderWidth": 1,
+            "marginVertical": 5,
+            "paddingHorizontal": 10,
+            "width": "100%",
+          }
+        }
+      >
+        <TextInput
+          onChangeText={[Function]}
+          placeholder="First Name"
+          style={Object {}}
+          value=""
+        />
+      </View>
+      <View
+        style={
+          Object {
+            "backgroundColor": "white",
+            "borderColor": "#e8e8e8",
+            "borderRadius": 5,
+            "borderWidth": 1,
+            "marginVertical": 5,
+            "paddingHorizontal": 10,
+            "width": "100%",
+          }
+        }
+      >
+        <TextInput
+          onChangeText={[Function]}
+          placeholder="Last Name"
+          style={Object {}}
+          value=""
+        />
+      </View>
+      <View
+        style={
+          Object {
+            "backgroundColor": "white",
+            "borderColor": "#e8e8e8",
+            "borderRadius": 5,
+            "borderWidth": 1,
+            "marginVertical": 5,
+            "paddingHorizontal": 10,
+            "width": "100%",
+          }
+        }
+      >
+        <TextInput
+          onChangeText={[Function]}
+          placeholder="Number"
+          style={Object {}}
+          value={0}
+        />
+      </View>
+      <View
+        style={
+          Object {
+            "backgroundColor": "white",
+            "borderColor": "#e8e8e8",
+            "borderRadius": 5,
+            "borderWidth": 1,
+            "marginVertical": 5,
+            "paddingHorizontal": 10,
+            "width": "100%",
+          }
+        }
+      >
+        <TextInput
+          onChangeText={[Function]}
+          placeholder="Age"
+          style={Object {}}
+          value={0}
+        />
+      </View>
+      <View
+        style={
+          Object {
+            "backgroundColor": "white",
+            "borderColor": "#e8e8e8",
+            "borderRadius": 5,
+            "borderWidth": 1,
+            "marginVertical": 5,
+            "paddingHorizontal": 10,
+            "width": "100%",
+          }
+        }
+      >
+        <TextInput
+          onChangeText={[Function]}
+          placeholder="Height"
+          style={Object {}}
+          value=""
+        />
+      </View>
+      <View
+        accessible={true}
+        collapsable={false}
+        focusable={true}
+        onBlur={[Function]}
+        onClick={[Function]}
+        onFocus={[Function]}
+        onResponderGrant={[Function]}
+        onResponderMove={[Function]}
+        onResponderRelease={[Function]}
+        onResponderTerminate={[Function]}
+        onResponderTerminationRequest={[Function]}
+        onStartShouldSetResponder={[Function]}
+        style={
+          Array [
+            Object {
+              "alignItems": "center",
+              "borderRadius": 5,
+              "marginVertical": 5,
+              "padding": 10,
+              "width": "100%",
+            },
+            Object {
+              "backgroundColor": "#DD4D44",
+            },
+            Object {},
+          ]
+        }
+      >
+        <Text
+          style={
+            Array [
+              Object {
+                "color": "white",
+                "fontWeight": "bold",
+              },
+              undefined,
+              Object {},
+            ]
+          }
+        >
+          Add Player
+        </Text>
+      </View>
+      <View
+        accessible={true}
+        collapsable={false}
+        focusable={true}
+        onBlur={[Function]}
+        onClick={[Function]}
+        onFocus={[Function]}
+        onResponderGrant={[Function]}
+        onResponderMove={[Function]}
+        onResponderRelease={[Function]}
+        onResponderTerminate={[Function]}
+        onResponderTerminationRequest={[Function]}
+        onStartShouldSetResponder={[Function]}
+        style={
+          Array [
+            Object {
+              "alignItems": "center",
+              "borderRadius": 5,
+              "marginVertical": 5,
+              "padding": 10,
+              "width": "100%",
+            },
+            Object {
+              "backgroundColor": "#DD4D44",
+            },
+            Object {},
+          ]
+        }
+      >
+        <Text
+          style={
+            Array [
+              Object {
+                "color": "white",
+                "fontWeight": "bold",
+              },
+              undefined,
+              Object {},
+            ]
+          }
+        >
+          Go Home
+        </Text>
+      </View>
+    </View>
+  </View>
+</RCTScrollView>
+`;
+
+exports[`Edit Player Screen 1`] = `null`;
+
+exports[`View All Players Screen 1`] = `
+<View
+  style={
+    Object {
+      "alignItems": "center",
+      "flex": 1,
+      "padding": 10,
+    }
+  }
+>
+  <Image
+    resizeMode="contain"
+    source={
+      Object {
+        "testUri": "../../../assets/images/Logo_1.png",
+      }
+    }
+    style={
+      Array [
+        Object {
+          "maxHeight": 150,
+          "maxWidth": 200,
+          "width": "3000%",
+        },
+        Object {
+          "height": 26680,
+        },
+      ]
+    }
+  />
+  <Text
+    style={
+      Object {
+        "color": "darkblue",
+        "fontSize": 20,
+        "fontWeight": "bold",
+        "marginTop": 8,
+      }
+    }
+  >
+    All Players
+  </Text>
+  <RCTScrollView
+    data={Array []}
+    getItem={[Function]}
+    getItemCount={[Function]}
+    keyExtractor={[Function]}
+    onContentSizeChange={[Function]}
+    onLayout={[Function]}
+    onMomentumScrollBegin={[Function]}
+    onMomentumScrollEnd={[Function]}
+    onScroll={[Function]}
+    onScrollBeginDrag={[Function]}
+    onScrollEndDrag={[Function]}
+    removeClippedSubviews={false}
+    renderItem={[Function]}
+    scrollEventThrottle={50}
+    stickyHeaderIndices={Array []}
+    viewabilityConfigCallbackPairs={Array []}
+  >
+    <View />
+  </RCTScrollView>
+</View>
+`;
