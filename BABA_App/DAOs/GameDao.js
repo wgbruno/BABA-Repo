@@ -52,18 +52,25 @@ export function findGame(_gameID){
     }
 }
 
-export function getAllDBGames(){
-    return realm.objects('Game');
-}
-
-/*
 let getAllDBGames = () => {
     return realm.objects('Game');
 }
 
 let DBisEmpty = () => {
-    return realm.length == 0;
-}*/
+    return realm.objects('Game').length == 0;
+}
+
+let deleteAllDBGames = () =>{
+    realm.write(() => {
+        realm.delete(getAllDBGames());
+    })
+}
+
+export {
+    getAllDBGames,
+    DBisEmpty,
+    deleteAllDBGames
+}
 
 //export default realm;
 //let realm = new Realm({schema: [GameSchema], schemaVersion: 5});

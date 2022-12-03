@@ -10,7 +10,7 @@ import { getAllDBGames } from '../../DAOs/GameDao';
 import Logo from '../../assets/images/Logo_1.png'
 
 let realm;
- 
+
 export default function ViewAllGames({ navigation }){
     const [games, setGames] = useState(getAllDBGames());
     const [empty, setEmpty] = useState(true);
@@ -65,10 +65,10 @@ export default function ViewAllGames({ navigation }){
                                 paramScore1: item.teamScore1,
                                 paramScore2: item.teamScore2,
                                 paramID: item.gameID });}}>
-                            <Text>{item.teamName1}      {item.teamName2}</Text>
-                            <Text>{item.teamScore1}      {item.teamScore2}</Text>
-                            <Text>{item.date}</Text>
-                            <Text>{item.tipoff}</Text>
+                            <Text style={styles.list}>{item.teamName1}      {item.teamName2}</Text>
+                            <Text style={styles.list}>{item.teamScore1}      {item.teamScore2}</Text>
+                            <Text style={styles.list}>{item.date}</Text>
+                            <Text style={styles.list}>{item.tipoff}</Text>
 
                         </TouchableOpacity>
                     </View>
@@ -77,6 +77,7 @@ export default function ViewAllGames({ navigation }){
         </ScrollView>
     </>);
 }
+
 
 const styles = StyleSheet.create({
     root: {
