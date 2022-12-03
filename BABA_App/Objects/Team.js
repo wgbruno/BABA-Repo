@@ -1,4 +1,4 @@
-import { insertDBTeam, deleteDBTeam, updateDBName, updateDBWins, updateDBLosses, updateDBSeed, addDBPlayer} from '../DAOs/AddTeamDao.js';
+import { insertDBTeam, deleteDBTeam, updateDBName, updateDBWins, updateDBLosses, updateDBSeed, addDBPlayer} from '../DAOs/TeamDao.js';
 
 export class Team {
     // Create team

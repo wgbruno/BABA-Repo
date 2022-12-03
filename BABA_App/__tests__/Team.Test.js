@@ -1,21 +1,34 @@
 import {expect, jest, test} from '@jest/globals';
-import Team from '../Objects/Team.js';
 import { openDatabase } from 'react-native-sqlite-storage';
-
-/*
-let t = null;
-beforeEach(function(){
-    t = new Team("ballers", "5-0", 1, 9);
-})*/
+import { Team, getName } from '../Objects/Team';
 
 test('Register New Team', function(){
     tempTeam = new Team("Ballers", "5-0", 1, 9, null);
     expect(tempTeam).toBe();
     //similar to player, what to put for navigation arg?
+});
+
+test("Return team's name", function(){
+
+    expect(getName(newTeam)).toBe("New Team");
+
+});
+
+
+/*
+let t = null;
+beforeEach(function(){
+    t = new Team("ballers", "5-0", 1, 9);
+})
+
+test('Register New Team', function(){
+    tempTeam = new Team;//new Team("Ballers", "5-0", 1, 9, null);
+    expect(tempTeam).toBe();
+    //similar to player, what to put for navigation arg?
 })
 
 test('View Team', function(){
-// expect that we can view the same team from the db that was added in the previous test
+    // expect that we can view the same team from the db that was added in the previous test
 })
 
 test('Update Team', function(){
@@ -26,4 +39,4 @@ test('Update Team', function(){
 test('Delete Team', function(){
 // delete the team previosuly used and expect that they are no longer saved in the db
 
-})
+})*/
