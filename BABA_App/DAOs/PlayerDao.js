@@ -21,7 +21,6 @@ export function addPlayerDB(_ID, _first, _last, _number, _age, _height){
                 turnovers: 0,
                 teamName: 'Free Agent'
             });
-            console.log(player);
         });
     return 0;
 }
@@ -32,11 +31,7 @@ export function getNewIDDB(){
 
 export function getTeam(_ID){
     var player = realm.objectForPrimaryKey("Player", _ID);
-    if(player['teamName'] != null){
-        return player['teamName'];
-    }else{
-        return 1;
-    }
+    return player['teamName'];
 }
 
 export function getFreeAgents(){

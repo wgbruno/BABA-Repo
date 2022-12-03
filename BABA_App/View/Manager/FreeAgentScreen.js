@@ -13,7 +13,8 @@ export default function FreeAgentScreen({navigation}){
     const [userName, setUser] = useState("");
 
     useEffect(() => {
-        setUser(navigation.getParam('paramName', "N/A"))
+        console.log(navigation.getParam('paramUserName', "N/A"));
+        setUser(navigation.getParam('paramUserName', "N/A"))
         if(players != undefined){
             setEmpty(false);
         }
@@ -28,7 +29,7 @@ export default function FreeAgentScreen({navigation}){
             </View>
         );
     }
-
+    console.log(userName);
     return (
         <View style={styles.root}>
         <Image

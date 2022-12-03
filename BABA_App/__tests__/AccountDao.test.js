@@ -1,4 +1,4 @@
-import {createAccount, findAccount, changePassword, checkPassword, checkCode, addCode, removeAccount, removeAll, loggedIn, getAccountDB, findLoggedIn, loggedOff} from '../DAOs/AccountDao.js';
+import {createAccount, findAccount, changePassword, checkPassword, checkCode, addCode, removeAccount, removeAll, loggedIn, getAccountDB, findLoggedIn, loggedOff, getID, changeTypeDB, getAccountTypeDB} from '../DAOs/AccountDao.js';
 import {expect, jest, test} from '@jest/globals';
 import { Account } from '../Objects/AccountCont.js';
 
@@ -65,4 +65,16 @@ test("Find Logged In", function (){
     expect(findLoggedIn()).toBe(0);
     loggedIn("TestName9");
     expect(findLoggedIn()).toBe(1);
+})
+
+test("Get Player ID", function(){
+    expect(getID("TestName9")).toBe(0);
+})
+
+test("Change Account Type", function(){
+    expect(changeTypeDB("TestName9")).toBe(0);
+})
+
+test("Get Account Type", function(){
+    expect(getAccountTypeDB("TestName9")).toBe("Manager");
 })

@@ -12,22 +12,15 @@ export default function ManagerHomeScreen({navigation}){
   const [userName, setUser] = useState("");
 
   useEffect(() => {
-    setUser(navigation.getParam('paramUser', "test"));
+    setUser(navigation.getParam('paramUserName', "test"));
   })
-
-  const account = new Account(/*userName*/"test", "test", "test", "Manager", 1111, true);
-  account.create();
-  var playerID = account.getPlayerID();
-  const player = new Player(/*playerID*/getNewIDDB(), "test", "test", 0, 0, "test");
-  player.createPlayer();
-  var teamName = player.getTeamName();
 
   const toTeam = () => {
     navigation.navigate("DisplayTeam", {paramTeamName: teamName});
   }
   
   const freeAgents = () => {
-    navigation.navigate('FreeAgent', {paramUser: userName});
+    navigation.navigate('FreeAgent', {paramUserName: userName});
   }
   
   

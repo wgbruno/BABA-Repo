@@ -12,19 +12,26 @@ export default function SendTeamRequestScreen({navigation}){
     const [playerID, setPlayerID] = useState(0);
     const [managerID, setManagerID] = useState("");
     const [message, setMessage] = useState("");
+    const [firstName, setFirst] = useState("");
+    const [lastName, setLast] = useState("");
+    const [teamName, setTeam] = useState("");
+
 
     useEffect(() => {
-        setPlayerID(navigation.getParam("paramPlayerID", 0))
-        setManagerID(navigation.getParam("paramManagerID", "N/A"))
+        setPlayerID(navigation.getParam("paramPlayerID", 0));
+        setManagerID(navigation.getParam("paramManagerID", "N/A"));
+        const player = new Player(navigation.getParam("paramPlayerID", 0));
+        setFirst(player.getFirstName());
+        setLast(player.getLastName());
+        const tmp = new Account(navigation.getParam("paramManagerID", "N/A"));
+        const account = tmp.getAccount();
+        const manager = new Player(account.getPlayerID());
+        setTeam(manager.getTeamName());
     })
+
+   
     
-    const player = new Player(playerID);
-    const firtsName = player.getFirstName();
-    const lastName = player.getLastName();
-    const tmp = new Account(managerID);
-    const account = tmp.getAccount();
-    const manager = new Player(account.getPlayerID());
-    const teamName = manager.getTeamName();
+    
 
     const toSendRequest = () => {
         sendTeamRequest()
@@ -38,7 +45,7 @@ export default function SendTeamRequestScreen({navigation}){
             resizeMode="contain"
         />
        <Text style={{marginTop: 8, fontWeight: 'bold', color: 'darkblue', fontSize: 22}}>Send Team Request</Text>
-       <Text style={{marginTop: 8, fontWeight: 'bold', color: 'darkblue', fontSize: 15}}>Enter a message to send to {firtsName} {lastName}:</Text>
+       <Text style={{marginTop: 8, fontWeight: 'bold', color: 'darkblue', fontSize: 15}}>Enter a message to send to {firstName} {lastName}:</Text>
        <CustomInput
           placeholder="Message"
           value={message}

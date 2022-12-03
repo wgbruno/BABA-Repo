@@ -18,52 +18,52 @@ export default function Home ({navigation}){
             <Text>{userName}        {accountType}</Text>
             <Button 
                 style={FormStyle.formButton} 
-                onPress={() => this.props.navigation.navigate('PlayerReg')}
+                onPress={() => navigation.navigate('PlayerReg')}
                 title="Register Player">
             </Button>
             <Button 
                 style={FormStyle.formButton} 
-                onPress={() => this.props.navigation.navigate('ViewPlayers')}
+                onPress={() => navigation.navigate('ViewPlayers')}
                 title="View Players">
             </Button>
             <Button 
                 style={FormStyle.formButton} 
-                onPress={() => this.props.navigation.navigate('TeamReg')}
+                onPress={() => navigation.navigate('TeamReg')}
                 title="Register Team">
             </Button>
             <Button 
                 style={FormStyle.formButton} 
-                onPress={() => this.props.navigation.navigate('ViewTeams')}
+                onPress={() => navigation.navigate('ViewTeams')}
                 title="View Teams">
             </Button>
             <Button 
                 style={FormStyle.formButton} 
-                onPress={() => this.props.navigation.navigate('SignIn')}
+                onPress={() => navigation.navigate('SignIn')}
                 title="Sign In">
             </Button>
             <Button 
                 style={FormStyle.formButton} 
-                onPress={() => this.props.navigation.navigate('SignUp')}
+                onPress={() => navigation.navigate('SignUp')}
                 title="Sign Up">
             </Button>
             <Button 
                 style={FormStyle.formButton} 
-                onPress={() => this.props.navigation.navigate('ForgotPassword')}
+                onPress={() => navigation.navigate('ForgotPassword')}
                 title="Forgot Password">
             </Button>
             <Button 
                 style={FormStyle.formButton} 
-                onPress={() => this.props.navigation.navigate('NewPassword')}
+                onPress={() => navigation.navigate('NewPassword')}
                 title="Change Password">
             </Button>
             <Button 
                 style={FormStyle.formButton} 
-                onPress={() => this.props.navigation.navigate('DeleteAccount')}
+                onPress={() => navigation.navigate('DeleteAccount')}
                 title="Delete Account">
             </Button>
             <Button 
                 style={FormStyle.formButton} 
-                onPress={() => this.props.navigation.navigate('ScheduleGame')}
+                onPress={() => navigation.navigate('ScheduleGame')}
                 title="Make Game">
             </Button>
             <Button 

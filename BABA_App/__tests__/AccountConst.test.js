@@ -1,6 +1,5 @@
 import {expect, jest, test} from '@jest/globals';
 import { Account } from '../Objects/AccountCont.js';
-import {createAccount, findAccount, changePassword, checkPassword, checkCode, addCode, removeAccount, removeAll, loggedIn, getAccountDB, findLoggedIn, loggedOff} from '../DAOs/AccountDao.js';
 
 var account = new Account("TestName", "TestEmail", "TestPassword", null, 0, false);
 
@@ -58,3 +57,14 @@ test("Delete All", function (){
     expect(account.deleteAll()).toBe(0);
 })
 
+test("Get Player ID", function(){
+    expect(account.getPlayerID()).toBe(0);
+})
+
+test("Change Type", function(){
+    expect(account.changeType()).toBe(0);
+})
+
+test("Get Type", function(){
+    expect(account.getAccountType()).toBe("Free Agent");
+})
