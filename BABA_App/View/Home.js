@@ -71,6 +71,10 @@ export default function Home ({navigation}){
                 onPress={() => navigation.navigate('RequestManager', {paramUserName: userName})}
                 title="Request Manager">
             </Button>
+            <Button 
+                style={FormStyle.formButton} 
+                onPress={() => navigation.navigate('PlayoffScreen')}
+                title="View Playoffs"></Button>
         </View>    
     </>);
 }

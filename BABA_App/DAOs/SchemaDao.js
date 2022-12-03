@@ -36,7 +36,7 @@ const BABA_DB = new Realm({
         }
     }, {
         name : "Team",
-        primaryKey: 'teamName',
+        //primaryKey: 'teamName',
         properties : {
             teamName : 'string',
             wins : 'int',
@@ -67,7 +67,7 @@ const BABA_DB = new Realm({
             toID: 'string'
         }
     }],
-    schemaVersion: 15
+    schemaVersion: 16
 });
 
 export default BABA_DB;

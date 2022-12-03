@@ -5,7 +5,7 @@ import realm from "./SchemaDao";
 export function addPlayerDB(_ID, _first, _last, _number, _age, _height){
         realm.write(() => {
             const player = realm.create("Player", {
-                primaryKey: _ID,
+                //primaryKey: _ID,
                 playerID: _ID,
                 firstName: _first,
                 lastName: _last,

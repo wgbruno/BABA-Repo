@@ -1,14 +1,19 @@
 import React, {useEffect, useState} from 'react';
-import { Button, Text, TextInput, TouchableOpacity, View, StyleSheet } from 'react-native';
-import { FlatList } from 'react-native-gesture-handler';
-import {SafeAreaView, StatusBar} from 'react-native';
-import { NavigationContainer } from 'react-native';
-import {createStackNavigator} from 'react-navigation-stack';
+import { Button, Text, TextInput, TouchableOpacity, View, StyleSheet, FlatList, Image, useWindowDimensions } from 'react-native';
 import { getAllDBTeams } from '../DAOs/TeamDao';
+import Logo from '../assets/images/Logo_1.png'
+
 
 export default function ViewAllTeams({ navigation }){
+    const {height} = useWindowDimensions();
     const [teams, setTeams] = useState(getAllDBTeams());
     const [empty, setEmpty] = useState([]);
+
+    useEffect(() => {
+        if(teams != null){
+            setEmpty(false);
+        }
+    })
 
     /*const listAllTeams = () => {
         return(
@@ -29,12 +34,64 @@ export default function ViewAllTeams({ navigation }){
     }
 
     return(
+        <View style={styles.root}>
+        <Image
+            source={Logo}
+            style={[styles.logo, {height: height * 20}]}
+            resizeMode="contain"
+        />
+        <Text style={{marginTop: 8, fontWeight: 'bold', color: 'darkblue', fontSize: 20}}>All Players</Text>
+        {empty ? emptyDatabase():
+            <FlatList
+                data={teams}
+                keyExtractor={(item, index) => index.toString()}
+                renderItem={({item, index}) => 
+                    <View style={{flexDirection: 'row', justifyContent: 'space-evenly', margin: 10, flexGrow: 1}}>
+                        <TouchableOpacity
+                            onPress={() => {navigation.navigate('UpdateTeams', {
+                                paramTeamName: item.teamName,
+                                paramWins: item.wins,
+                                paramLosses: item.losses,
+                                paramSeed: item.seed,
+                                paramPlayers: item.players
+                            });}}>  
+                            <Text style={styles.list}>{item.teamName} -   Wins: {item.wins}</Text>
+                            <Text style={styles.list}>Losses: {item.losses}      Seed: {item.seed}      Players: {item.players}</Text>
+                        </TouchableOpacity>
+                    </View>
+                } 
+            />}
+        </View>
+    );
+};
+
+const styles = StyleSheet.create({
+    list: {
+        marginTop: 8, 
+        fontWeight: 'bold', 
+        color: 'red', 
+        fontSize: 20
+    },
+    root: {
+      alignItems: 'center',
+      padding: 10,
+      flex: 1
+    },
+    logo: {
+      width: '3000%',
+      maxWidth: 200,
+      maxHeight: 150,
+    },
+  });
+
+    /*
+    return(
     <>
         <StatusBar barStyle="light-content" />
         <SafeAreaView style={{padding: 8}}>
         {<Text>{JSON.stringify(getAllDBTeams())}</Text>}
         </SafeAreaView>
-        {/* List for all teams */}
+        {/* List for all teams }
         <Text style={{marginTop: 8, fontWeight: 'bold'}}>Team name                          Wins            Losses             Seed Players</Text>
                 {empty ? emptyDatabase(empty):
                 <FlatList
@@ -82,4 +139,3 @@ export default function ViewAllTeams({ navigation }){
             }
         </View>
     </>);*/
-}

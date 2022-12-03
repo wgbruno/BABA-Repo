@@ -8,14 +8,16 @@ import { db } from './AddTeam';
 export default function EditTeam({route, navigation}){
     const [teamID, setID] = useState("");
     const [name, setName] = useState("");
-    const [record, setRecord] = useState("");
+    const [wins, setWins] = useState("");
+    const [losses, setLosses] = useState("");
     const [seed, setSeed] = useState("");
     const [players, setPlayers] = useState("");
 
     useEffect(() => {
         setID(navigation.getParam('paramID', 'N/A'));
         setName(navigation.getParam('paramName', 'N/A'));
-        setRecord(navigation.getParam('paramRecord', 'N/A'));
+        setRecord(navigation.getParam('paramWins', 'N/A'));
+        setRecord(navigation.getParam('paramLosses', 'N/A'));
         setSeed(navigation.getParam('paramSeed', 'N/A'));
         setPlayers(navigation.getParam('paramPlayers', 'N/A').toString());
     }, []);
