@@ -24,7 +24,7 @@ export default function Playoff({navigation}) {
                     
                     {/* QF 1 */}
                     <Text style={{fontSize: 14, fontWeight: 'bold', color: '#051C60', textAlign: 'left'}}>Quarterfinal 1</Text>
-                    <Gameformat teamName1='Ballers' teamName2='Hoopers' time='8:00pm'/>
+                    <Gameformat teamName1='Team 1' teamName2='Team 2' time='5:00pm'/>
 
                     {/* Creates line */}
                     <View style={{flexDirection: 'row', alignItems: 'center'}}>
@@ -32,6 +32,22 @@ export default function Playoff({navigation}) {
                     </View>
 
                     <Text style={{textAlign: 'left', lineHeight: 50}}> </Text>
+
+                    {/* SF 1 Details */}
+                    <View style={{flexDirection: 'row', alignItems: 'center'}}>
+                    <View style={{flex: .72, height: 0, backgroundColor: 'black'}} />
+                    <View>
+                    <Text style={{color: '#111825', fontSize: 12}}>Winner of QF 1 vs. Winner of QF 2</Text>
+                    </View>
+                    <View style={{flex: 0, height: 0, backgroundColor: 'black'}} />
+                    </View> 
+                    <View style={{flexDirection: 'row', alignItems: 'center'}}>
+                    <View style={{flex: .62, height: 0, backgroundColor: 'black'}} />
+                    <View>
+                    <Text style={{color: '#111825', fontSize: 12}}>Tipoff @ 9:00pm</Text>
+                    </View>
+                    <View style={{flex: 0, height: 0, backgroundColor: 'black'}} />
+                    </View> 
 
                     {/* SF 1 */}
                     <View style={{flexDirection: 'row', alignItems: 'center'}}>
@@ -51,18 +67,22 @@ export default function Playoff({navigation}) {
 
                     {/* QF 2 */}
                     <Text style={{fontSize: 14, fontWeight: 'bold', color: '#051C60', textAlign: 'left'}}>Quarterfinal 2</Text>
-                    <Gameformat teamName1='Ballers' teamName2='Hoopers' time='8:00pm'/>
+                    <Gameformat teamName1='Team 3' teamName2='Team 4' time='6:00pm'/>
 
                     <Text style={{textAlign: 'left', lineHeight: 15}}> </Text>
 
                     {/* Finals */}
                     <Text style={{fontSize: 14, fontWeight: 'bold', color: '#051C60', textAlign: 'right'}}>Finals</Text>
 
+                    {/* Finals Details */}
+                    <Text style={{color: '#111825', fontSize: 12, textAlign: 'right'}}>Winner of SF 1 vs. Winner of SF 2</Text>
+                    <Text style={{color: '#111825', fontSize: 12, textAlign: 'right'}}>Tipoff @ 11:00pm</Text>
+
                     <Text style={{textAlign: 'left', lineHeight: 15}}> </Text>
 
                     {/* QF 3 */}
                     <Text style={{fontSize: 14, fontWeight: 'bold', color: '#051C60', textAlign: 'left', lineHeight: 25}}>Quartefinal 3</Text>
-                    <Gameformat teamName1='Ballers' teamName2='Hoopers' time='8:00pm'/>
+                    <Gameformat teamName1='Team 5' teamName2='Team 6' time='7:00pm'/>
 
                     {/* Creates line */}
                     <View style={{flexDirection: 'row', alignItems: 'center'}}>
@@ -78,7 +98,23 @@ export default function Playoff({navigation}) {
                         <Text style={{fontSize: 14, fontWeight: 'bold', color: '#051C60', textAlign: 'center'}}>Semifinal 2</Text>
                     </View>
                     <View style={{flex: .3, height: 1, backgroundColor: 'black'}} />
-                    </View>                    
+                    </View>         
+
+                    {/* SF 2 Details */}
+                    <View style={{flexDirection: 'row', alignItems: 'center'}}>
+                    <View style={{flex: .72, height: 0, backgroundColor: 'black'}} />
+                    <View>
+                    <Text style={{color: '#111825', fontSize: 12}}>Winner of QF 3 vs. Winner of QF 4</Text>
+                    </View>
+                    <View style={{flex: 0, height: 0, backgroundColor: 'black'}} />
+                    </View> 
+                    <View style={{flexDirection: 'row', alignItems: 'center'}}>
+                    <View style={{flex: .62, height: 0, backgroundColor: 'black'}} />
+                    <View>
+                    <Text style={{color: '#111825', fontSize: 12}}>Tipoff @ 10:00pm</Text>
+                    </View>
+                    <View style={{flex: 0, height: 0, backgroundColor: 'black'}} />
+                    </View>            
                     
                     <Text style={{textAlign: 'left', lineHeight: 50}}> </Text>
 
@@ -89,7 +125,7 @@ export default function Playoff({navigation}) {
 
                     {/* QF 4 */}
                     <Text style={{fontSize: 14, fontWeight: 'bold', color: '#051C60', textAlign: 'left', lineHeight: 25}}>Quarterfinal 4</Text>
-                    <Gameformat teamName1='Ballers' teamName2='Hoopers' time='8:00pm'/>
+                    <Gameformat teamName1='Team 7' teamName2='Team 8' time='8:00pm'/>
 
                 </View>
             </ScrollView>
