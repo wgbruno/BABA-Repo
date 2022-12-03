@@ -7,6 +7,8 @@ import { NavigationContainer } from '@react-navigation/native';
 import Logo from "../assets/images/Logo_1.png";
 
 export default function CreateGame({navigation}){
+    const {height} = useWindowDimensions();  
+
     const [name1, setTeam1] = useState('');
     const [name2, setTeam2] = useState('');
     const [time, setTime] = useState('');
