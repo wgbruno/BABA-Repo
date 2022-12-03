@@ -63,8 +63,8 @@ export default function Home ({navigation}){
             </Button>
             <Button 
                 style={FormStyle.formButton} 
-                onPress={() => navigation.navigate('ScheduleGame')}
-                title="Make Game">
+                onPress={() => navigation.navigate('CalendarScreen')}
+                title="Calendar">
             </Button>
             <Button 
                 style={FormStyle.formButton} 
