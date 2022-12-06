@@ -23,11 +23,7 @@ export default function DisplayTeamScreen({navigation}){
             keyExtractor={(item, index) => index.toString()}
             renderItem={({item, index}) => 
                 <View style={{flexDirection: 'row', justifyContent: 'space-between'}}>
-                    <TouchableOpacity
-                        onPress={() => {navigation.navigate('SendTeamRequest', {
-                            paramPlayerID: item.playerID,
-                            paramManagerID: userName,    
-                        });}}>
+                    <TouchableOpacity>
                         <Text style={styles.list}>{item.firstName} {item.lastName}   Team: {item.teamName} ID: {item.playerID}</Text>
                         <Text style={styles.list}>Age: {item.age}      Height: {item.height}      Number: {item.number}</Text>
                     </TouchableOpacity>
