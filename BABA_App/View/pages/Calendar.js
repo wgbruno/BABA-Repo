@@ -6,13 +6,13 @@ import Realm from 'realm';
 import Gameformat from './components/Gameformat';
 import { NavigationContainer, SafeAreaView, StatusBar } from 'react-native';
 import { FlatList } from 'react-native-gesture-handler';
-import { getAllDBGames } from '../../DAOs/GameDao';
+import { getAllDBGames, getGameDB } from '../../DAOs/GameDao';
 import Logo from '../../assets/images/Logo_1.png'
 
 let realm;
 
 export default function ViewAllGames({ navigation }){
-    const [games, setGames] = useState(getAllDBGames());
+    const [games] = useState(getGameDB(1));
     const [empty, setEmpty] = useState(true);
 
     useEffect(() => {
@@ -51,28 +51,23 @@ export default function ViewAllGames({ navigation }){
                 <Text style={styles.teamText}>Upcoming Games</Text>
             </View>
             {empty ? emptyDatabase():
-            <FlatList
-                data={games}
-                keyExtractor={(item, index) => index.toString()}
-                renderItem={({item, index}) => 
                     <View style={{flexDirection: 'row', justifyContent: 'space-between'}}>
                         <TouchableOpacity
                             onPress={() => {navigation.navigate('GameView', {
-                                paramTeam1: item.teamName1,
-                                paramTeam2: item.teamName2,
-                                paramDate: item.date,
-                                paramStart: item.tipoff,
-                                paramScore1: item.teamScore1,
-                                paramScore2: item.teamScore2,
-                                paramID: item.gameID });}}>
-                            <Text style={styles.list}>{item.teamName1}      {item.teamName2}</Text>
-                            <Text style={styles.list}>{item.teamScore1}      {item.teamScore2}</Text>
-                            <Text style={styles.list}>{item.date}</Text>
-                            <Text style={styles.list}>{item.tipoff}</Text>
+                                paramTeam1: games.teamName1,
+                                paramTeam2: games.teamName2,
+                                paramDate: games.date,
+                                paramStart: games.tipoff,
+                                paramScore1: games.teamScore1,
+                                paramScore2: games.teamScore2,
+                                paramID: games.gameID });}}>
+                            <Text style={styles.list}>{games.teamName1}      {games.teamName2}</Text>
+                            <Text style={styles.list}>{games.teamScore1}      {games.teamScore2}</Text>
+                            <Text style={styles.list}>{games.date}</Text>
+                            <Text style={styles.list}>{games.tipoff}</Text>
 
                         </TouchableOpacity>
                     </View>
-                } />
             }
         </ScrollView>
     </>);
