@@ -34,8 +34,8 @@ export function getTeam(_ID){
     return player['teamName'];
 }
 
-export function getFreeAgents(){
-    return realm.objects('Player').filtered("teamName == 'Free Agent'");
+export function getTeamPlayers(_teamName){
+    return realm.objects('Player').filtered("teamName == '"+_teamName+"'");
 }
 
 export function getAllPlayers(){
@@ -60,4 +60,12 @@ export function getFirstNameDB(_ID){
 export function getLastNameDB(_ID){
     var player = realm.objectForPrimaryKey("Player", _ID);
     return player['lastName'];
+}
+
+export function setTeamNameDB(_ID, _teamName){
+    realm.write(() => {
+        var player = realm.objectForPrimaryKey("Player", _ID);
+        player["teamName"] = _teamName;
+    });
+    return 0;
 }

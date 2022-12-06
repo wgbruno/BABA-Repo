@@ -5,6 +5,8 @@ import CustomInput from "../../src/components/CustomInput";
 import { NavigationContainer } from 'react-native';
 import { Player } from "../../Objects/PlayerCont";
 import { getNewIDDB } from "../../DAOs/PlayerDao";
+import { set } from "react-native-reanimated";
+import { Account } from "../../Objects/AccountCont";
 
 
 export default function AddPlayerScreen({navigation}){
@@ -23,12 +25,24 @@ export default function AddPlayerScreen({navigation}){
         var player = new Player(playerID, firstName, lastName, parseInt(number), parseInt(age), height);
         if(!(player.createPlayer())){
             Alert.alert("Success!","You have created a new player!");
-            navigation.navigate("HomeScreen");
+            var tmp = new Account(navigation.getParam("paramUserName", "N/A"));
+            var account = tmp.getAccount();
+            console.log(account);
+            account.setPlayerID(playerID);
+            if(navigation.getParam("paramAccountType", "N/A") == "Manager"){
+              navigation.navigate("ManagerHome");
+            }else{
+              navigation.navigate("HomeScreen");
+            }
         }
     }
 
     const onGoHome = () => {
+      if(navigation.getParam("paramAccountType", "N/A") == "Manager"){
+        navigation.navigate("ManagerHome");
+      }else{
         navigation.navigate("HomeScreen");
+      }
     }
 
     return (

@@ -3,12 +3,12 @@ import { NavigationContainer } from 'react-native';
 import { View, Text, Image, StyleSheet, useWindowDimensions, ScrollView, Alert, FlatList, TouchableOpacity } from 'react-native';
 import { UserState } from "realm";
 import Logo from '../../assets/images/Logo_1.png'
-import { getFreeAgents } from "../../DAOs/PlayerDao";
+import { getTeamPlayers } from "../../DAOs/PlayerDao";
 
 
 export default function FreeAgentScreen({navigation}){
     const {height} = useWindowDimensions();
-    const [players, setPlayers] = useState(getFreeAgents());
+    const [players, setPlayers] = useState(getTeamPlayers("Free Agent"));
     const [empty, setEmpty] = useState(true);
     const [userName, setUser] = useState("");
 
@@ -29,7 +29,6 @@ export default function FreeAgentScreen({navigation}){
             </View>
         );
     }
-    console.log(userName);
     return (
         <View style={styles.root}>
         <Image

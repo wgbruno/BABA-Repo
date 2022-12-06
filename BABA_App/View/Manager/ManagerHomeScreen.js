@@ -12,15 +12,45 @@ export default function ManagerHomeScreen({navigation}){
   const [userName, setUser] = useState("");
 
   useEffect(() => {
-    setUser(navigation.getParam('paramUserName', "test"));
+    setUser(navigation.getParam('paramUserName', "N/A"));
   })
 
-  const toTeam = () => {
-    navigation.navigate("DisplayTeam", {paramTeamName: teamName});
+  const toCreatePlayer = () => {
+    var tmp = new Account(userName);
+    var account = tmp.getAccount();
+    var accountType = account.getAccountType();
+    navigation.navigate('PlayerReg', {
+      paramUserName: userName, 
+      paramAccountType: accountType
+    });
   }
+
+  const toTeam = () => {
+    var tmp = new Account(userName);
+    var account = tmp.getAccount();
+    var playerID = account.getPlayerID();
+    var player = new Player(playerID);
+    var teamName = player.getTeamName();
+    console.log(teamName);
+    if(teamName == "Free Agent"){
+      Alert.alert("Fail!","Manager does not have a team. Make a team first please.");
+    }else{
+      navigation.navigate("DisplayTeam", {paramTeamName: teamName});
+    }
+  }   
   
   const freeAgents = () => {
     navigation.navigate('FreeAgent', {paramUserName: userName});
+  }
+
+  const toCreateTeam = () => {
+    var tmp = new Account(userName);
+    var account = tmp.getAccount();
+    var playerID = account.getPlayerID();
+    var player = new Player(playerID);
+    console.log(player);
+    var teamName = player.getTeamName();
+    navigation.navigate('TeamReg', {paramPlayerID: playerID, paramAccountType: account.getAccountType()});
   }
   
   
@@ -32,6 +62,16 @@ export default function ManagerHomeScreen({navigation}){
             style={[styles.logo, {height: height * 20}]}
             resizeMode="contain"
           />
+          <CustomButton
+            text={"Create my Player"}
+            onPress={toCreatePlayer}
+          />
+
+          <CustomButton
+            text={"Create Team"}
+            onPress={toCreateTeam}
+          />
+
           <CustomButton
             text={"View Team"}
             onPress={toTeam}

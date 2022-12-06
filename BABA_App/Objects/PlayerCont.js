@@ -1,5 +1,5 @@
 import { Alert } from 'react-native';
-import { addPlayerDB, getFirstNameDB, getLastNameDB, getTeam } from '../DAOs/PlayerDao';
+import { addPlayerDB, getFirstNameDB, getLastNameDB, getTeam, setTeamNameDB} from '../DAOs/PlayerDao';
 
 // rename this to PlayerController?? or PlayerDao?
 export class Player{
@@ -27,6 +27,10 @@ export class Player{
 
     getTeamName(){
         return getTeam(this.ID);
+    }
+
+    setTeamName(_teamName){
+        return setTeamNameDB(this.ID, _teamName);
     }
 
     //call this method to use in sqllite execute call from AddPlayer
