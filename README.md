@@ -27,3 +27,6 @@ https://lucid.app/lucidchart/5e0a5d68-4cb7-4e63-a926-fc37ff9520ad/edit?viewport_
 ## Sequence Diagram
 <img width="680" alt="Screenshot 2022-12-06 at 3 37 16 PM" src="https://user-images.githubusercontent.com/54945471/206017784-7e16985a-fa8b-49c1-9b43-cd6f87dff04e.png">
 
+## I3 Testing Coverage
+<img width="809" alt="Screenshot 2022-12-06 at 2 07 03 PM" src="https://user-images.githubusercontent.com/54945471/206026180-59fc7ebb-5a04-4517-a75e-afcc1aef776a.png">
+
