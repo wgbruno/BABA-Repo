@@ -26,6 +26,8 @@ import EditPlayerScreen from './View/Player/EditPlayerScreen.js';
 import SendTeamRequestScreen from "./View/Manager/SendTeamRequestScreen.js";
 import RequestManagerScreen from "./View/Manager/RequestManagerScreen.js";
 import DisplayTeamScreen from './View/Manager/DisplayTeamScreen.js'
+import GuestHomeScreen from './View/pages/GuestHomeScreen.js'
+import PlayerHomeScreen from "./View/pages/PlayerHomeScreen.js";
 
 const AppNavigator = createStackNavigator(  
   {  
@@ -50,7 +52,9 @@ const AppNavigator = createStackNavigator(
       SendTeamRequest: SendTeamRequestScreen,
       RequestManager: RequestManagerScreen,
       PlayoffScreen: Playoffs,
-      DisplayTeam: DisplayTeamScreen
+      DisplayTeam: DisplayTeamScreen,
+      GuestHome: GuestHomeScreen,
+      PlayerHome: PlayerHomeScreen
   },  
   {  
       initialRouteName: "SignIn"  

@@ -31,8 +31,11 @@ export default function AddPlayerScreen({navigation}){
             account.setPlayerID(playerID);
             if(navigation.getParam("paramAccountType", "N/A") == "Manager"){
               navigation.navigate("ManagerHome");
-            }else{
+            } else if(navigation.getParam("paramAccountType", "N/A") == "Manager"){
               navigation.navigate("HomeScreen");
+            }
+            else{
+              navigation.navigate("PlayerHome");
             }
         }
     }

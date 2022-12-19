@@ -24,10 +24,10 @@ export default function SignInScreen({navigation}){
       }else{
         if(account.getAccountType() == "Player"){
           Alert.alert("Success", "You have logged in!");
-          navigation.navigate('HomeScreen', {paramUserName: account.userName, paramAccountType: account.accountType});
+          navigation.navigate('PlayerHome', {paramUserName: account.userName, paramAccountType: account.accountType});
         } else if(account.getAccountType() == 'Admin'){
           Alert.alert("Success", "You have logged in as admin!");
-          navigation.navigate('AdminScreen');
+          navigation.navigate('HomeScreen');
         } else if(account.getAccountType() == 'Manager'){
           Alert.alert("Success", "You have logged in as manager!");
           navigation.navigate('ManagerHome', {paramUserName: account.userName});
@@ -45,7 +45,7 @@ export default function SignInScreen({navigation}){
   };
 
   const onGuest = () => {
-    navigation.navigate('HomeScreen', {paramUserName: username});
+    navigation.navigate('GuestHome');
   };
 
   
