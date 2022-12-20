@@ -8,6 +8,9 @@ import { NavigationContainer } from 'react-native';
 export default function GuestHomeScreen ({navigation}){
     const {height} = useWindowDimensions();
 
+    const toViewPlayers = () => {
+      navigation.navigate('ViewPlayers');
+  }
     const toViewTeams = () => {
         navigation.navigate('ViewTeams');
     }
@@ -25,6 +28,10 @@ export default function GuestHomeScreen ({navigation}){
             source={Logo}
             style={[styles.logo, {height: height * 20}]}
             resizeMode="contain"
+          />
+          <CustomButton 
+                onPress={toViewPlayers}
+                text={"View Players"}
           />
           <CustomButton 
                 onPress={toViewTeams}

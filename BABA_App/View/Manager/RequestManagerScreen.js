@@ -20,7 +20,7 @@ export default function RequestManagerScreen({navigation}){
             Alert.alert("Failed!", "Failed to convert to manager account!");
         }else{
             Alert.alert("Success!", "Converted account to manager!");
-            navigation.navigate("HomeScreen");
+            navigation.navigate("PlayerHome");
         }
     }
     

@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { Button, Text, TextInput, TouchableOpacity, View, StyleSheet, FlatList, Image, useWindowDimensions } from 'react-native';
+import { Button, Text, TextInput, TouchableOpacity, View, StyleSheet, FlatList, Image, useWindowDimensions, Alert } from 'react-native';
 import Logo from '../../assets/images/Logo_1.png'
 import CustomInput from "../../src/components/CustomInput";
 import CustomButton from "../../src/components/CustomButton";
@@ -34,7 +34,8 @@ export default function SendTeamRequestScreen({navigation}){
     
 
     const toSendRequest = () => {
-        sendTeamRequest()
+        Alert.alert("Success","You have sent a request to " +firstName+" " +lastName);
+        navigation.navigate("ManagerHome");
     }
 
     return(

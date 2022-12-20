@@ -5,6 +5,7 @@ import CustomButton from "../../src/components/CustomButton";
 import Logo from '../../assets/images/Logo_1.png'
 import { NavigationContainer } from 'react-native';
 import { Account } from "../../Objects/AccountCont";
+import { Player } from "../../Objects/PlayerCont";
 
 export default function PlayerHomeScreen ({navigation}){
     const {height} = useWindowDimensions();
@@ -32,7 +33,6 @@ export default function PlayerHomeScreen ({navigation}){
         var playerID = account.getPlayerID();
         var player = new Player(playerID);
         var teamName = player.getTeamName();
-        console.log(teamName);
         if(teamName == "Free Agent"){
           Alert.alert("Fail!","You are not a member of a team.");
         }else{
@@ -48,6 +48,9 @@ export default function PlayerHomeScreen ({navigation}){
     }
     const toPlayoffScreen = () => {
         navigation.navigate('PlayoffScreen');
+    }
+    const toRequestManager = () => {
+      navigation.navigate('RequestManager', {paramUserName: userName});
     }
 
     return(<>
@@ -77,6 +80,10 @@ export default function PlayerHomeScreen ({navigation}){
            <CustomButton 
                 onPress={toPlayoffScreen}
                 text={"View Playoffs"}
+           />
+           <CustomButton 
+                onPress={toRequestManager}
+                text={"Become Manager"}
            />
         </View>
     </ScrollView>
